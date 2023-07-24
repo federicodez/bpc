@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url("images/nyc-bg.jpeg");
-  background-position: center;
-}
+/* body { */
+/*   background-image: url("images/nyc-bg.jpeg"); */
+/*   background-position: center; */
+/* } */
