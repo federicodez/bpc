@@ -4,6 +4,7 @@ type PatientProps = {
   lastName: string;
   email: string;
   phone: string;
+  message: string;
 };
 
 export function Patient({
@@ -12,6 +13,7 @@ export function Patient({
   lastName,
   email,
   phone,
+  message,
 }: PatientProps) {
   return (
     <li className="flex gap-1 items-center">
