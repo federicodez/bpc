@@ -1,11 +1,10 @@
 import { prisma } from "@/db";
 
 export default async function Home() {
-  const patients = await prisma.patient.findMany();
-  console.log(patients);
+  // const patients = await prisma.patient.findMany();
   return (
     <>
-      <div>
+      <div className="container mx-auto p-4">
         <p className="ml-4 p-4">
           Thank you for visiting Bowen Pain Center. It is our goal to provide
           you with a high-standard of innovative and comprehensive treatments
@@ -19,16 +18,19 @@ export default async function Home() {
         <p className="ml-4 p-4">
           We encourage you to take the time to explore our website, call our
           office, and speak to our staff about how we can help you move forward
-          in improving you quality of life. This is important to us, because at
-          Bowen Pain Center Pain is Personal.
+          in improving you quality of life.{" "}
+          <strong>
+            This is important to us, because at Bowen Pain Center Pain is
+            Personal.
+          </strong>
         </p>
-        <h3 className="text-center">Mission Statement</h3>
+        <h1 className="text-center font-bold">Mission Statement</h1>
         <p className="ml-4 p-4">
           Our mission at Bowen Pain Center is to provide an all encompassing
           experience that addresses our patients' needs and provides the highest
           quality of pain and wellness care available
         </p>
-        <h3 className="text-center">Vision</h3>
+        <h1 className="text-center font-bold">Vision</h1>
         <p className="ml-4 p-4">
           Our vision is to establish ourselves as the top pain provider service
           in the region. We will accomplish our goal by operating with
@@ -39,8 +41,8 @@ export default async function Home() {
           We seek to offer a wide variety of treatment options to better
           optimize our patients' pain and physical/mental state.
         </p>
-        <h1 className="text-center">GET TO KNOW YOUR MD</h1>
-        <h3 className="text-center">Meet Dr. Alexander Bowen</h3>
+        <h1 className="text-center font-bold">GET TO KNOW YOUR MD</h1>
+        <h3 className="text-center font-bold">Meet Dr. Alexander Bowen</h3>
         <p className="ml-4 p-4">
           Dr. Bowen is a board certified attending Anesthesiologist and
           Interventional Pain Medicine Physician in the Metro New York City
@@ -59,7 +61,15 @@ export default async function Home() {
           twinkle twinkle little star), joggle, learn french, and cook.
         </p>
       </div>
-      <footer className="text-center">@ 2020 Bowen Pain Center</footer>
+      <p className="ml-4 text-center">68-38 Yellowstone Blvd, Suite BB1</p>
+      <p className="text-center">Forest Hills, NY 11375</p>
+      <p className="ml-4 text-center">
+        Tel: (929) 334-4500 Fax: (877) 286-4105
+      </p>
+      <p className="ml-4 p-4 text-center">Bowen.PainCenter@gmail.com</p>
+      <footer className="text-center text-white">
+        @ 2020 Bowen Pain Center
+      </footer>
     </>
   );
 }
