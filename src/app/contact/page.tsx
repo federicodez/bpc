@@ -1,6 +1,7 @@
 import Navbar from "../navbar";
 import { prisma } from "@/db";
 import { redirect } from "next/navigation";
+import Map from "@/components/Map";
 
 async function submitContact(data: FormData) {
   "use server";
@@ -9,8 +10,6 @@ async function submitContact(data: FormData) {
   const phone = data.get("phone")?.valueOf();
   const email = data.get("email")?.valueOf();
   const message = data.get("message")?.valueOf();
-
-  console.log(firstName, lastName, phone, email, message);
 
   if (typeof firstName !== "string" || firstName.length === 0) {
     throw new Error("Invalid First Name");
@@ -37,13 +36,13 @@ async function submitContact(data: FormData) {
 export default function Page() {
   return (
     <>
-      <h1 className="text-2xl text-center">Contact Us</h1>
+      <h1 className="text-2xl text-center m-4">Contact Us</h1>
       <form action={submitContact}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
             <label
               htmlFor="firstName"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900 light:text-black"
             >
               First name
             </label>
@@ -59,7 +58,7 @@ export default function Page() {
           <div>
             <label
               htmlFor="lastName"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900 light:text-black"
             >
               Last name
             </label>
@@ -75,7 +74,7 @@ export default function Page() {
           <div>
             <label
               htmlFor="phone"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900 light:text-black"
             >
               Phone number
             </label>
@@ -92,7 +91,7 @@ export default function Page() {
           <div>
             <label
               htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-gray-900 light:text-black"
             >
               Email address
             </label>
@@ -109,7 +108,7 @@ export default function Page() {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900 light:text-black"
           >
             Your message
           </label>
@@ -128,6 +127,7 @@ export default function Page() {
           Submit
         </button>
       </form>
+      <Map />
     </>
   );
 }
