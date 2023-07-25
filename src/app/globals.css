@@ -2,7 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body { */
-/*   background-image: url("images/nyc-bg.jpeg"); */
-/*   background-position: center; */
-/* } */
+body {
+  /* background-image: url("images/nyc-bg.jpeg"); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  background-color: #f9f7f7;
+}
+
+.navbar {
+  background-color: #112d4e;
+}
+
+footer {
+  background-color: #112d4e;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+}
+
+h1:before,
+h1:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+
+h1:before {
+  margin-right: 10px;
+}
+
+h1:after {
+  margin-left: 10px;
+}
+
+li {
+  list-style: upper-roman outside;
+}
