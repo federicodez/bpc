@@ -19,15 +19,22 @@ export default function Procedures() {
           suitable and personalized care.
         </p>
       </div>
-
       <section>
         <div className="row">
-          <div className="column">
+          <div className="col">
             <div className="card">
-              <div className="cover epidural">
-                <h1>Epidural Steroid Injection</h1>
-                <div className="card-back epidural">
-                  <a href="#">
+              <div className="card-inner">
+                <div className="card-front">
+                  <h2>
+                    Epidural
+                    <br />
+                    Steroid
+                    <br />
+                    Injection
+                  </h2>
+                </div>
+                <div className="card-back">
+                  <p>
                     This injection procedure is conducted to alleviate neck,
                     shoulder, and arm pain resulting from nerve root compression
                     in the cervical spine. Various conditions, such as spinal
@@ -37,110 +44,140 @@ export default function Procedures() {
                     associated with these conditions. Patients can typically
                     expect to experience relief within 3-7 days after the
                     procedure.
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="column">
-              <div className="card">
-                <div className="cover trigger">
-                  <h1>Trigger Point Injection</h1>
-                  <div className="card-back trigger">
-                    <a href="#">
-                      This outpatient procedure is specifically intended to
-                      reduce or alleviate pain caused by small tender knots that
-                      develop in the muscles of the neck and back. The process
-                      is quick, usually taking only a few minutes, and it is
-                      performed under local anesthesia. A small needle is
-                      carefully inserted into the knots and injected with a
-                      combination of local anesthetic and steroid medication.
-                      The treatment is designed to provide nearly instant
-                      relief, and its effectiveness can last from several hours
-                      to weeks, depending on the use of steroids. This allows
-                      patients to have a window of relief during which they can
-                      engage in exercises and stretching routines to help ease
-                      the tension and discomfort caused by those muscle knots.
-                    </a>
-                  </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-inner">
+            <div className="card-front">
+              <h2>
+                Trigger
+                <br />
+                Point
+                <br />
+                Injection
+              </h2>
+            </div>
+            <div className="card-back">
+              <p>
+                This outpatient procedure is specifically intended to reduce or
+                alleviate pain caused by small tender knots that develop in the
+                muscles of the neck and back. The process is quick, usually
+                taking only a few minutes, and it is performed under local
+                anesthesia. A small needle is carefully inserted into the knots
+                and injected with a combination of local anesthetic and steroid
+                medication. The treatment is designed to provide nearly instant
+                relief, and its effectiveness can last from several hours to
+                weeks, depending on the use of steroids. This allows patients to
+                have a window of relief during which they can engage in
+                exercises and stretching routines to help ease the tension and
+                discomfort caused by those muscle knots.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <h2>
+                    Medial
+                    <br />
+                    Branch
+                    <br />
+                    Block
+                  </h2>
+                </div>
+                <div className="card-back">
+                  <p>
+                    This diagnostic procedure serves the purposes of identifying
+                    a painful facet joint that might benefit from a
+                    radiofrequency ablation. The facet joints in the spine allow
+                    for bending, twisting, and flexing movements. If these
+                    joints become arthritic or enlarged, they can cause pain.
+                    Similar to a facet injection, a small needle is precisely
+                    placed near the medial branch nerve with the guidance of
+                    x-ray imaging. A small amount of local anesthetic is then
+                    administered to numb the nerve. Following the injection,
+                    patients are encouraged to resume their regular activities
+                    and monitor their pain relief over the next 30 minutes to 2
+                    hours. If the patient experiences significant relief from
+                    the pain, they may be considered a suitable candidate for
+                    the radiofrequency ablation procedure.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="column">
-              <div className="card">
-                <div className="cover medial">
-                  <h1>Medial Branch Block</h1>
-                  <div className="card-back medial">
-                    <a href="#">
-                      This diagnostic procedure serves the purposes of
-                      identifying a painful facet joint that might benefit from
-                      a radiofrequency ablation. The facet joints in the spine
-                      allow for bending, twisting, and flexing movements. If
-                      these joints become arthritic or enlarged, they can cause
-                      pain. Similar to a facet injection, a small needle is
-                      precisely placed near the medial branch nerve with the
-                      guidance of x-ray imaging. A small amount of local
-                      anesthetic is then administered to numb the nerve.
-                      Following the injection, patients are encouraged to resume
-                      their regular activities and monitor their pain relief
-                      over the next 30 minutes to 2 hours. If the patient
-                      experiences significant relief from the pain, they may be
-                      considered a suitable candidate for the radiofrequency
-                      ablation procedure.
-                    </a>
-                  </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <h2>
+                    Radiofrequency
+                    <br />
+                    Ablation
+                  </h2>
+                </div>
+                <div className="card-back">
+                  <p>
+                    This is a minimally invasive procedure known as a
+                    radiofrequency ablation or rhizotomy. The primary goal of
+                    this procedure is to reduce or eliminate the pain caused by
+                    damaged facet joints by disrupting the sensory nerves
+                    responsible for carrying pain signals. Similar to facet
+                    injections, a specialized needle is guided under x-ray to
+                    the junction where the medial branch nerve is typically
+                    located. The positioning of the needle is carefully tested
+                    to ensure accuracy. Once confirmed, the nerve is numbed and
+                    then heated for 90-120 seconds, effectively disrupting its
+                    pain signaling. Optimal pain relief is usually achieved
+                    within 2-4 weeks following the procedure. Radiofrequency
+                    ablation can be performed under local anesthesia or
+                    sedation, depending on the patient's preference and needs.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="column">
-              <div className="card">
-                <div className="cover radio">
-                  <h1>Radiofrequency Ablation</h1>
-                  <div className="card-back radio">
-                    <a href="#">
-                      This is a minimally invasive procedure known as a
-                      radiofrequency ablation or rhizotomy. The primary goal of
-                      this procedure is to reduce or eliminate the pain caused
-                      by damaged facet joints by disrupting the sensory nerves
-                      responsible for carrying pain signals. Similar to facet
-                      injections, a specialized needle is guided under x-ray to
-                      the junction where the medial branch nerve is typically
-                      located. The positioning of the needle is carefully tested
-                      to ensure accuracy. Once confirmed, the nerve is numbed
-                      and then heated for 90-120 seconds, effectively disrupting
-                      its pain signaling. Optimal pain relief is usually
-                      achieved within 2-4 weeks following the procedure.
-                      Radiofrequency ablation can be performed under local
-                      anesthesia or sedation, depending on the patient's
-                      preference and needs.
-                    </a>
-                  </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <h2>
+                    Sacroiliac
+                    <br />
+                    Joint
+                    <br />
+                    Injection
+                  </h2>
                 </div>
-              </div>
-            </div>
-            <div className="column">
-              <div className="card">
-                <div className="cover joint">
-                  <h1>Sacroiliac Joint Injection</h1>
-                  <div className="card-back joint">
-                    <a href="#">
-                      Patients experiencing lower back or buttocks pain can find
-                      relief through sacroiliac joint injections. The sacroiliac
-                      joint (SIJ) is the area where the spine and hip come
-                      together to form a joint space. Inflammation in this area
-                      can lead to pain resulting from arthritis, trauma, or
-                      various diseases. During the procedure, the patient lies
-                      on their stomach with a comfortable pillow for support.
-                      Under the guidance of fluoroscopy (x-ray), a small needle
-                      is carefully directed into the joint. After confirming the
-                      needle's position with a contrast dye, a mixture of local
-                      anesthetic and steroid medication is injected in and
-                      around the joint. Typically, patients experience relief
-                      within 1-3 days, and optimal pain relief is felt within
-                      5-14 days after the injection. This procedure can provide
-                      significant relief to those suffering form sacroiliac
-                      joint-related pain.
-                    </a>
-                  </div>
+                <div className="card-back">
+                  <p>
+                    Patients experiencing lower back or buttocks pain can find
+                    relief through sacroiliac joint injections. The sacroiliac
+                    joint (SIJ) is the area where the spine and hip come
+                    together to form a joint space. Inflammation in this area
+                    can lead to pain resulting from arthritis, trauma, or
+                    various diseases. During the procedure, the patient lies on
+                    their stomach with a comfortable pillow for support. Under
+                    the guidance of fluoroscopy (x-ray), a small needle is
+                    carefully directed into the joint. After confirming the
+                    needle's position with a contrast dye, a mixture of local
+                    anesthetic and steroid medication is injected in and around
+                    the joint. Typically, patients experience relief within 1-3
+                    days, and optimal pain relief is felt within 5-14 days after
+                    the injection. This procedure can provide significant relief
+                    to those suffering form sacroiliac joint-related pain.
+                  </p>
                 </div>
               </div>
             </div>
