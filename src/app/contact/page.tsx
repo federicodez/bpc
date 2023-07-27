@@ -1,7 +1,11 @@
-import Navbar from "../navbar";
 import { prisma } from "@/db";
 import { redirect } from "next/navigation";
-import Map from "@/components/Map";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("../../components/Map"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 async function submitContact(data: FormData) {
   "use server";
@@ -33,12 +37,12 @@ async function submitContact(data: FormData) {
   redirect("/");
 }
 
-export default function Page() {
+export default function ContactUs() {
   return (
     <>
-      <h1 className="text-2xl text-center m-4">Contact Us</h1>
+      <h1 className="text-2xl text-center py-40">Contact Us</h1>
       <form action={submitContact}>
-        <div className="grid gap-6 mb-6 md:grid-cols-2">
+        <div className="grid gap-6 mx-4 mb-6 md:grid-cols-2">
           <div>
             <label
               htmlFor="firstName"
@@ -105,7 +109,7 @@ export default function Page() {
             />
           </div>
         </div>
-        <div className="mb-6">
+        <div className="mb-6 mx-4">
           <label
             htmlFor="message"
             className="block mb-2 text-sm font-medium text-gray-900 light:text-black"
@@ -122,12 +126,14 @@ export default function Page() {
         </div>
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white m-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
         </button>
       </form>
-      <Map />
+      <div className="container map mx-auto">
+        <Map />
+      </div>
     </>
   );
 }
