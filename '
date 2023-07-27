@@ -1,0 +1,88 @@
+import { prisma } from "@/db";
+import Image from "next/image";
+import profilePic from "./images/profilePic.jpg";
+
+export default async function Home() {
+  // const patients = await prisma.patient.findMany();
+  return (
+    <>
+      <div className="container mx-auto p-4">
+        <p className="ml-4 p-4">
+          Welcome to Bowen Pain Center. Our mission is to deliver top-notch,
+          innovative, and comprehensive pain treatments, ensuring your overall
+          well-being is prioritized.
+        </p>
+        <p className="ml-4 p-4">
+          Our team consists of specialty-trained and board-certified pain
+          physicians and staff who are dedicated to treating every patient like
+          family. We take pride in addressing all concerns with honesty,
+          compassion, and efficiency.
+        </p>
+        <p className="ml-4 p-4">
+          We invite you to browse through our website, reach out to our office,
+          and have a conversation with our staff about how we can assist you in
+          enhancing your quality of life. At Bowen Pain Center, we understand
+          that pain is a personal experience, and we are commiteed to helping
+          you through it.
+        </p>
+        <h1 className="text-center text-2xl font-bold">Mission Statement</h1>
+        <p className="ml-4 p-4">
+          At Bowen Pain Center, our mission is to create a comprehensive
+          experience that caters to our patients' needs, delivering the highest
+          standard of pain and wellness care possible.
+        </p>
+        <p className="ml-4 p-4">
+          <strong>At Bowen Pain Center, pain is personal.</strong>
+        </p>
+        <h1 className="text-center text-2xl font-bold">Vision</h1>
+        <p className="ml-4 p-4">
+          Our vision is to establish ourselves as the top pain provider service
+          in the region. We will accomplish our goal by operating with
+          compassion, honesty, and a sense of family values so that our patients
+          feel at home when allowing us to treat their illnesses.
+        </p>
+        <p className="ml-4 p-4">
+          We seek to offer a wide variety of treatment options to better
+          optimize our patients' pain and physical/mental state.
+        </p>
+        <h1 className="text-center text-2xl my-4 font-bold">
+          GET TO KNOW YOUR MD
+        </h1>
+        <div className="grid mb-3 grid-cols-3">
+          <Image className="image" src={profilePic} alt="profile picture" />
+          <div className="col-span-2">
+            <p className="font-bold">Meet Dr. Alexander Bowen</p>
+            <p className="my-4">
+              Dr. Bowen is a board certified attending Anesthesiologist and
+              Interventional Pain Medicine Physician in the Metro New York City
+              Area.
+            </p>
+            <p className="my-4">
+              Dr. Bowen attended Louisiana State University School of Medicine
+              and completed his residecy at the University of Miami/ Jackson
+              Memorial Hospital Health System in Miami, Florida. He was
+              fellowship trained in interventional pain medicine at Columbia
+              University. After finishing his fellowship, he began practicing
+              anesthesiology and pain medicine in the greater New York City
+              area.
+            </p>
+            <p className="my-4">
+              In his spare time, Dr. Bowen likes to play the guitar (his
+              specialty is "Twinkle, Twinkle, Little Star"), joggling, learning
+              french, and cooking.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="grid mb-6 md:grid-cols-3">
+        <p className="mx-auto my-3">Tel: (929) 334-4500 Fax: (877) 286-4105</p>
+        <div className="block">
+          <p className="ml-4 text-center">68-38 Yellowstone Blvd, Suite BB1</p>
+          <p className="text-center">Forest Hills, NY 11375</p>
+        </div>
+        <p className="mx-auto my-3">Bowen.PainCenter@gmail.com</p>
+      </div>
+      <footer className="text-center">@ 2020 Bowen Pain Center</footer>
+    </>
+  );
+}
