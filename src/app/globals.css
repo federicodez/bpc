@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /************Images***************/
-.image {
+.profile-image {
   width: 100%;
   height: 400px;
   object-fit: contain;
@@ -66,7 +66,7 @@ section .row {
 .card {
   background-color: transparent;
   width: 400px;
-  height: 300px;
+  height: 500px;
   margin: 10px 0;
   transition: ease all 2.3s;
   border: 4px solid #f1f1f1;
