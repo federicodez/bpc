@@ -1,12 +1,13 @@
-import { prisma } from "@/db";
 import Image from "next/image";
 import profilePic from "./images/profilePic.jpg";
+import operation from "./images/alex-op3.jpeg";
 
 export default async function Home() {
   // const patients = await prisma.patient.findMany();
   return (
     <>
-      <div className="container mx-auto py-40">
+      <Image className="py-20" src={operation} alt="operation picture" />
+      <div className="container mx-auto md:py-4">
         <p className="ml-4 p-4">
           Welcome to Bowen Pain Center. Our mission is to deliver top-notch,
           innovative, and comprehensive pain treatments, ensuring your overall
@@ -49,7 +50,11 @@ export default async function Home() {
           GET TO KNOW YOUR MD
         </h1>
         <div className="grid text-center mb-3 grid-cols-1 md:grid-cols-3">
-          <Image className="image" src={profilePic} alt="profile picture" />
+          <Image
+            className="profile-image"
+            src={profilePic}
+            alt="profile picture"
+          />
           <div className="col-span-2">
             <p className="font-bold">Meet Dr. Alexander Bowen</p>
             <p className="my-4">
@@ -76,8 +81,8 @@ export default async function Home() {
       </div>
       <div className="grid mb-6 md:grid-cols-3">
         <div className="block">
-          <p className="ml-4 text-center md:my-3">Tel: (929) 334-4500</p>
-          <p className="ml-4 text-center md:my-3">Fax: (877) 286-4105</p>
+          <p className="ml-4 text-center">Tel: (929) 334-4500</p>
+          <p className="ml-4 text-center">Fax: (877) 286-4105</p>
         </div>
         <div className="block">
           <p className="ml-4 text-center">68-38 Yellowstone Blvd, Suite BB1</p>
