@@ -13,6 +13,11 @@
   height: 400px;
   object-fit: contain;
 }
+.procedure-image {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
 
 /**********Colors************/
 body {
@@ -54,21 +59,21 @@ footer {
 }
 
 /************card transformation************/
-section {
-  display: inline-block;
-  position: absolute;
-  top: 270%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-section .row {
-  display: inline-block;
-}
-.col {
-  display: inline-block;
-  margin: 20px;
-}
+/* section { */
+/*   display: inline-block; */
+/*   position: absolute; */
+/*   top: 270%; */
+/*   left: 50%; */
+/*   margin-right: -50%; */
+/*   transform: translate(-50%, -50%); */
+/* } */
+/* section .row { */
+/*   display: inline-block; */
+/* } */
+/* .col { */
+/*   display: inline-block; */
+/*   margin: 20px; */
+/* } */
 .card {
   background-color: transparent;
   width: 400px;
@@ -117,18 +122,18 @@ section .row {
 /*********** Breakpoints ************/
 
 @media screen and (min-width: 990px) {
-  section {
-    top: 110%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
+  /* section { */
+  /*   top: 110%; */
+  /*   margin-right: -50%; */
+  /*   transform: translate(-50%, -50%); */
+  /* } */
 }
 @media screen and (min-width: 768px) {
-  section {
-    top: 250%;
-    left: 65%;
-    justify-items: center;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
+  /* section { */
+  /*   top: 250%; */
+  /*   left: 65%; */
+  /*   justify-items: center; */
+  /*   margin-right: -50%; */
+  /*   transform: translate(-50%, -50%); */
+  /* } */
 }
