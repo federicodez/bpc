@@ -6,7 +6,12 @@ export default async function Home() {
   // const patients = await prisma.patient.findMany();
   return (
     <>
-      <Image className="py-20" src={operation} alt="operation picture" />
+      <Image
+        className="operation py-20"
+        src={operation}
+        priority={true}
+        alt="operation picture"
+      />
       <div className="container mx-auto md:py-4">
         <p className="ml-4 p-4">
           Welcome to Bowen Pain Center. Our mission is to deliver top-notch,
@@ -26,7 +31,9 @@ export default async function Home() {
           that pain is a personal experience, and we are commiteed to helping
           you through it.
         </p>
-        <h1 className="text-center text-2xl font-bold">Mission Statement</h1>
+        <h1 className="linethrough text-center text-2xl font-bold">
+          Mission Statement
+        </h1>
         <p className="ml-4 p-4">
           At Bowen Pain Center, our mission is to create a comprehensive
           experience that caters to our patients' needs, delivering the highest
@@ -35,7 +42,7 @@ export default async function Home() {
         <p className="ml-4 p-4">
           <strong>At Bowen Pain Center, pain is personal.</strong>
         </p>
-        <h1 className="text-center text-2xl font-bold">Vision</h1>
+        <h1 className="linethrough text-center text-2xl font-bold">Vision</h1>
         <p className="ml-4 p-4">
           Our vision is to establish ourselves as the top pain provider service
           in the region. We will accomplish our goal by operating with
@@ -46,7 +53,7 @@ export default async function Home() {
           We seek to offer a wide variety of treatment options to better
           optimize our patients' pain and physical/mental state.
         </p>
-        <h1 className="text-center text-2xl my-4 font-bold">
+        <h1 className="linethrough text-center text-2xl my-4 font-bold">
           GET TO KNOW YOUR MD
         </h1>
         <div className="grid text-center mb-3 grid-cols-1 md:grid-cols-3">
