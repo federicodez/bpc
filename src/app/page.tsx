@@ -7,24 +7,24 @@ export default async function Home() {
   return (
     <>
       <Image
-        className="operation py-20"
+        className="operation pt-20 md:object-center"
         src={operation}
         priority={true}
         alt="operation picture"
       />
-      <div className="container mx-auto md:py-4">
-        <p className="ml-4 p-4">
+      <div className="container mx-auto">
+        <p className="m-4">
           Welcome to Bowen Pain Center. Our mission is to deliver top-notch,
           innovative, and comprehensive pain treatments, ensuring your overall
           well-being is prioritized.
         </p>
-        <p className="ml-4 p-4">
+        <p className="m-4">
           Our team consists of specialty-trained and board-certified pain
           physicians and staff who are dedicated to treating every patient like
           family. We take pride in addressing all concerns with honesty,
           compassion, and efficiency.
         </p>
-        <p className="ml-4 p-4">
+        <p className="m-4">
           We invite you to browse through our website, reach out to our office,
           and have a conversation with our staff about how we can assist you in
           enhancing your quality of life. At Bowen Pain Center, we understand
@@ -34,42 +34,42 @@ export default async function Home() {
         <h1 className="linethrough text-center text-2xl font-bold">
           Mission Statement
         </h1>
-        <p className="ml-4 p-4">
+        <p className="m-4">
           At Bowen Pain Center, our mission is to create a comprehensive
           experience that caters to our patients' needs, delivering the highest
           standard of pain and wellness care possible.
         </p>
-        <p className="ml-4 p-4">
+        <p className="m-4">
           <strong>At Bowen Pain Center, pain is personal.</strong>
         </p>
         <h1 className="linethrough text-center text-2xl font-bold">Vision</h1>
-        <p className="ml-4 p-4">
+        <p className="m-4">
           Our vision is to establish ourselves as the top pain provider service
           in the region. We will accomplish our goal by operating with
           compassion, honesty, and a sense of family values so that our patients
           feel at home when allowing us to treat their illnesses.
         </p>
-        <p className="ml-4 p-4">
+        <p className="m-4">
           We seek to offer a wide variety of treatment options to better
           optimize our patients' pain and physical/mental state.
         </p>
         <h1 className="linethrough text-center text-2xl my-4 font-bold">
           GET TO KNOW YOUR MD
         </h1>
-        <div className="grid text-center mb-3 grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           <Image
-            className="profile-image"
+            className="profile-image object-contain md:object-right"
             src={profilePic}
             alt="profile picture"
           />
-          <div className="col-span-2">
+          <div className="text-center m-4 md:col-span-2 md:text-left">
             <p className="font-bold">Meet Dr. Alexander Bowen</p>
-            <p className="my-4">
+            <p className="mt-4">
               Dr. Bowen is a board certified attending Anesthesiologist and
               Interventional Pain Medicine Physician in the Metro New York City
               Area.
             </p>
-            <p className="my-4">
+            <p className="mt-4">
               Dr. Bowen attended Louisiana State University School of Medicine
               and completed his residecy at the University of Miami/ Jackson
               Memorial Hospital Health System in Miami, Florida. He was
@@ -78,7 +78,7 @@ export default async function Home() {
               anesthesiology and pain medicine in the greater New York City
               area.
             </p>
-            <p className="my-4">
+            <p className="mt-4">
               In his spare time, Dr. Bowen likes to play the guitar (his
               specialty is "Twinkle, Twinkle, Little Star"), joggling, learning
               french, and cooking.
@@ -86,7 +86,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="grid mb-6 md:grid-cols-3">
+      <div className="grid mt-6 mb-6 md:grid-cols-3">
         <div className="block">
           <p className="ml-4 text-center">Tel: (929) 334-4500</p>
           <p className="ml-4 text-center">Fax: (877) 286-4105</p>
