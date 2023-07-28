@@ -1,8 +1,11 @@
+import Image from "next/image";
+import operation from "../images/alex-op2.jpeg";
+
 export default function Procedures() {
   return (
     <>
       <div className="container mx-auto py-40">
-        <h1 className="text-2xl text-center m-4">Our Procedures</h1>
+        <h1 className="linethrough text-2xl text-center m-4">Our Procedures</h1>
         <p className="ml-4 p-4">
           At Bowen Pain Center, our unwavering dedication lies in assisting
           patients through a comprehensive interventional pain management
@@ -25,13 +28,13 @@ export default function Procedures() {
             <div className="card">
               <div className="card-inner">
                 <div className="card-front">
-                  <h2>
+                  <h1>
                     Epidural
                     <br />
                     Steroid
                     <br />
                     Injection
-                  </h2>
+                  </h1>
                 </div>
                 <div className="card-back">
                   <p>
@@ -49,48 +52,49 @@ export default function Procedures() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="card">
-          <div className="card-inner">
-            <div className="card-front">
-              <h2>
-                Trigger
-                <br />
-                Point
-                <br />
-                Injection
-              </h2>
-            </div>
-            <div className="card-back">
-              <p>
-                This outpatient procedure is specifically intended to reduce or
-                alleviate pain caused by small tender knots that develop in the
-                muscles of the neck and back. The process is quick, usually
-                taking only a few minutes, and it is performed under local
-                anesthesia. A small needle is carefully inserted into the knots
-                and injected with a combination of local anesthetic and steroid
-                medication. The treatment is designed to provide nearly instant
-                relief, and its effectiveness can last from several hours to
-                weeks, depending on the use of steroids. This allows patients to
-                have a window of relief during which they can engage in
-                exercises and stretching routines to help ease the tension and
-                discomfort caused by those muscle knots.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="row">
           <div className="col">
             <div className="card">
               <div className="card-inner">
                 <div className="card-front">
-                  <h2>
+                  <h1>
+                    Trigger
+                    <br />
+                    Point
+                    <br />
+                    Injection
+                  </h1>
+                </div>
+                <div className="card-back">
+                  <p>
+                    This outpatient procedure is specifically intended to reduce
+                    or alleviate pain caused by small tender knots that develop
+                    in the muscles of the neck and back. The process is quick,
+                    usually taking only a few minutes, and it is performed under
+                    local anesthesia. A small needle is carefully inserted into
+                    the knots and injected with a combination of local
+                    anesthetic and steroid medication. The treatment is designed
+                    to provide nearly instant relief, and its effectiveness can
+                    last from several hours to weeks, depending on the use of
+                    steroids. This allows patients to have a window of relief
+                    during which they can engage in exercises and stretching
+                    routines to help ease the tension and discomfort caused by
+                    those muscle knots.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <h1>
                     Medial
                     <br />
                     Branch
                     <br />
                     Block
-                  </h2>
+                  </h1>
                 </div>
                 <div className="card-back">
                   <p>
@@ -113,17 +117,15 @@ export default function Procedures() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row">
           <div className="col">
             <div className="card">
               <div className="card-inner">
                 <div className="card-front">
-                  <h2>
+                  <h1>
                     Radiofrequency
                     <br />
                     Ablation
-                  </h2>
+                  </h1>
                 </div>
                 <div className="card-back">
                   <p>
@@ -146,19 +148,17 @@ export default function Procedures() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row">
           <div className="col">
             <div className="card">
               <div className="card-inner">
                 <div className="card-front">
-                  <h2>
+                  <h1>
                     Sacroiliac
                     <br />
                     Joint
                     <br />
                     Injection
-                  </h2>
+                  </h1>
                 </div>
                 <div className="card-back">
                   <p>

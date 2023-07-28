@@ -37,7 +37,7 @@ export default function MyComponent() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={clinic}
-      zoom={18}
+      zoom={14}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >

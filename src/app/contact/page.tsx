@@ -40,7 +40,7 @@ async function submitContact(data: FormData) {
 export default function ContactUs() {
   return (
     <>
-      <h1 className="text-2xl text-center py-40">Contact Us</h1>
+      <h1 className="text-2xl text-center py-20">Contact Us</h1>
       <form action={submitContact}>
         <div className="grid gap-6 mx-4 mb-6 md:grid-cols-2">
           <div>
@@ -131,7 +131,7 @@ export default function ContactUs() {
           Submit
         </button>
       </form>
-      <div className="container map mx-auto">
+      <div className="container map mx-auto py-40">
         <Map />
       </div>
     </>
