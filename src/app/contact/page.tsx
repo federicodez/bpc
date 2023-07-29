@@ -40,7 +40,7 @@ async function submitContact(data: FormData) {
 export default function ContactUs() {
   return (
     <>
-      <h1 className="linethrough text-2xl text-center pt-40 pb-4">
+      <h1 className="linethrough text-2xl text-center pt-20 pb-4">
         Contact Us
       </h1>
       <form action={submitContact}>
@@ -133,7 +133,18 @@ export default function ContactUs() {
           Submit
         </button>
       </form>
-      <div className="container map mx-auto py-40">
+      <div className="grid mt-6 md:grid-cols-3">
+        <p className="mx-auto my-3">Bowen.PainCenter@gmail.com</p>
+        <div className="block">
+          <p className="ml-4 text-center">68-38 Yellowstone Blvd, Suite BB1</p>
+          <p className="text-center">Forest Hills, NY 11375</p>
+        </div>
+        <div className="block">
+          <p className="ml-4 text-center">Tel: (929) 334-4500</p>
+          <p className="ml-4 text-center">Fax: (877) 286-4105</p>
+        </div>
+      </div>
+      <div className="container map mx-auto py-10">
         <Map />
       </div>
       <footer className="text-center">@ 2020 Bowen Pain Center</footer>
