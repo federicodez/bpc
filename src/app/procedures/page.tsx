@@ -4,11 +4,11 @@ import operation from "../images/alex-op2.jpeg";
 export default function Procedures() {
   return (
     <>
-      <div className="container mx-auto pt-40">
+      <div className="container mx-auto pt-20">
         <h1 className="linethrough text-2xl text-center">Our Procedures</h1>
         <div className="grid grid-cols-1 md:grid-cols-3">
           <Image
-            className="procedure-image"
+            className="procedure-image object-contain"
             src={operation}
             alt="procedure image"
           />

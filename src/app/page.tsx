@@ -1,13 +1,14 @@
 import Image from "next/image";
 import profilePic from "./images/profilePic.jpg";
 import operation from "./images/alex-op3.jpeg";
+import photoShopped from "./images/alex-photoshop.jpeg";
 
 export default async function Home() {
   // const patients = await prisma.patient.findMany();
   return (
     <>
       <Image
-        className="operation pt-20 md:object-center"
+        className="operation pt-10 object-center"
         src={operation}
         priority={true}
         alt="operation picture"
@@ -56,10 +57,10 @@ export default async function Home() {
         <h1 className="linethrough text-center text-2xl my-4 font-bold">
           GET TO KNOW YOUR MD
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid mb-6 grid-cols-1 md:grid-cols-3">
           <Image
             className="profile-image object-contain md:object-right"
-            src={profilePic}
+            src={photoShopped}
             alt="profile picture"
           />
           <div className="text-center m-4 md:col-span-2 md:text-left">
@@ -85,17 +86,6 @@ export default async function Home() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="grid mt-6 mb-6 md:grid-cols-3">
-        <div className="block">
-          <p className="ml-4 text-center">Tel: (929) 334-4500</p>
-          <p className="ml-4 text-center">Fax: (877) 286-4105</p>
-        </div>
-        <div className="block">
-          <p className="ml-4 text-center">68-38 Yellowstone Blvd, Suite BB1</p>
-          <p className="text-center">Forest Hills, NY 11375</p>
-        </div>
-        <p className="mx-auto my-3">Bowen.PainCenter@gmail.com</p>
       </div>
       <footer className="text-center">@ 2020 Bowen Pain Center</footer>
     </>
