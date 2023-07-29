@@ -37,8 +37,8 @@ export default async function Home() {
         </h1>
         <p className="m-4">
           At Bowen Pain Center, our mission is to create a comprehensive
-          experience that caters to our patients' needs, delivering the highest
-          standard of pain and wellness care possible.
+          experience that caters to our patients&apos; needs, delivering the
+          highest standard of pain and wellness care possible.
         </p>
         <p className="m-4">
           <strong>At Bowen Pain Center, pain is personal.</strong>
@@ -52,7 +52,7 @@ export default async function Home() {
         </p>
         <p className="m-4">
           We seek to offer a wide variety of treatment options to better
-          optimize our patients' pain and physical/mental state.
+          optimize our patients&apos; pain and physical/mental state.
         </p>
         <h1 className="linethrough text-center text-2xl my-4 font-bold">
           GET TO KNOW YOUR MD
@@ -81,8 +81,8 @@ export default async function Home() {
             </p>
             <p className="mt-4">
               In his spare time, Dr. Bowen likes to play the guitar (his
-              specialty is "Twinkle, Twinkle, Little Star"), joggling, learning
-              french, and cooking.
+              specialty is &quot;Twinkle, Twinkle, Little Star&quot;), joggling,
+              learning french, and cooking.
             </p>
           </div>
         </div>

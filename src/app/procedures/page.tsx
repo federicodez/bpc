@@ -139,7 +139,7 @@ export default function Procedures() {
                   seconds, effectively disrupting its pain signaling. Optimal
                   pain relief is usually achieved within 2-4 weeks following the
                   procedure. Radiofrequency ablation can be performed under
-                  local anesthesia or sedation, depending on the patient's
+                  local anesthesia or sedation, depending on the patient&apos;s
                   preference and needs.
                 </p>
               </div>
@@ -166,7 +166,7 @@ export default function Procedures() {
                   During the procedure, the patient lies on their stomach with a
                   comfortable pillow for support. Under the guidance of
                   fluoroscopy (x-ray), a small needle is carefully directed into
-                  the joint. After confirming the needle's position with a
+                  the joint. After confirming the needle&apos;s position with a
                   contrast dye, a mixture of local anesthetic and steroid
                   medication is injected in and around the joint. Typically,
                   patients experience relief within 1-3 days, and optimal pain
