@@ -1,6 +1,7 @@
 import { prisma } from "@/db";
 import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
+import { sendEmail } from "../../components/email";
 
 const Map = dynamic(() => import("../../components/Map"), {
   loading: () => <p>Loading...</p>,
@@ -33,6 +34,14 @@ async function submitContact(data: FormData) {
 
   await prisma.patient.create({
     data: { firstName, lastName, phone, email, message },
+  });
+  // const patients = await prisma.patient.findMany();
+  // console.log(patients);
+
+  await sendEmail({
+    to: "jfedericodes@gmail.com",
+    subject: "Bowen Pain Center New Patient",
+    text: `Name: ${firstName} ${lastName} Phone: ${phone} Email: ${email} Message: ${message}`,
   });
   redirect("/");
 }
@@ -144,9 +153,7 @@ export default function ContactUs() {
           <p className="ml-4 text-center">Fax: (877) 286-4105</p>
         </div>
       </div>
-      <div className="container map mx-auto py-10">
-        <Map />
-      </div>
+      <div className="container map mx-auto py-10"></div>
       <footer className="text-center">@ 2020 Bowen Pain Center</footer>
     </>
   );
