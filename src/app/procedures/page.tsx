@@ -32,11 +32,11 @@ export default function Procedures() {
             </p>
           </div>
         </div>
-        <div className="grid pt-10 gap-10 justify-center md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid py-20 gap-20 justify-center md:grid-cols-2 xl:grid-cols-3">
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1 className="subpixel-antialiased italic">
+                <h1 className="subpixel-antialiased italic bottom-32 left-20 text-5xl">
                   Epidural
                   <br />
                   Steroid
@@ -61,7 +61,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1 className="subpixel-antialiased italic">
+                <h1 className="subpixel-antialiased italic bottom-32 left-20 text-5xl">
                   Trigger
                   <br />
                   Point
@@ -90,7 +90,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1 className="subpixel-antialiased italic">
+                <h1 className="subpixel-antialiased italic bottom-32 left-24 text-5xl">
                   Medial
                   <br />
                   Branch
@@ -98,8 +98,8 @@ export default function Procedures() {
                   Block
                 </h1>
               </div>
-              <div className="card-back w-full h-full">
-                <p className="text-sm">
+              <div className="card-back w-full h-fit">
+                <p className="text-base">
                   This diagnostic procedure serves the purposes of identifying a
                   painful facet joint that might benefit from a radiofrequency
                   ablation. The facet joints in the spine allow for bending,
@@ -121,14 +121,16 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1 className="subpixel-antialiased italic">
-                  Radiofrequency
+                <h1 className="subpixel-antialiased italic bottom-32 left-16 text-5xl">
+                  Radio
+                  <br />
+                  Frequency
                   <br />
                   Ablation
                 </h1>
               </div>
-              <div className="card-back w-full h-full">
-                <p className="text-sm">
+              <div className="card-back w-full h-fit">
+                <p className="text-base">
                   This is a minimally invasive procedure known as a
                   radiofrequency ablation or rhizotomy. The primary goal of this
                   procedure is to reduce or eliminate the pain caused by damaged
@@ -150,7 +152,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1 className="subpixel-antialiased italic">
+                <h1 className="subpixel-antialiased italic bottom-32 left-16 text-5xl">
                   Sacroiliac
                   <br />
                   Joint
@@ -158,8 +160,8 @@ export default function Procedures() {
                   Injection
                 </h1>
               </div>
-              <div className="card-back w-full h-full">
-                <p className="text-sm">
+              <div className="card-back w-full h-fit">
+                <p className="text-base">
                   Patients experiencing lower back or buttocks pain can find
                   relief through sacroiliac joint injections. The sacroiliac
                   joint (SIJ) is the area where the spine and hip come together
@@ -181,7 +183,7 @@ export default function Procedures() {
           </div>
         </div>
       </div>
-      <footer className="text-center">@ 2020 Bowen Pain Center</footer>
+      <footer className=" text-center">@ 2020 Bowen Pain Center</footer>
     </>
   );
 }
