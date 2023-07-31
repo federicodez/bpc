@@ -4,7 +4,12 @@ import dynamic from "next/dynamic";
 import { sendEmail } from "../../components/email";
 
 const Map = dynamic(() => import("../../components/Map"), {
-  loading: () => <p>Loading...</p>,
+  loading: () => (
+    <button type="button" disabled>
+      <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>
+      Loading...
+    </button>
+  ),
   ssr: false,
 });
 
@@ -35,8 +40,6 @@ async function submitContact(data: FormData) {
   await prisma.patient.create({
     data: { firstName, lastName, phone, email, message },
   });
-  // const patients = await prisma.patient.findMany();
-  // console.log(patients);
 
   await sendEmail({
     to: "jfedericodes@gmail.com",
@@ -153,7 +156,9 @@ export default function ContactUs() {
           <p className="ml-4 text-center">Fax: (877) 286-4105</p>
         </div>
       </div>
-      <div className="container map mx-auto py-10"></div>
+      <div className="container map mx-auto py-10">
+        <Map />
+      </div>
       <footer className="text-center">@ 2020 Bowen Pain Center</footer>
     </>
   );
