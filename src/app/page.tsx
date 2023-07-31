@@ -1,7 +1,6 @@
 import Image from "next/image";
 import profilePic from "./images/profilePic.jpg";
 import operation from "./images/alex-op3.jpeg";
-import photoShopped from "./images/alex-photoshop.jpeg";
 
 export default async function Home() {
   // const patients = await prisma.patient.findMany();
@@ -60,7 +59,7 @@ export default async function Home() {
         <div className="grid mb-6 grid-cols-1 md:grid-cols-3">
           <Image
             className="profile-image object-contain md:object-right"
-            src={photoShopped}
+            src={profilePic}
             alt="profile picture"
           />
           <div className="text-center m-4 md:col-span-2 md:text-left">
