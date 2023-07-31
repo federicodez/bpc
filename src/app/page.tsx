@@ -3,7 +3,6 @@ import profilePic from "./images/profilePic.jpg";
 import operation from "./images/alex-op3.jpeg";
 
 export default async function Home() {
-  // const patients = await prisma.patient.findMany();
   return (
     <>
       <Image
@@ -31,7 +30,7 @@ export default async function Home() {
           that pain is a personal experience, and we are commiteed to helping
           you through it.
         </p>
-        <h1 className="linethrough text-center text-2xl font-bold">
+        <h1 className="linethrough m-10 text-center text-2xl font-bold">
           Mission Statement
         </h1>
         <p className="m-4">
@@ -42,7 +41,9 @@ export default async function Home() {
         <p className="m-4">
           <strong>At Bowen Pain Center, pain is personal.</strong>
         </p>
-        <h1 className="linethrough text-center text-2xl font-bold">Vision</h1>
+        <h1 className="linethrough m-10 text-center text-2xl font-bold">
+          Vision
+        </h1>
         <p className="m-4">
           Our vision is to establish ourselves as the top pain provider service
           in the region. We will accomplish our goal by operating with
@@ -53,10 +54,10 @@ export default async function Home() {
           We seek to offer a wide variety of treatment options to better
           optimize our patients&apos; pain and physical/mental state.
         </p>
-        <h1 className="linethrough text-center text-2xl my-4 font-bold">
+        <h1 className="linethrough m-10 text-center text-2xl my-4 font-bold">
           GET TO KNOW YOUR MD
         </h1>
-        <div className="grid mb-6 grid-cols-1 md:grid-cols-3">
+        <div className="grid m-10 grid-cols-1 md:grid-cols-3">
           <Image
             className="profile-image object-contain md:object-right"
             src={profilePic}

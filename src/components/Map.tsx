@@ -1,6 +1,5 @@
 "use client";
-import React, { useState, useEffect, useCallback } from "react";
-import "mapbox-gl/dist/mapbox-gl.css";
+import React, { useState, useCallback } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 
 const containerStyle = {
@@ -22,7 +21,6 @@ export default function MyComponent() {
   const [map, setMap] = useState(null);
 
   const onLoad = useCallback(function callback(map: any) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
     const bounds = new window.google.maps.LatLngBounds(clinic);
     map.fitBounds(bounds);
 
@@ -41,7 +39,6 @@ export default function MyComponent() {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {/* Child components, such as markers, info windows, etc. */}
       <MarkerF position={clinic} />
     </GoogleMap>
   ) : (

@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import Navbar from "../components/navbar";
@@ -18,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          src={`//maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}`}
-        ></script>
+        <Script
+          src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
+        ></Script>
       </head>
       <body className={`${poppins.className} ${inter.className}`}>
         <Navbar />
