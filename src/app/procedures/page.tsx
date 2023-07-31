@@ -4,8 +4,10 @@ import operation from "../images/alex-op2.jpeg";
 export default function Procedures() {
   return (
     <>
-      <div className="container mx-auto pt-20">
-        <h1 className="linethrough text-2xl text-center">Our Procedures</h1>
+      <div className="container m-auto pt-20">
+        <h1 className="linethrough m-10 text-2xl text-center">
+          Our Procedures
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-3">
           <Image
             className="procedure-image object-contain"
@@ -30,11 +32,11 @@ export default function Procedures() {
             </p>
           </div>
         </div>
-        <div className="grid justify-items-center md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid pt-10 gap-10 justify-center md:grid-cols-2 xl:grid-cols-3">
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1>
+                <h1 className="subpixel-antialiased italic">
                   Epidural
                   <br />
                   Steroid
@@ -43,7 +45,7 @@ export default function Procedures() {
                 </h1>
               </div>
               <div className="card-back w-full h-full">
-                <p className="text-sm">
+                <p className="text-base">
                   This injection procedure is conducted to alleviate neck,
                   shoulder, and arm pain resulting from nerve root compression
                   in the cervical spine. Various conditions, such as spinal
@@ -59,7 +61,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1>
+                <h1 className="subpixel-antialiased italic">
                   Trigger
                   <br />
                   Point
@@ -67,8 +69,8 @@ export default function Procedures() {
                   Injection
                 </h1>
               </div>
-              <div className="card-back w-full h-full">
-                <p className="text-sm">
+              <div className="card-back w-full h-fit">
+                <p className="text-base">
                   This outpatient procedure is specifically intended to reduce
                   or alleviate pain caused by small tender knots that develop in
                   the muscles of the neck and back. The process is quick,
@@ -88,7 +90,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1>
+                <h1 className="subpixel-antialiased italic">
                   Medial
                   <br />
                   Branch
@@ -119,7 +121,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1>
+                <h1 className="subpixel-antialiased italic">
                   Radiofrequency
                   <br />
                   Ablation
@@ -148,7 +150,7 @@ export default function Procedures() {
           <div className="card w-96 h-96">
             <div className="card-inner w-full h-full">
               <div className="card-front w-full h-full">
-                <h1>
+                <h1 className="subpixel-antialiased italic">
                   Sacroiliac
                   <br />
                   Joint
