@@ -5,7 +5,7 @@ export default function Procedures() {
   return (
     <>
       <div className="container m-auto pt-20 justify-center">
-        <h1 className="linethrough m-10 text-2xl text-center">
+        <h1 className="linethrough m-10 text-2xl text-center font-bold text-blue-800">
           OUR PROCEDURES
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-80">
@@ -14,7 +14,7 @@ export default function Procedures() {
             src={operation}
             alt="procedure image"
           />
-          <div className="">
+          <div>
             <p className="m-4">
               At Bowen Pain Center, our unwavering dedication lies in assisting
               patients through a comprehensive interventional pain management
