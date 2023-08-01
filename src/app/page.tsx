@@ -12,59 +12,61 @@ export default async function Home() {
         alt="operation picture"
       />
       <div className="container mx-auto">
-        <p className="m-4">
+        <p className="m-4 mx-10">
           Welcome to Bowen Pain Center. Our mission is to deliver top-notch,
           innovative, and comprehensive pain treatments, ensuring your overall
           well-being is prioritized.
         </p>
-        <p className="m-4">
+        <p className="m-4 mx-10">
           Our team consists of specialty-trained and board-certified pain
           physicians and staff who are dedicated to treating every patient like
           family. We take pride in addressing all concerns with honesty,
           compassion, and efficiency.
         </p>
-        <p className="m-4">
+        <p className="m-4 mx-10">
           We invite you to browse through our website, reach out to our office,
           and have a conversation with our staff about how we can assist you in
           enhancing your quality of life. At Bowen Pain Center, we understand
           that pain is a personal experience, and we are commiteed to helping
           you through it.
         </p>
-        <h1 className="linethrough m-10 text-center text-2xl font-bold">
-          Mission Statement
+        <h1 className="linethrough m-10 text-center text-2xl font-bold text-blue-800">
+          MISSION STATEMENT
         </h1>
-        <p className="m-4">
+        <p className="m-4 mx-10">
           At Bowen Pain Center, our mission is to create a comprehensive
           experience that caters to our patients&apos; needs, delivering the
           highest standard of pain and wellness care possible.
         </p>
-        <p className="m-4">
+        <p className="m-4 mx-10">
           <strong>At Bowen Pain Center, pain is personal.</strong>
         </p>
-        <h1 className="linethrough m-10 text-center text-2xl font-bold">
-          Vision
+        <h1 className="linethrough m-10 text-center text-2xl font-bold text-blue-800">
+          VISION
         </h1>
-        <p className="m-4">
+        <p className="m-4 mx-10">
           Our vision is to establish ourselves as the top pain provider service
           in the region. We will accomplish our goal by operating with
           compassion, honesty, and a sense of family values so that our patients
           feel at home when allowing us to treat their illnesses.
         </p>
-        <p className="m-4">
+        <p className="m-4 mx-10">
           We seek to offer a wide variety of treatment options to better
           optimize our patients&apos; pain and physical/mental state.
         </p>
-        <h1 className="linethrough m-10 text-center text-2xl my-4 font-bold">
+        <h1 className="linethrough m-10 text-center text-2xl my-4 font-bold text-blue-800">
           GET TO KNOW YOUR MD
         </h1>
-        <div className="grid m-10 grid-cols-1 md:grid-cols-3">
+        <div className="grid m-10 grid-cols-1 gap-4 md:grid-cols-2 lg:mx-80">
           <Image
-            className="profile-image object-contain md:object-right"
+            className="profile-image object-contain w-auto h-auto border-8 border-white drop-shadow-lg lg:w-96"
             src={profilePic}
             alt="profile picture"
           />
-          <div className="text-center m-4 md:col-span-2 md:text-left">
-            <p className="font-bold">Meet Dr. Alexander Bowen</p>
+          <div>
+            <h3 className="font-bold text-center md:text-left">
+              Meet Dr. Alexander Bowen
+            </h3>
             <p className="mt-4">
               Dr. Bowen is a board certified attending Anesthesiologist and
               Interventional Pain Medicine Physician in the Metro New York City
