@@ -81,7 +81,7 @@ export default async function Home() {
             </p>
             <p className="mt-4">
               In his spare time, Dr. Bowen likes to play the guitar (his
-              specialty is &quot;Twinkle, Twinkle, Little Star&quot;), joggling,
+              specialty is &quot;Twinkle, Twinkle, Little Star&quot;), juggling,
               learning french, and cooking.
             </p>
           </div>
