@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/************Images***************/
-.profile-image {
-  width: 100%;
-  height: 400px;
-}
-
 /***********Navbar***************/
 nav {
   z-index: 3;
