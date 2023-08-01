@@ -7,9 +7,10 @@
   width: 100%;
   height: 400px;
 }
-.procedure-image {
-  width: 100%;
-  height: 400px;
+
+/***********Navbar***************/
+nav {
+  z-index: 3;
 }
 
 /************Footer**************/
@@ -35,49 +36,4 @@ footer {
 }
 .linethrough:after {
   margin-left: 10px;
-}
-
-/************card transformation************/
-.card {
-  /* transition: ease all 2.3s; */
-  display: inline-block;
-}
-.card-inner {
-  /* position: relative; */
-  display: inline-block;
-  text-align: center;
-  transition: ease all 2.3s;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-.card-inner:hover {
-  transform: rotateY(180deg);
-}
-.card-front,
-.card-back {
-  border: 4px solid #f1f1f1;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-  transition: ease all 2.3s;
-  transform-style: preserve-3d;
-  position: absolute;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-.card-front {
-  font-weight: 600;
-  background-color: #30e7fd;
-  color: black;
-  transform-style: preserve-3d;
-  transition: ease all 2.3s;
-}
-.card .card-front h1 {
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: ease all 2.3s;
-  transform: translateZ(100px);
-}
-.card-back {
-  background-color: #112d4e;
-  color: white;
-  transform: rotateY(180deg);
 }
