@@ -20,18 +20,35 @@ export default function Navbar() {
                   onClick={() => setActive(!active)}
                   className="p-2 text-white rounded-md outline-none focus:border-white focus:border"
                 >
-                  <svg
-                    className="w-6 h-6 text-white"
-                    x-show="!showMenu"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
+                  {active ? (
+                    <svg
+                      className="w-6 h-6 text-white"
+                      viewBox="0 0 40 40"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={5}
+                      stroke="white"
+                      fill="transparent"
+                    >
+                      <path
+                        className="close-x"
+                        d="M 10,10 L 30,30 M 30,10 L 10,30"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-6 h-6 text-white"
+                      x-show="!showMenu"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  )}
                 </button>
               </div>
             </div>
@@ -42,18 +59,18 @@ export default function Navbar() {
                 active ? "p-12 md:p-0 block" : "hidden"
               }`}
             >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-gray-900 border-gray-100 md:hover:text-gray-100 md:hover:bg-transparent">
+              <ul className="h-screen md:h-auto justify-start md:flex">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center hover:bg-gray-900 md:hover:text-gray-100 md:hover:bg-transparent">
                   <Link href="/" onClick={() => setActive(!active)}>
                     Home
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-gray-900 border-gray-100 md:hover:text-gray-100 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center hover:bg-gray-900 md:hover:text-gray-100 md:hover:bg-transparent">
                   <Link href="/procedures" onClick={() => setActive(!active)}>
                     Procedures
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-gray-900 border-gray-100 md:hover:text-white md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center hover:bg-gray-900 md:hover:text-white md:hover:bg-transparent">
                   <Link href="/contact" onClick={() => setActive(!active)}>
                     Contact Us
                   </Link>
