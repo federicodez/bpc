@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
-import { sendEmail } from "../../components/email";
+import { sendEmail } from "@/components/email";
 
-const Map = dynamic(() => import("../../components/Map"), {
+const Map = dynamic(() => import("@/components/Map"), {
   loading: () => (
     <button type="button" disabled>
       <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>

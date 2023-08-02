@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+
   return (
     <div>
       <nav className="w-full bg-blue-950 fixed top-0 left-0 right-0 z-10">
@@ -11,7 +12,7 @@ export default function Navbar() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link href="/">
-                <h2 className="text-2xl text-white font-bold">
+                <h2 className="underline text-2xl text-white font-bold sm:no-underline sm:text-2xl sm:text-white sm:font-bold">
                   Bowen Pain Center
                 </h2>
               </Link>
@@ -56,21 +57,23 @@ export default function Navbar() {
           <div>
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                active ? "p-12 md:p-0 block" : "hidden"
+                active
+                  ? "overflow-hidden h-screen p-12 md:h-fit md:p-0 block"
+                  : "hidden"
               }`}
             >
-              <ul className="h-screen md:h-auto justify-start md:flex">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center hover:bg-gray-900 md:hover:text-gray-100 md:hover:bg-transparent">
+              <ul className="h-screen md:h-auto justify-center md:flex">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/" onClick={() => setActive(!active)}>
                     Home
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center hover:bg-gray-900 md:hover:text-gray-100 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/procedures" onClick={() => setActive(!active)}>
                     Procedures
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center hover:bg-gray-900 md:hover:text-white md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/contact" onClick={() => setActive(!active)}>
                     Contact Us
                   </Link>
