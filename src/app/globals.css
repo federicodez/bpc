@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 /***********Navbar***************/
-nav {
+.nav-open {
+  overflow: hidden;
+  height: 100vh;
   z-index: 3;
 }
 
