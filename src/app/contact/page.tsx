@@ -146,14 +146,14 @@ export default function ContactUs() {
         </button>
       </form>
       <div className="grid mt-6 md:grid-cols-3">
-        <p className="mx-auto my-3">Bowen.PainCenter@gmail.com</p>
+        <p className="text-center my-3">Bowen.PainCenter@gmail.com</p>
         <div className="block">
-          <p className="ml-4 text-center">68-38 Yellowstone Blvd, Suite BB1</p>
+          <p className="text-center">68-38 Yellowstone Blvd, Suite BB1</p>
           <p className="text-center">Forest Hills, NY 11375</p>
         </div>
         <div className="block">
-          <p className="ml-4 text-center">Tel: (929) 334-4500</p>
-          <p className="ml-4 text-center">Fax: (877) 286-4105</p>
+          <p className="text-center">Tel: (929) 334-4500</p>
+          <p className="text-center">Fax: (877) 286-4105</p>
         </div>
       </div>
       <div className="container map mx-auto py-10">
