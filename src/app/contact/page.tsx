@@ -1,4 +1,3 @@
-import { prisma } from "@/db";
 import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
 import { sendEmail } from "../../components/email";
@@ -36,10 +35,6 @@ async function submitContact(data: FormData) {
   if (typeof message !== "string" || message.length === 0) {
     throw new Error("Invalid Message");
   }
-
-  await prisma.patient.create({
-    data: { firstName, lastName, phone, email, message },
-  });
 
   await sendEmail({
     to: "jfedericodes@gmail.com",
