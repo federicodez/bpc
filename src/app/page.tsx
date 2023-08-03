@@ -89,7 +89,6 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <footer className="text-center">@ 2020 Bowen Pain Center</footer>
     </>
   );
 }

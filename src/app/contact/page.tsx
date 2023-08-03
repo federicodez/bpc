@@ -154,7 +154,6 @@ export default function ContactUs() {
       <div className="container map mx-auto py-10">
         <Map />
       </div>
-      <footer className="text-center">@ 2020 Bowen Pain Center</footer>
     </>
   );
 }

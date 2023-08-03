@@ -34,7 +34,7 @@ export default function Procedures() {
         </div>
         <div className="grid py-20 gap-20 md:grid-cols-2 xl:grid-cols-3">
           <div className="card border-4 p-4">
-            <h1 className="subpixel-antialiased italic text-2xl text-center">
+            <h1 className="subpixel-antialiased italic text-2xl">
               Epidural Steroid Injection
             </h1>
             <p className="text-base">
@@ -49,7 +49,7 @@ export default function Procedures() {
             </p>
           </div>
           <div className="card border-4 p-4">
-            <h1 className="subpixel-antialiased italic text-2xl text-center">
+            <h1 className="subpixel-antialiased italic text-2xl">
               Trigger Point Injection
             </h1>
             <p className="text-base">
@@ -68,7 +68,7 @@ export default function Procedures() {
             </p>
           </div>
           <div className="card border-4 p-4">
-            <h1 className="subpixel-antialiased italic text-2xl text-center">
+            <h1 className="subpixel-antialiased italic text-2xl">
               Medial Branch Block
             </h1>
             <p className="text-base">
@@ -88,7 +88,7 @@ export default function Procedures() {
             </p>
           </div>
           <div className="card border-4 p-4">
-            <h1 className="subpixel-antialiased italic text-2xl text-center">
+            <h1 className="subpixel-antialiased italic text-2xl">
               Radio Frequency Ablation
             </h1>
             <p className="text-base">
@@ -108,7 +108,7 @@ export default function Procedures() {
             </p>
           </div>
           <div className="card border-4 p-4">
-            <h1 className="subpixel-antialiased italic text-2xl text-center">
+            <h1 className="subpixel-antialiased italic text-2xl">
               Sacroiliac Joint Injection
             </h1>
             <p className="text-base">
@@ -130,7 +130,6 @@ export default function Procedures() {
           </div>
         </div>
       </div>
-      <footer className=" text-center">@ 2020 Bowen Pain Center</footer>
     </>
   );
 }
