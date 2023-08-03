@@ -6,8 +6,8 @@ export default function Navbar() {
   const [active, setActive] = useState(false);
 
   return (
-    <div>
-      <nav className="w-full bg-blue-950 fixed top-0 left-0 right-0 z-10">
+    <header>
+      <nav className="w-full fixed z-10 bg-blue-950 top-0 left-0 right-0">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -57,9 +57,7 @@ export default function Navbar() {
           <div>
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                active
-                  ? "overflow-hidden h-screen p-12 md:h-fit md:p-0 block"
-                  : "hidden"
+                active ? "p-12 md:h-fit md:p-0 block" : "hidden"
               }`}
             >
               <ul className="h-screen md:h-auto justify-center md:flex">
@@ -83,6 +81,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
