@@ -1,9 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+
+  // useEffect(() => {
+  //   active
+  //     ? document.body.classList.add("nav-open")
+  //     : document.body.classList.remove("nav-open");
+  // }, [active]);
 
   return (
     <header>
@@ -12,7 +18,7 @@ export default function Navbar() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link href="/">
-                <h2 className="underline text-2xl text-white font-bold sm:no-underline sm:text-2xl sm:text-white sm:font-bold">
+                <h2 className="text-2xl text-white font-bold sm:text-2xl sm:text-white sm:font-bold">
                   Bowen Pain Center
                 </h2>
               </Link>
@@ -57,7 +63,7 @@ export default function Navbar() {
           <div>
             <div
               className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                active ? "p-12 md:h-fit md:p-0 block" : "hidden"
+                active ? "md:h-fit md:p-0 block" : "hidden"
               }`}
             >
               <ul className="h-screen md:h-auto justify-center md:flex">

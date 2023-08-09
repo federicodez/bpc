@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
 /********Line design**********/
 .linethrough {
   display: flex;

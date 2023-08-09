@@ -37,7 +37,7 @@ export default function Procedures() {
             <h1 className="subpixel-antialiased italic text-2xl">
               Epidural Steroid Injection
             </h1>
-            <p className="text-base">
+            <p className="text-sm pt-5">
               This injection procedure is conducted to alleviate neck, shoulder,
               and arm pain resulting from nerve root compression in the cervical
               spine. Various conditions, such as spinal stenosis or herniated
@@ -52,7 +52,7 @@ export default function Procedures() {
             <h1 className="subpixel-antialiased italic text-2xl">
               Trigger Point Injection
             </h1>
-            <p className="text-base">
+            <p className="text-sm pt-5">
               This outpatient procedure is specifically intended to reduce or
               alleviate pain caused by small tender knots that develop in the
               muscles of the neck and back. The process is quick, usually taking
@@ -71,7 +71,7 @@ export default function Procedures() {
             <h1 className="subpixel-antialiased italic text-2xl">
               Medial Branch Block
             </h1>
-            <p className="text-base">
+            <p className="text-sm pt-5">
               This diagnostic procedure serves the purposes of identifying a
               painful facet joint that might benefit from a radiofrequency
               ablation. The facet joints in the spine allow for bending,
@@ -91,7 +91,7 @@ export default function Procedures() {
             <h1 className="subpixel-antialiased italic text-2xl">
               Radio Frequency Ablation
             </h1>
-            <p className="text-base">
+            <p className="text-sm pt-5">
               This is a minimally invasive procedure known as a radiofrequency
               ablation or rhizotomy. The primary goal of this procedure is to
               reduce or eliminate the pain caused by damaged facet joints by
@@ -111,7 +111,7 @@ export default function Procedures() {
             <h1 className="subpixel-antialiased italic text-2xl">
               Sacroiliac Joint Injection
             </h1>
-            <p className="text-base">
+            <p className="text-sm pt-5">
               Patients experiencing lower back or buttocks pain can find relief
               through sacroiliac joint injections. The sacroiliac joint (SIJ) is
               the area where the spine and hip come together to form a joint
