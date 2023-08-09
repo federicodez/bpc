@@ -68,23 +68,17 @@ export default async function Home() {
               Meet Dr. Alexander Bowen
             </h3>
             <p className="mt-4">
-              Dr. Bowen is a board certified attending Anesthesiologist and
-              Interventional Pain Medicine Physician in the Metro New York City
-              Area.
+              Dr. Bowen is a board certified Anesthesiologist and Interventional
+              Pain Management Physician in the Metro New York City Area.
             </p>
             <p className="mt-4">
               Dr. Bowen attended Louisiana State University School of Medicine
               and completed his residecy at the University of Miami/ Jackson
               Memorial Hospital Health System in Miami, Florida. He was
-              fellowship trained in interventional pain medicine at Columbia
+              fellowship trained in interventional pain management at Columbia
               University. After finishing his fellowship, he began practicing
-              anesthesiology and pain medicine in the greater New York City
+              anesthesiology and pain management in the greater New York City
               area.
-            </p>
-            <p className="mt-4">
-              In his spare time, Dr. Bowen likes to play the guitar (his
-              specialty is &quot;Twinkle, Twinkle, Little Star&quot;), juggling,
-              learning french, and cooking.
             </p>
           </div>
         </div>
