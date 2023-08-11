@@ -62,8 +62,10 @@ export default function Navbar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                active ? "md:h-fit md:p-0 block" : "hidden"
+              className={`flex-1 justify-self-center mt-8 md:block md:pb-0 md:mt-0 ${
+                active
+                  ? "border-t-2 pt-8 md:border-none md:h-fit md:p-0 block"
+                  : "hidden"
               }`}
             >
               <ul className="h-screen md:h-auto justify-center md:flex">
