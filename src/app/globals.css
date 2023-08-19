@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --active: 0;
+    --active: 1;
     --offset: 0.6;
     --direction: 1;
     --abs-offset: 1;
@@ -46,12 +46,13 @@
 
 section {
   width: 100%;
-  height: 500px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: linear-gradient(45deg, #8b5cf6, #ec4899);
+  padding: 10px;
+  background-image: linear-gradient(45deg, #00a3ff, #0a007d);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -61,8 +62,8 @@ section {
 
 .carousel {
   position: relative;
-  width: 23rem;
-  height: 100%;
+  width: 40rem;
+  height: 30rem;
   perspective: 500px;
   transform-style: preserve-3d;
 }
