@@ -2,8 +2,7 @@ import { IframeHTMLAttributes } from "react";
 
 type Procedure = Array<{
   title: string;
-  content: string | IframeHTMLAttributes;
-  image: string;
+  content: string;
 }>;
 
 const procedures: Procedure = [
@@ -13,8 +12,6 @@ const procedures: Procedure = [
     compression in the cervical spine. Various conditions, such as spinal stenosis or herniated discs, can lead to inflammation 
     and swelling of the spinal nerves. The injected steroid medication is effective in reducing the pain and swelling associated 
     with these conditions. Patients can typically expect to experience relief within 3-7 days after the procedure.`,
-    image:
-      "https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg",
   },
   {
     title: "Trigger Point Injection",
@@ -25,8 +22,6 @@ const procedures: Procedure = [
     can last from several hours to weeks, depending on the use of steroids. This allows patients to have a window of relief 
     during which they can engage in exercises and stretching routines to help ease the tension and discomfort caused by those 
     muscle knots.`,
-    image:
-      "https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg",
   },
   {
     title: "Medial Branch Block",
@@ -37,8 +32,6 @@ const procedures: Procedure = [
     the nerve. Following the injection, patients are encouraged to resume their regular activities and monitor their pain relief 
     over the next 30 minutes to 2 hours. If the patient experiences significant relief from the pain, they may be considered 
     a suitable candidate for the radiofrequency ablation procedure.`,
-    image:
-      "https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg",
   },
   {
     title: "Radio Frequency Ablation",
@@ -49,8 +42,6 @@ const procedures: Procedure = [
     accuracy. Once confirmed, the nerve is numbed and then heated for 90-120 seconds, effectively disrupting its pain signaling. 
     Optimal pain relief is usually achieved within 2-4 weeks following the procedure. Radiofrequency ablation can be performed 
     under local anesthesia or sedation, depending on the patient&apos;s preference and needs.`,
-    image:
-      "https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg",
   },
   {
     title: "Sacroiliac Joint Injection",
@@ -62,14 +53,10 @@ const procedures: Procedure = [
     and steroid medication is injected in and around the joint. Typically, patients experience relief within 1-3 days, and 
     optimal pain relief is felt within 5-14 days after the injection. This procedure can provide significant relief to those 
     suffering form sacroiliac joint-related pain.`,
-    image:
-      "https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg",
   },
   {
     title: "Discectomies",
     content: "",
-    image:
-      "https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg",
   },
 ];
 
