@@ -5,12 +5,6 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [active, setActive] = useState(false);
 
-  // useEffect(() => {
-  //   active
-  //     ? document.body.classList.add("nav-open")
-  //     : document.body.classList.remove("nav-open");
-  // }, [active]);
-
   return (
     <header>
       <nav className="w-full fixed z-10 bg-blue-950 top-0 left-0 right-0">
@@ -92,3 +86,30 @@ export default function Navbar() {
     </header>
   );
 }
+
+// <header>
+//   <nav>
+//     <input type="checkbox" id="check" />
+//     <label htmlFor="check" className="checkbtn">
+//       <FaBars />
+//     </label>
+//     <label className="logo">Bowen Pain Center</label>
+//     <ul className="nav-links">
+//       <li>
+//         <Link className="active" href="/">
+//           Home
+//         </Link>
+//       </li>
+//       <li>
+//         <Link style={{ color: "#fff" }} href="/procedures">
+//           Procedures
+//         </Link>
+//       </li>
+//       <li>
+//         <Link style={{ color: "#fff" }} href="/contact">
+//           Contact Us
+//         </Link>
+//       </li>
+//     </ul>
+//   </nav>
+// </header>

@@ -6,24 +6,24 @@ export default async function Home() {
   return (
     <>
       <Image
-        className="operation pt-10 object-center"
+        className="operation my-10 h-96 object-center object-cover"
         src={operation}
         priority={true}
         alt="operation picture"
       />
       <div className="container mx-auto">
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           Welcome to Bowen Pain Center. Our mission is to deliver top-notch,
           innovative, and comprehensive pain treatments, ensuring your overall
           well-being is prioritized.
         </p>
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           Our team consists of specialty-trained and board-certified pain
           physicians and staff who are dedicated to treating every patient like
           family. We take pride in addressing all concerns with honesty,
           compassion, and efficiency.
         </p>
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           We invite you to browse through our website, reach out to our office,
           and have a conversation with our staff about how we can assist you in
           enhancing your quality of life. At Bowen Pain Center, we understand
@@ -33,24 +33,24 @@ export default async function Home() {
         <h1 className="linethrough m-10 text-center text-2xl font-bold text-blue-800">
           MISSION STATEMENT
         </h1>
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           At Bowen Pain Center, our mission is to create a comprehensive
           experience that caters to our patients&apos; needs, delivering the
           highest standard of pain and wellness care possible.
         </p>
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           <strong>At Bowen Pain Center, pain is personal.</strong>
         </p>
         <h1 className="linethrough m-10 text-center text-2xl font-bold text-blue-800">
           VISION
         </h1>
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           Our vision is to establish ourselves as the top pain provider service
           in the region. We will accomplish our goal by operating with
           compassion, honesty, and a sense of family values so that our patients
           feel at home when allowing us to treat their illnesses.
         </p>
-        <p className="m-4 mx-10">
+        <p className="my-5 mx-40">
           We seek to offer a wide variety of treatment options to better
           optimize our patients&apos; pain and physical/mental state.
         </p>

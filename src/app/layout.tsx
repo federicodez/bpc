@@ -2,7 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer } from "@/app/components";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ weight: ["400"], subsets: ["devanagari"] });

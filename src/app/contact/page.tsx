@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
-import { sendEmail } from "@/components/email";
+import sendEmail from "@/app/libs/email";
 
-const Map = dynamic(() => import("@/components/Map"), {
+const Map = dynamic(() => import("@/app/components/Map"), {
   loading: () => (
     <button type="button" disabled>
       <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>
@@ -41,7 +41,6 @@ async function submitContact(data: FormData) {
     subject: "Bowen Pain Center New Patient",
     text: `Name: ${firstName} ${lastName} Phone: ${phone} Email: ${email} Message: ${message}`,
   });
-  redirect("/");
 }
 
 export default function ContactUs() {

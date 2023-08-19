@@ -16,7 +16,7 @@ const smtpOptions = {
   },
 };
 
-export const sendEmail = async (data: EmailPayload) => {
+export default async function sendEmail(data: EmailPayload): Promise<object> {
   const transporter = nodemailer.createTransport({
     ...smtpOptions,
   });
@@ -25,4 +25,4 @@ export const sendEmail = async (data: EmailPayload) => {
     from: process.env.SMTP_FROM_EMAIL,
     ...data,
   });
-};
+}
