@@ -5,8 +5,8 @@ import Carousel from "../components/Carousel";
 
 export default async function Procedures() {
   return (
-    <div className="container m-auto pt-20 justify-center">
-      <h1 className="linethrough m-10 text-2xl text-center font-bold text-blue-800">
+    <div className="procedures m-auto pt-20 justify-center">
+      <h1 className="linethrough m-20 text-2xl text-center font-bold text-white">
         OUR PROCEDURES
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:mx-80">
@@ -17,14 +17,14 @@ export default async function Procedures() {
           alt="procedure image"
         />
         <div>
-          <p className="m-4">
+          <p className="m-4 text-white">
             At Bowen Pain Center, our unwavering dedication lies in assisting
             patients through a comprehensive interventional pain management
             program. Embracing the forefront of medical progress, we offer
             advanced diagnosis and treatment techniques to ensure the best
             possible outcomes.
           </p>
-          <p className="m-4">
+          <p className="m-4 text-white">
             Our core mission at Bowen Pain Center is to relieve acute to chronic
             pain and foster improved health, comfort, and quality of life within
             a compassionate and collaborative environment. Through continuous
