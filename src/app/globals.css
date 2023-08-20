@@ -11,29 +11,26 @@
   }
 }
 
-.img-operation {
-  object-position: center;
-  object-fit: cover;
-  width: 100%;
-  height: 400px;
+html {
+  background: linear-gradient(45deg, #fff, #7d9aff);
 }
 
 /********Line design**********/
-.linethrough {
+.title {
   display: flex;
   flex-direction: row;
 }
-.linethrough:before,
-.linethrough:after {
+.title:before,
+.title:after {
   content: "";
   flex: 1 1;
   border-bottom: 1px solid;
   margin: auto;
 }
-.linethrough:before {
+.title:before {
   margin-right: 10px;
 }
-.linethrough:after {
+.title:after {
   margin-left: 10px;
 }
 
@@ -44,9 +41,6 @@
 /* $color-black: #1f2937; */
 /* $card-size: 23rem; */
 
-.procedures {
-  background: linear-gradient(45deg, #00a3ff, #0a007d);
-}
 section {
   width: 100%;
   height: 100%;
