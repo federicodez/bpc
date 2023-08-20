@@ -45,12 +45,15 @@ async function submitContact(data: FormData) {
 
 export default function ContactUs() {
   return (
-    <>
-      <h1 className="linethrough text-2xl text-center pt-20 pb-4 font-bold text-blue-800">
-        Contact Us
+    <div className="container contact py-20 mx-auto justify-center">
+      <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
+        CONTACT US
       </h1>
-      <form action={submitContact}>
-        <div className="grid gap-6 mx-4 mb-6 md:grid-cols-2">
+      <form
+        action={submitContact}
+        className="container p-5 mx-auto border-8 border-solid border-white shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
+      >
+        <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
             <label
               htmlFor="firstName"
@@ -140,19 +143,30 @@ export default function ContactUs() {
         </button>
       </form>
       <div className="grid mt-6 md:grid-cols-3">
-        <p className="text-center my-3">Bowen.PainCenter@gmail.com</p>
+        <a
+          href="mailto:bowen.paincenter@gmail.com"
+          className="text-center my-3 underline"
+        >
+          Bowen.PainCenter@gmail.com
+        </a>
         <div className="block">
-          <p className="text-center">68-38 Yellowstone Blvd, Suite BB1</p>
-          <p className="text-center">Forest Hills, NY 11375</p>
+          <address className="text-center">
+            68-38 Yellowstone Blvd, Suite BB1
+            <br />
+            Forest Hills, NY 11375
+          </address>
         </div>
         <div className="block">
-          <p className="text-center">Tel: (929) 334-4500</p>
-          <p className="text-center">Fax: (877) 286-4105</p>
+          <p className="text-center">
+            Tel: (929) 334-4500
+            <br />
+            Fax: (877) 286-4105
+          </p>
         </div>
       </div>
-      <div className="container map mx-auto py-10">
+      <div className="container map h-[420px] mx-auto my-5 border-8 border-solid border-white shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
         <Map />
       </div>
-    </>
+    </div>
   );
 }
