@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 
 const containerStyle = {
   width: "100%",
@@ -13,7 +13,7 @@ const clinic = {
 };
 
 export default function MyComponent() {
-  const { isLoaded } = useJsApiLoader({
+  const { isLoaded } = useLoadScript({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
   });
@@ -35,7 +35,7 @@ export default function MyComponent() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={clinic}
-      zoom={14}
+      zoom={18}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >

@@ -45,7 +45,7 @@ async function submitContact(data: FormData) {
 
 export default function ContactUs() {
   return (
-    <div className="container contact py-20 mx-auto justify-center">
+    <div className="container contact py-10 sm:py-20 mx-auto justify-center">
       <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
         CONTACT US
       </h1>

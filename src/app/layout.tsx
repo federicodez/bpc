@@ -20,6 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
+          async
+          defer
+          type="text/javascript"
           src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
         ></Script>
       </head>
