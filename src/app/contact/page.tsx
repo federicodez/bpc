@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
 import sendEmail from "@/app/libs/email";
 

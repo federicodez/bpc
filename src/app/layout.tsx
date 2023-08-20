@@ -18,14 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          async
-          defer
-          type="text/javascript"
-          src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-        ></Script>
-      </head>
       <body className={`${poppins.className} ${inter.className}`}>
         <Navbar />
         {children}

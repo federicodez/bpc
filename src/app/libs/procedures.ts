@@ -1,5 +1,3 @@
-import { IframeHTMLAttributes } from "react";
-
 type Procedure = Array<{
   title: string;
   content: string;
