@@ -38,7 +38,7 @@ export default async function Procedures() {
         </div>
       </div>
       <section className="sm:w-full sm:h-full flex items-center justify-center overflow-hidden p-10 font-sans">
-        <Carousel {...procedures} />
+        <Carousel title={""} content={""} {...procedures} />
       </section>
     </>
   );
