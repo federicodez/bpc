@@ -22,16 +22,19 @@ export default function Carousel({ title, content }: Procedures) {
   );
 
   return (
-    <div className="carousel">
+    <div className="carousel relative w-[20rem] h-[51rem] sm:w-[40rem] sm:h-[30rem]">
       {active > 0 && (
-        <button className="nav left" onClick={() => setActive((i) => i - 1)}>
+        <button
+          className="nav left text-7xl absolute flex justify-center items-center top-1/2 z-20 cursor-pointer select-none -translate-x-full -translate-Y-1/2"
+          onClick={() => setActive((i) => i - 1)}
+        >
           <TiChevronLeftOutline />
         </button>
       )}
       {procedures.map(({ title, content }, i) => (
         <div
           key={i}
-          className="card-container"
+          className="card-container absolute w-full h-full"
           style={{
             "--active": i === active ? 1 : 0,
             "--offset": (active - i) / 3,
@@ -42,8 +45,8 @@ export default function Carousel({ title, content }: Procedures) {
             display: Math.abs(active - i) > 3 ? "none" : "block",
           }}
         >
-          <div className="card">
-            <h2>{title}</h2>
+          <div className="card w-full h-full p-8 rounded-2xl text-black text-justify">
+            <h2 className="text-center text-4xl font-bold mb-3">{title}</h2>
             <div className="flex justify-center items-center">
               {content.length ? content : video}
             </div>
@@ -51,7 +54,10 @@ export default function Carousel({ title, content }: Procedures) {
         </div>
       ))}
       {active < count - 1 && (
-        <button className="nav right" onClick={() => setActive((i) => i + 1)}>
+        <button
+          className="nav right text-7xl absolute flex justify-center items-center top-1/2 z-20 cursor-pointer select-none translate-x-full translate-Y-1/2 right-0"
+          onClick={() => setActive((i) => i + 1)}
+        >
           <TiChevronRightOutline />
         </button>
       )}
