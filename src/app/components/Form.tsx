@@ -88,7 +88,7 @@ export default function Form() {
           placeholder="Write your thoughts here..."
         ></textarea>
       </div>
-      <button className="bg-blue-800" type="submit">
+      <button className="send-btn bg-blue-800" type="submit">
         <div className="svg-wrapper-1">
           <div className="svg-wrapper">
             <svg
