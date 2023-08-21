@@ -22,10 +22,10 @@ export default function Carousel({ title, content }: Procedures) {
   );
 
   return (
-    <div className="carousel relative w-[20rem] h-[51rem] sm:w-[40rem] sm:h-[30rem]">
+    <div className="carousel relative w-full h-[53rem] sm:w-[40rem] sm:h-[30rem]">
       {active > 0 && (
         <button
-          className="nav left text-7xl absolute flex justify-center items-center top-1/2 z-20 cursor-pointer select-none -translate-x-2/3 sm:-translate-x-full -translate-Y-1/2"
+          className="nav left text-5xl absolute flex justify-center items-center top-1/2 z-20 cursor-pointer select-none -translate-x-full sm:-translate-x-full -translate-Y-1/2"
           onClick={() => setActive((i) => i - 1)}
         >
           <TiChevronLeftOutline />
@@ -45,7 +45,10 @@ export default function Carousel({ title, content }: Procedures) {
             display: Math.abs(active - i) > 3 ? "none" : "block",
           }}
         >
-          <div className="card w-full h-full p-8 rounded-2xl text-black text-justify">
+          <div
+            className="card w-full h-full p-4 rounded-2xl text-black text-justify border-4 border-solid border-white 
+          shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
+          >
             <h2 className="text-center text-4xl font-bold mb-3">{title}</h2>
             <div className="flex justify-center items-center text-left">
               {content.length ? content : video}
@@ -55,7 +58,7 @@ export default function Carousel({ title, content }: Procedures) {
       ))}
       {active < count - 1 && (
         <button
-          className="nav right text-7xl absolute flex justify-center items-center top-1/2 z-20 cursor-pointer select-none translate-x-2/3 sm:translate-x-full translate-Y-1/2 right-0"
+          className="nav right text-5xl absolute flex justify-center items-center top-1/2 z-20 cursor-pointer select-none translate-x-full sm:translate-x-full translate-Y-1/2 right-0"
           onClick={() => setActive((i) => i + 1)}
         >
           <TiChevronRightOutline />
