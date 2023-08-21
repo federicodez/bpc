@@ -78,7 +78,7 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.44.0.tgz"
   "version" "8.44.0"
 
-"@googlemaps/js-api-loader@1.16.2":
+"@googlemaps/js-api-loader@^1.16.2", "@googlemaps/js-api-loader@1.16.2":
   "integrity" "sha512-psGw5u0QM6humao48Hn4lrChOM2/rA43ZCm3tKK9qQsEj1/VzqkCqnvGfEOshDbBQflydfaRovbKwZMF4AyqbA=="
   "resolved" "https://registry.npmjs.org/@googlemaps/js-api-loader/-/js-api-loader-1.16.2.tgz"
   "version" "1.16.2"
