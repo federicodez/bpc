@@ -12,7 +12,7 @@
 /* } */
 
 html {
-  background: linear-gradient(45deg, #fff, #7d9aff);
+  background: linear-gradient(45deg, #fff, #c5dff8);
 }
 
 /********Line design**********/
@@ -64,6 +64,7 @@ html {
 
   p,
   h2 {
+    flex: 1;
     transition: all 0.3s ease-out;
     opacity: var(--active);
   }
