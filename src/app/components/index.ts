@@ -4,5 +4,6 @@ import Navbar from "./navbar";
 import Footer from "./Footer";
 import Form from "./Form";
 import Carousel from "./Carousel";
+import LoadingModel from "./LoadingModel";
 
-export { About, Maps, Navbar, Footer, Form, Carousel };
+export { About, Maps, Navbar, Footer, Form, Carousel, LoadingModel };

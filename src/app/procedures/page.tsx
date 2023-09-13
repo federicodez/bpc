@@ -7,7 +7,7 @@ import Carousel from "@/app/components/Carousel";
 import { useTranslation } from "react-i18next";
 
 const Procedures = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <div className="container py-10 sm:py-20 mx-auto justify-center">

@@ -14,7 +14,7 @@ const Map = dynamic(() => import("@/app/components/Map"), {
 });
 
 const ContactUs = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="container contact py-10 sm:py-20 mx-auto justify-center">
       <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">

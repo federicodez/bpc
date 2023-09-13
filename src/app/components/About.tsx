@@ -11,7 +11,7 @@ const locales = {
 };
 
 const About = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
   return (
     <>
       <Image
