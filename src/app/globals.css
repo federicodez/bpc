@@ -129,3 +129,12 @@ html {
     transform: translateY(-0.1em);
   }
 }
+
+/***** Translation Button *****/
+
+.translate-btn {
+  border-radius: 10px;
+  border: 2px solid #000;
+  margin: 1rem;
+  padding: 10px 28px;
+}

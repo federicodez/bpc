@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
-import Form from "../components/Form";
+import Form from "@/app/components/Form";
+import { useTranslation } from "react-i18next";
 
 const Map = dynamic(() => import("@/app/components/Map"), {
   loading: () => (
@@ -12,11 +13,12 @@ const Map = dynamic(() => import("@/app/components/Map"), {
   ssr: false,
 });
 
-export default function ContactUs() {
+const ContactUs = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="container contact py-10 sm:py-20 mx-auto justify-center">
       <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
-        CONTACT US
+        {t("contact.title1")}
       </h1>
       <Form />
       <div className="grid mt-6 md:grid-cols-3">
@@ -46,4 +48,6 @@ export default function ContactUs() {
       </div>
     </div>
   );
-}
+};
+
+export default ContactUs;

@@ -1,0 +1,38 @@
+{
+  "about": {
+    "p1": "Welcome to Bowen Pain Center. Our mission is to deliver top-notch, innovative, and comprehensive pain treatments, ensuring your overall well-being is prioritized.",
+    "p2": "Our team consists of specialty-trained and board-certified pain physicians and staff who are dedicated to treating every patient like family. We take pride in addressing all concerns with honesty, compassion, and efficiency.",
+    "p3": "We invite you to browse through our website, reach out to our office, and have a conversation with our staff about how we can assist you in enhancing your quality of life. At Bowen Pain Center, we understand that pain is a personal experience, and we are commiteed to helping you through it.",
+    "p4": "At Bowen Pain Center, our mission is to create a comprehensive experience that caters to our patients&apos; needs, delivering the highest standard of pain and wellness care possible.",
+    "p5": "At Bowen Pain Center, pain is personal.",
+    "p6": "Our vision is to establish ourselves as the top pain provider service in the region. We will accomplish our goal by operating with compassion, honesty, and a sense of family values so that our patients feel at home when allowing us to treat their illnesses.",
+    "p7": "We seek to offer a wide variety of treatment options to better optimize our patients&apos; pain and physical/mental state.",
+    "p8": "Dr. Bowen is a board certified Anesthesiologist and Interventional Pain Management Physician in the Metro New York City Area.",
+    "p9": "Dr. Bowen attended Louisiana State University School of Medicine and completed his residecy at the University of Miami/ Jackson Memorial Hospital Health System in Miami, Florida. He was fellowship trained in interventional pain management at Columbia University. After finishing his fellowship, he began practicing anesthesiology and pain management in the greater New York City area.",
+    "title1": "MISSION STATEMENT",
+    "title2": "VISION",
+    "title3": "GET TO KNOW YOUR MD",
+    "title4": "Meet Dr. Alexander Bowen"
+  },
+  "procedures": {
+    "p1": "At Bowen Pain Center, our unwavering dedication lies in assisting patients through a comprehensive interventional pain management program. Embracing the forefront of medical progress, we offer advanced diagnosis and treatment techniques to ensure the best possible outcomes.",
+    "p2": "Our core mission at Bowen Pain Center is to relieve acute to chronic pain and foster improved health, comfort, and quality of life within a compassionate and collaborative environment. Through continuous research and innovative practices, we are committed to eradicting pain, all while working closely with each patient to provide the most suitable and personalized care.",
+    "title1": "OUR PROCEDURES"
+  },
+  "contact": {
+    "title1": "CONTACT US"
+  },
+  "carousel": {
+    "title0": "Epidural Steroid Injection",
+    "content0": "This injection procedure is conducted to alleviate neck, shoulder, and arm pain resulting from nerve root compression in the cervical spine. Various conditions, such as spinal stenosis or herniated discs, can lead to inflammation and swelling of the spinal nerves. The injected steroid medication is effective in reducing the pain and swelling associated with these conditions. Patients can typically expect to experience relief within 3-7 days after the procedure.",
+    "title1": "Trigger Point Injection",
+    "content1": "This outpatient procedure is specifically intended to reduce or alleviate pain caused by small tender knots that develop in the muscles of the neck and back. The process is quick, usually taking only a few minutes, and it is performed under local anesthesia. A small needle is carefully inserted into the knots and injected with a combination of local anesthetic and steroid medication. The treatment is designed to provide nearly instant relief, and its effectiveness can last from several hours to weeks, depending on the use of steroids. This allows patients to have a window of relief during which they can engage in exercises and stretching routines to help ease the tension and discomfort caused by those muscle knots.",
+    "title2": "Medial Branch Block",
+    "content2": "This diagnostic procedure serves the purposes of identifying a painful facet joint that might benefit from a radiofrequency ablation. The facet joints in the spine allow for bending, twisting, and flexing movements. If these joints become arthritic or enlarged, they can cause pain. Similar to a facet injection, a small needle is precisely placed near the medial branch nerve with the guidance of x-ray imaging. A small amount of local anesthetic is then administered to numb the nerve. Following the injection, patients are encouraged to resume their regular activities and monitor their pain relief over the next 30 minutes to 2 hours. If the patient experiences significant relief from the pain, they may be considered a suitable candidate for the radiofrequency ablation procedure.",
+    "title3": "Radio Frequency Ablation",
+    "content3": "This is a minimally invasive procedure known as a radiofrequency ablation or rhizotomy. The primary goal of this procedure is to reduce or eliminate the pain caused by damaged facet joints by disrupting the sensory nerves responsible for carrying pain signals. Similar to facet injections, a specialized needle is guided under x-ray to the junction where the medial branch nerve is typically located. The positioning of the needle is carefully tested to ensure accuracy. Once confirmed, the nerve is numbed and then heated for 90-120 seconds, effectively disrupting its pain signaling. Optimal pain relief is usually achieved within 2-4 weeks following the procedure. Radiofrequency ablation can be performed under local anesthesia or sedation, depending on the patient's preference and needs.",
+    "title4": "Sacroiliac Joint Injection",
+    "content4": "Patients experiencing lower back or buttocks pain can find relief through sacroiliac joint injections. The sacroiliac joint (SIJ) is the area where the spine and hip come together to form a joint space. Inflammation in this area can lead to pain resulting from arthritis, trauma, or various diseases. During the procedure, the patient lies on their stomach with a comfortable pillow for support. Under the guidance of fluoroscopy (x-ray), a small needle is carefully directed into the joint. After confirming the needle's position with a contrast dye, a mixture of local anesthetic and steroid medication is injected in and around the joint. Typically, patients experience relief within 1-3 days, and optimal pain relief is felt within 5-14 days after the injection. This procedure can provide significant relief to those suffering form sacroiliac joint-related pain.",
+    "title5": "Discectomies"
+  }
+}

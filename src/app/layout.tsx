@@ -1,3 +1,4 @@
+import "@/i18n";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";

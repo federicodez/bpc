@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 
@@ -70,7 +71,7 @@ export default function Navbar() {
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/procedures" onClick={() => setActive(!active)}>
-                    Procedures
+                    Procedure
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">

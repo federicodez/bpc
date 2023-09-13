@@ -1,14 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import operation from "../images/alex-op2.jpeg";
-import procedures from "../libs/procedures";
-import Carousel from "../components/Carousel";
+import procedures from "@/app/libs/procedures";
+import Carousel from "@/app/components/Carousel";
+import { useTranslation } from "react-i18next";
 
-export default async function Procedures() {
+const Procedures = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div className="container py-10 sm:py-20 mx-auto justify-center">
         <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
-          OUR PROCEDURES
+          {t("procedures.title1")}
         </h1>
         <div className="grid justify-items-center gap-4 md:w-[800px] mx-auto sm:my-10 grid-cols-1 md:grid-cols-2">
           <Image
@@ -19,21 +23,8 @@ export default async function Procedures() {
             alt="procedure image"
           />
           <div>
-            <p className="m-4">
-              At Bowen Pain Center, our unwavering dedication lies in assisting
-              patients through a comprehensive interventional pain management
-              program. Embracing the forefront of medical progress, we offer
-              advanced diagnosis and treatment techniques to ensure the best
-              possible outcomes.
-            </p>
-            <p className="m-4">
-              Our core mission at Bowen Pain Center is to relieve acute to
-              chronic pain and foster improved health, comfort, and quality of
-              life within a compassionate and collaborative environment. Through
-              continuous research and innovative practices, we are committed to
-              eradicting pain, all while working closely with each patient to
-              provide the most suitable and personalized care.
-            </p>
+            <p className="m-4">{t("procedures.p1")}</p>
+            <p className="m-4">{t("procedures.p2")}</p>
           </div>
         </div>
       </div>
@@ -42,4 +33,6 @@ export default async function Procedures() {
       </section>
     </>
   );
-}
+};
+
+export default Procedures;
