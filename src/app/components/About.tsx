@@ -5,9 +5,7 @@ import profilePic from "@/app/images/profilePic.jpg";
 import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
-
-export const normalizeKey = (key: string) =>
-  key as unknown as TemplateStringsArray;
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const locales = {
   en: { title: "English" },
@@ -31,14 +29,16 @@ const About = () => {
             id="en-btn"
             onClick={() => changeLanguage("en")}
           >
-            English
+            <span className="fi fi-us fis"></span>
+            <p>English</p>
           </button>
           <button
             className="translate-btn"
             id="es-btn"
             onClick={() => changeLanguage("es")}
           >
-            Spanish
+            <span className="fi fi-es fis"></span>
+            <p>Español</p>
           </button>
         </div>
         <p className="m-4 lg:mx-40">

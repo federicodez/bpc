@@ -10,9 +10,6 @@ import esNs1 from "../locales/es/ns1.json";
 export const defaultNS = "ns1";
 export const fallbackNS = "fallback";
 
-export const normalizeKey = (key: string) =>
-  key as unknown as TemplateStringsArray;
-
 i18n.use(initReactI18next).init({
   lng: "en",
   returnNull: false,

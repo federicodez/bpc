@@ -9,9 +9,6 @@ type Procedures = {
   content: string;
 };
 
-export const normalizeKey = (key: string) =>
-  key as unknown as TemplateStringsArray;
-
 export default function Carousel({ title, content }: Procedures) {
   const { t } = useTranslation();
   const [active, setActive] = useState(2);
