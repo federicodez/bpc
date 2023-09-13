@@ -132,13 +132,20 @@ html {
 
 /***** Translation Button *****/
 
-.about-translate-btn {
+.about__translate-btn {
   display: flex;
   justify-content: center;
-}
-.translate__btn {
-  border-radius: 10px;
-  border: 2px solid #000;
-  margin: 1rem;
-  padding: 10px 28px;
+  .translate-btn {
+    background-color: skyblue;
+    border-radius: 10px;
+    border: 2px solid #000;
+    margin: 1rem;
+    padding: 10px 28px;
+  }
+  .translate-btn:hover {
+    border: 2px solid #fff;
+  }
+  .translate-btn:active {
+    background-color: darkblue;
+  }
 }

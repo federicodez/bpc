@@ -4,6 +4,7 @@ import Image from "next/image";
 import profilePic from "@/app/images/profilePic.jpg";
 import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 
 const locales = {
   en: { title: "English" },
@@ -11,7 +12,7 @@ const locales = {
 };
 
 const About = () => {
-  const { t, i18n, ready } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <Image
@@ -21,21 +22,21 @@ const About = () => {
         alt="operation picture"
       />
       <div className="container mx-auto">
-        <div className="about-translate-btn">
-          {Object.keys(locales).map((locale, id) => (
-            <button
-              key={id}
-              className="translate__btn"
-              style={{
-                fontWeight:
-                  i18n.resolvedLanguage === locale ? "bold" : "normal",
-              }}
-              type="submit"
-              onClick={() => i18n.changeLanguage(locale)}
-            >
-              {locales[locale].title}
-            </button>
-          ))}
+        <div className="about__translate-btn">
+          <button
+            className="translate-btn"
+            id="en-btn"
+            onClick={() => changeLanguage("en")}
+          >
+            English
+          </button>
+          <button
+            className="translate-btn"
+            id="es-btn"
+            onClick={() => changeLanguage("es")}
+          >
+            Spanish
+          </button>
         </div>
         <p className="m-4 lg:mx-40">{t("about.p1")}</p>
         <p className="m-4 lg:mx-40">{t("about.p2")}</p>

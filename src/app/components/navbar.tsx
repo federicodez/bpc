@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <header>
@@ -66,17 +68,17 @@ export default function Navbar() {
               <ul className="h-screen md:h-auto justify-center md:flex">
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/" onClick={() => setActive(!active)}>
-                    Home
+                    {t("navbar.title1")}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/procedures" onClick={() => setActive(!active)}>
-                    Procedure
+                    {t("navbar.title2")}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/contact" onClick={() => setActive(!active)}>
-                    Contact Us
+                    {t("navbar.title3")}
                   </Link>
                 </li>
               </ul>

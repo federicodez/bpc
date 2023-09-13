@@ -1,4 +1,9 @@
 {
+  "navbar": {
+    "title1": "Inicio",
+    "title2": "procedimiento",
+    "title3": "Contacto"
+  },
   "about": {
     "p1": "Bienvenido al Centro del Dolor Bowen. Nuestra misión es ofrecer tratamientos para el dolor integrales, innovadores y de primer nivel, garantizando que se dé prioridad a su bienestar general.",
     "p2": "Nuestro equipo está formado por médicos especialistas en dolor y personal certificado que se dedican a tratar a cada paciente como si fuera una familia. Nos enorgullecemos de abordar todas las inquietudes con honestidad, compasión y eficiencia.",

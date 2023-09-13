@@ -1,4 +1,9 @@
 {
+  "navbar": {
+    "title1": "Home",
+    "title2": "Procedure",
+    "title3": "Contact Us"
+  },
   "about": {
     "p1": "Welcome to Bowen Pain Center. Our mission is to deliver top-notch, innovative, and comprehensive pain treatments, ensuring your overall well-being is prioritized.",
     "p2": "Our team consists of specialty-trained and board-certified pain physicians and staff who are dedicated to treating every patient like family. We take pride in addressing all concerns with honesty, compassion, and efficiency.",
