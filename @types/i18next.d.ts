@@ -6,5 +6,6 @@ declare module "i18next" {
     defaultNS: typeof defaultNS;
     fallbackNS: typeof fallbackNS;
     resources: typeof resources;
+    returnNull: false;
   }
 }

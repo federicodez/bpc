@@ -68,17 +68,17 @@ export default function Navbar() {
               <ul className="h-screen md:h-auto justify-center md:flex">
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/" onClick={() => setActive(!active)}>
-                    {t("navbar.title1")}
+                    {t("navbar.title1" as unknown as TemplateStringsArray)}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/procedures" onClick={() => setActive(!active)}>
-                    {t("navbar.title2")}
+                    {t("navbar.title2" as unknown as TemplateStringsArray)}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/contact" onClick={() => setActive(!active)}>
-                    {t("navbar.title3")}
+                    {t("navbar.title3" as unknown as TemplateStringsArray)}
                   </Link>
                 </li>
               </ul>

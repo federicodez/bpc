@@ -10,23 +10,24 @@ import esNs1 from "../locales/es/ns1.json";
 export const defaultNS = "ns1";
 export const fallbackNS = "fallback";
 
-i18n
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    debug: true,
-    fallbackLang: "en",
-    defaultNS,
-    fallbackNS,
-    resources: {
-      en: {
-        ns1: enNs1,
-      },
-      es: {
-        ns1: esNs1,
-      },
+export const normalizeKey = (key: string) =>
+  key as unknown as TemplateStringsArray;
+
+i18n.use(initReactI18next).init({
+  lng: "en",
+  returnNull: false,
+  debug: true,
+  fallbackLng: "en",
+  defaultNS,
+  fallbackNS,
+  resources: {
+    en: {
+      ns1: enNs1,
     },
-  });
+    es: {
+      ns1: esNs1,
+    },
+  },
+});
 
 export default i18n;

@@ -9,8 +9,11 @@ type Procedures = {
   content: string;
 };
 
+export const normalizeKey = (key: string) =>
+  key as unknown as TemplateStringsArray;
+
 export default function Carousel({ title, content }: Procedures) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [active, setActive] = useState(2);
   const count = procedures.length;
   const video = (
@@ -52,10 +55,12 @@ export default function Carousel({ title, content }: Procedures) {
           shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
           >
             <h2 className="text-center text-4xl font-bold mb-3">
-              {t([`carousel.title${i}`])}
+              {t([`carousel.title${i}`] as unknown as TemplateStringsArray)}
             </h2>
             <div className="flex justify-center items-center text-left">
-              {content.length ? t([`carousel.content${i}`]) : video}
+              {content.length
+                ? t([`carousel.content${i}`] as unknown as TemplateStringsArray)
+                : video}
             </div>
           </div>
         </div>

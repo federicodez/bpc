@@ -6,6 +6,9 @@ import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 
+export const normalizeKey = (key: string) =>
+  key as unknown as TemplateStringsArray;
+
 const locales = {
   en: { title: "English" },
   es: { title: "Español" },
@@ -38,23 +41,35 @@ const About = () => {
             Spanish
           </button>
         </div>
-        <p className="m-4 lg:mx-40">{t("about.p1")}</p>
-        <p className="m-4 lg:mx-40">{t("about.p2")}</p>
-        <p className="m-4 lg:mx-40">{t("about.p3")}</p>
-        <h1 className="title m-10 text-center text-2xl font-bold text-blue-800">
-          {t("about.title1")}
-        </h1>
-        <p className="m-4 lg:mx-40">{t("about.p4")}</p>
         <p className="m-4 lg:mx-40">
-          <strong>{t("about.p5")}</strong>
+          {t("about.p1" as unknown as TemplateStringsArray)}
+        </p>
+        <p className="m-4 lg:mx-40">
+          {t("about.p2" as unknown as TemplateStringsArray)}
+        </p>
+        <p className="m-4 lg:mx-40">
+          {t("about.p3" as unknown as TemplateStringsArray)}
         </p>
         <h1 className="title m-10 text-center text-2xl font-bold text-blue-800">
-          {t("about.title2")}
+          {t("about.title1" as const)}
         </h1>
-        <p className="m-4 lg:mx-40">{t("about.p6")}</p>
-        <p className="m-4 lg:mx-40">{t("about.p7")}</p>
+        <p className="m-4 lg:mx-40">
+          {t("about.p4" as unknown as TemplateStringsArray)}
+        </p>
+        <p className="m-4 lg:mx-40">
+          <strong>{t("about.p5" as unknown as TemplateStringsArray)}</strong>
+        </p>
+        <h1 className="title m-10 text-center text-2xl font-bold text-blue-800">
+          {t("about.title2" as unknown as TemplateStringsArray)}
+        </h1>
+        <p className="m-4 lg:mx-40">
+          {t("about.p6" as unknown as TemplateStringsArray)}
+        </p>
+        <p className="m-4 lg:mx-40">
+          {t("about.p7" as unknown as TemplateStringsArray)}
+        </p>
         <h1 className="title m-10 text-center text-2xl my-4 font-bold text-blue-800">
-          {t("about.title3")}
+          {t("about.title3" as unknown as TemplateStringsArray)}
         </h1>
         <div className="grid mx-auto my-10 md:w-[800px] grid-cols-1 gap-4 md:grid-cols-2">
           <Image
@@ -65,10 +80,10 @@ const About = () => {
           />
           <div>
             <h3 className="font-bold text-center md:text-left">
-              {t("about.title4")}
+              {t("about.title4" as unknown as TemplateStringsArray)}
             </h3>
-            <p className="m-4">{t("about.p8")}</p>
-            <p className="m-4">{t("about.p9")}</p>
+            <p className="m-4">{t("about.p8" as const)}</p>
+            <p className="m-4">{t("about.p9" as const)}</p>
           </div>
         </div>
       </div>
