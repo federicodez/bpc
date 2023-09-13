@@ -21,19 +21,22 @@ const About = () => {
         alt="operation picture"
       />
       <div className="container mx-auto">
-        {Object.keys(locales).map((locale, id) => (
-          <button
-            key={id}
-            className="translate-btn"
-            style={{
-              fontWeight: i18n.resolvedLanguage === locale ? "bold" : "normal",
-            }}
-            type="submit"
-            onClick={() => i18n.changeLanguage(locale)}
-          >
-            {locales[locale].title}
-          </button>
-        ))}
+        <div className="about-translate-btn">
+          {Object.keys(locales).map((locale, id) => (
+            <button
+              key={id}
+              className="translate__btn"
+              style={{
+                fontWeight:
+                  i18n.resolvedLanguage === locale ? "bold" : "normal",
+              }}
+              type="submit"
+              onClick={() => i18n.changeLanguage(locale)}
+            >
+              {locales[locale].title}
+            </button>
+          ))}
+        </div>
         <p className="m-4 lg:mx-40">{t("about.p1")}</p>
         <p className="m-4 lg:mx-40">{t("about.p2")}</p>
         <p className="m-4 lg:mx-40">{t("about.p3")}</p>

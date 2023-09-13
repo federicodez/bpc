@@ -132,7 +132,11 @@ html {
 
 /***** Translation Button *****/
 
-.translate-btn {
+.about-translate-btn {
+  display: flex;
+  justify-content: center;
+}
+.translate__btn {
   border-radius: 10px;
   border: 2px solid #000;
   margin: 1rem;
