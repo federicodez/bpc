@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import spine from "@/app/images/spine.png";
+import Image from "next/image";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
@@ -14,11 +16,11 @@ export default function Navbar() {
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <Link href="/">
-                <h2 className="text-2xl text-white font-bold sm:text-2xl sm:text-white sm:font-bold">
-                  Bowen Pain Center
-                </h2>
-              </Link>
+              <div className="logo-container">
+                <Link href="/">
+                  <Image className="spine-logo" src={spine} alt="spine logo" />
+                </Link>
+              </div>
               <div className="md:hidden">
                 <button
                   onClick={() => setActive(!active)}

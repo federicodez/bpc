@@ -1,27 +1,21 @@
 {
   "navbar": {
     "title1": "Home",
-    "title2": "Procedure",
+    "title2": "Procedures",
     "title3": "Contact Us"
   },
   "about": {
-    "p1": "Welcome to Bowen Pain Center. Our mission is to deliver top-notch, innovative, and comprehensive pain treatments, ensuring your overall well-being is prioritized.",
-    "p2": "Our team consists of specialty-trained and board-certified pain physicians and staff who are dedicated to treating every patient like family. We take pride in addressing all concerns with honesty, compassion, and efficiency.",
-    "p3": "We invite you to browse through our website, reach out to our office, and have a conversation with our staff about how we can assist you in enhancing your quality of life. At Bowen Pain Center, we understand that pain is a personal experience, and we are commiteed to helping you through it.",
-    "p4": "At Bowen Pain Center, our mission is to create a comprehensive experience that caters to our patients&apos; needs, delivering the highest standard of pain and wellness care possible.",
-    "p5": "At Bowen Pain Center, pain is personal.",
-    "p6": "Our vision is to establish ourselves as the top pain provider service in the region. We will accomplish our goal by operating with compassion, honesty, and a sense of family values so that our patients feel at home when allowing us to treat their illnesses.",
-    "p7": "We seek to offer a wide variety of treatment options to better optimize our patients&apos; pain and physical/mental state.",
-    "p8": "Dr. Bowen is a board certified Anesthesiologist and Interventional Pain Management Physician in the Metro New York City Area.",
-    "p9": "Dr. Bowen attended Louisiana State University School of Medicine and completed his residecy at the University of Miami/ Jackson Memorial Hospital Health System in Miami, Florida. He was fellowship trained in interventional pain management at Columbia University. After finishing his fellowship, he began practicing anesthesiology and pain management in the greater New York City area.",
-    "title1": "MISSION STATEMENT",
-    "title2": "VISION",
-    "title3": "GET TO KNOW YOUR MD",
-    "title4": "Meet Dr. Alexander Bowen"
+    "p1": "Welcome to Bowen Pain Center. Our mission is to deliver top-notch and innovative pain treatments, ensuring your overall well-being is prioritized.",
+    "p2": "Our team consists of specialty-trained and board-certified pain physicians and staff who are dedicated to treating every patient to the highest standard of care. We take pride in addressing all concerns with honesty, compassion, and efficiency.",
+    "p3": "We invite you to browse through our website, reach out to our office, and have a conversation with our staff about how we can assist you in enhancing your quality of life.",
+    "p4": "Dr. Bowen is a board certified Anesthesiologist and Pain Management Physician in New York City.",
+    "p5": "Dr. Bowen attended Louisiana State University School of Medicine and completed his residency at the University of Miami/ Jackson Memorial Hospital Health System in Miami, Florida. He was fellowship trained in pain management at Columbia University. After finishing his fellowship, he began practicing in the Greater New York region.",
+    "title1": "GET TO KNOW YOUR MD",
+    "title2": "Meet Dr. Alexander Bowen"
   },
   "procedures": {
-    "p1": "At Bowen Pain Center, our unwavering dedication lies in assisting patients through a comprehensive interventional pain management program. Embracing the forefront of medical progress, we offer advanced diagnosis and treatment techniques to ensure the best possible outcomes.",
-    "p2": "Our core mission at Bowen Pain Center is to relieve acute to chronic pain and foster improved health, comfort, and quality of life within a compassionate and collaborative environment. Through continuous research and innovative practices, we are committed to eradicting pain, all while working closely with each patient to provide the most suitable and personalized care.",
+    "p1": "At Bowen Pain Center, our unwavering dedication lies in assisting patients through a interventional pain management program. Embracing the forefront of medical progress, we offer advanced diagnosis and treatment techniques to ensure the best possible outcomes.",
+    "p2": "Our core mission at Bowen Pain Center is to relieve acute to chronic pain and foster improved health, comfort, and quality of life within a compassionate and collaborative environment. Through continuous research and innovative practices, we are committed to eradicting pain, all while working closely with each patient to provide the most suitable care.",
     "title1": "OUR PROCEDURES"
   },
   "contact": {
