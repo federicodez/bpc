@@ -18,7 +18,7 @@ const Procedures = () => {
         <Navbar />
         <div className="container py-10 sm:py-20 mx-auto justify-center">
           <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
-            {t("procedures.title1" as unknown as TemplateStringsArray)}
+            {t("procedures.title1")}
           </h1>
           <div className="grid justify-items-center gap-4 md:w-[800px] mx-auto sm:my-10 grid-cols-1 md:grid-cols-2">
             <Image
@@ -29,12 +29,8 @@ const Procedures = () => {
               alt="procedure image"
             />
             <div>
-              <p className="m-4">
-                {t("procedures.p1" as unknown as TemplateStringsArray)}
-              </p>
-              <p className="m-4">
-                {t("procedures.p2" as unknown as TemplateStringsArray)}
-              </p>
+              <p className="m-4">{t("procedures.p1")}</p>
+              <p className="m-4">{t("procedures.p2")}</p>
             </div>
           </div>
         </div>

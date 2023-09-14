@@ -24,7 +24,7 @@ const ContactUs = () => {
         <Navbar />
         <div className="container contact py-10 sm:py-20 mx-auto justify-center">
           <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
-            {t("contact.title1" as unknown as TemplateStringsArray)}
+            {t("contact.title1")}
           </h1>
           <Form />
           <div className="grid mt-6 md:grid-cols-3">

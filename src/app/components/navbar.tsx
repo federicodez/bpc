@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 import spine from "@/app/images/spine.png";
 import Image from "next/image";
+import { MdLanguage } from "react-icons/md";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+  const [lng, setLng] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -20,6 +23,7 @@ export default function Navbar() {
                 <Link href="/">
                   <Image className="spine-logo" src={spine} alt="spine logo" />
                 </Link>
+                <p className="brand">Bowen Pain Center</p>
               </div>
               <div className="md:hidden">
                 <button
@@ -70,18 +74,52 @@ export default function Navbar() {
               <ul className="h-screen md:h-auto justify-center md:flex">
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/" onClick={() => setActive(!active)}>
-                    {t("navbar.title1" as unknown as TemplateStringsArray)}
+                    {t("navbar.title1")}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/procedures" onClick={() => setActive(!active)}>
-                    {t("navbar.title2" as unknown as TemplateStringsArray)}
+                    {t("navbar.title2")}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
                   <Link href="/contact" onClick={() => setActive(!active)}>
-                    {t("navbar.title3" as unknown as TemplateStringsArray)}
+                    {t("navbar.title3")}
                   </Link>
+                </li>
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
+                  <MdLanguage
+                    className="lng-icon"
+                    onClick={() => setLng(!lng)}
+                  />
+                  <div className="nav__translate-btn bg-blue-900">
+                    <button
+                      className={`${
+                        lng ? "lng-btn hover:bg-red-500" : "hidden"
+                      }`}
+                      id="en-btn"
+                      onClick={() => {
+                        changeLanguage("en");
+                        setLng(!lng);
+                      }}
+                    >
+                      <span className="fi fi-us fis"></span>
+                      <p>English</p>
+                    </button>
+                    <button
+                      className={`${
+                        lng ? "lng-btn hover:bg-yellow-500" : "hidden"
+                      }`}
+                      id="es-btn"
+                      onClick={() => {
+                        changeLanguage("es");
+                        setLng(!lng);
+                      }}
+                    >
+                      <span className="fi fi-es fis"></span>
+                      <p>Español</p>
+                    </button>
+                  </div>
                 </li>
               </ul>
             </div>

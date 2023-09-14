@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base { */
-/*   :root { */
-/*     --active: 1; */
-/*     --offset: 0.6; */
-/*     --direction: 1; */
-/*     --abs-offset: 1; */
-/*   } */
-/* } */
-
 html {
   background: linear-gradient(45deg, #fff, #c5dff8);
 }
@@ -130,31 +121,64 @@ html {
   }
 }
 
+/***** Navigation *****/
+
+.logo-container {
+  display: flex;
+  flex-direction: rows;
+  align-items: center;
+  gap: 10rem;
+}
+.brand {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 /***** Translation Button *****/
 
-.about__translate-btn {
+.lng-icon {
+  font-size: 2rem;
+  color: #fff;
+  top: 2rem;
+}
+
+.nav__translate-btn {
   display: flex;
-  justify-content: center;
-  .translate-btn {
-    background-color: skyblue;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  right: 8rem;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  .lng-btn {
     border-radius: 10px;
-    border: 2px solid #000;
-    margin: 1rem;
-    padding: 10px 28px;
-  }
-  .translate-btn:hover {
-    border: 2px solid #fff;
-  }
-  .translate-btn:active {
-    background-color: darkblue;
   }
 }
 
 /***** Logo *****/
 
 .spine-logo {
-  width: 7rem;
+  width: 3rem;
   border-radius: 50px;
-  /* mix-blend-mode: screen; */
-  box-shadow: inset -10px -10px 8px 8px darkblue;
+}
+
+/***** Mobile *****/
+@media (max-width: 868px) {
+  .nav__translate-btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 4rem;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow:
+      inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    .lng-btn {
+      border-radius: 10px;
+    }
+  }
 }

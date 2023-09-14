@@ -52,12 +52,10 @@ export default function Carousel({ title, content }: Procedures) {
           shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
           >
             <h2 className="text-center text-4xl font-bold mb-3">
-              {t([`carousel.title${i}`] as unknown as TemplateStringsArray)}
+              {t([`carousel.title${i}`])}
             </h2>
             <div className="flex justify-center items-center text-left">
-              {content.length
-                ? t([`carousel.content${i}`] as unknown as TemplateStringsArray)
-                : video}
+              {content.length ? t([`carousel.content${i}`]) : video}
             </div>
           </div>
         </div>
