@@ -12,6 +12,7 @@ export default function Navbar() {
   const [active, setActive] = useState(false);
   const [procedures, setProcedures] = useState(false);
   const [lng, setLng] = useState(false);
+  const [percdis, setPercdis] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -148,9 +149,68 @@ export default function Navbar() {
                         }`}
                         href="/procedures/percutaneous-discectomy"
                         onClick={() => setActive(!active)}
+                        onMouseOver={() => setPercdis(!percdis)}
                       >
                         {t("navbar.procedures.procedure6")}
                       </Link>
+                      <ul>
+                        <li className="absolute bg-blue-950 p-2">
+                          <Link
+                            href="/procedures/percutaneous-discectomy/#who"
+                            onClick={() => {
+                              setPercdis(!percdis);
+                              setActive(!active);
+                            }}
+                            className={`${
+                              percdis ? "hover:bg-blue-500" : "hidden"
+                            }`}
+                          >
+                            {t("percdis.who_title")}
+                          </Link>
+                        </li>
+                        <li className="absolute bg-blue-950 p-2">
+                          <Link
+                            href="/procedures/percutaneous-discectomy/#how"
+                            onClick={() => {
+                              setPercdis(!percdis);
+                              setActive(!active);
+                            }}
+                            className={`${
+                              percdis ? "hover:bg-blue-500" : "hidden"
+                            }`}
+                          >
+                            {t("percdis.how_title")}
+                          </Link>
+                        </li>
+                        <li className="absolute bg-blue-950 p-2">
+                          <Link
+                            href="/procedures/percutaneous-discectomy/#benefits"
+                            onClick={() => {
+                              setPercdis(!percdis);
+                              setActive(!active);
+                            }}
+                            className={`${
+                              percdis ? "hover:bg-blue-500" : "hidden"
+                            }`}
+                          >
+                            {t("percdis.benefits_title")}
+                          </Link>
+                        </li>
+                        <li className="absolute bg-blue-950 p-2">
+                          <Link
+                            href="/procedures/percutaneous-discectomy/#pre"
+                            onClick={() => {
+                              setPercdis(!percdis);
+                              setActive(!active);
+                            }}
+                            className={`${
+                              percdis ? "hover:bg-blue-500" : "hidden"
+                            }`}
+                          >
+                            {t("percdis.pre_main_title")}
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
