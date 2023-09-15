@@ -4,6 +4,7 @@ import Image from "next/image";
 import profilePic from "@/app/images/profilePic.jpg";
 import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const About = () => {
@@ -17,6 +18,24 @@ const About = () => {
         alt="operation picture"
       />
       <div className="container mx-auto">
+        <div className="lng-btn">
+          <button
+            type="submit"
+            className="lng-btn__en"
+            onClick={() => changeLanguage("en")}
+          >
+            <span>English</span>
+            <span className="fi fi-us fis"></span>
+          </button>
+          <button
+            type="submit"
+            className="lng-btn__es"
+            onClick={() => changeLanguage("es")}
+          >
+            <span className="fi fi-es fis"></span>
+            <span>Español</span>
+          </button>
+        </div>
         <h1 className="title m-10 text-center text-2xl my-4 font-bold text-blue-800">
           {t("about.title0")}
         </h1>

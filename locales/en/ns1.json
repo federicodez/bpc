@@ -2,7 +2,15 @@
   "navbar": {
     "title1": "Home",
     "title2": "Procedures",
-    "title3": "Contact Us"
+    "title3": "Contact Us",
+    "procedures": {
+      "procedure1": "Epidural Steroid Injection",
+      "procedure2": "Trigger Point Injection",
+      "procedure3": "Medial Branch Block",
+      "procedure4": "Radio Frequency Ablation",
+      "procedure5": "Sacroiliac Joint Injection",
+      "procedure6": "Percutaneous Discectomy"
+    }
   },
   "about": {
     "p1": "Welcome to Bowen Pain Center. Our mission is to deliver top-notch and innovative pain treatments, ensuring your overall well-being is prioritized.",
@@ -20,7 +28,7 @@
     "title1": "OUR PROCEDURES"
   },
   "contact": {
-    "title1": "CONTACT US"
+    "title": "CONTACT US"
   },
   "carousel": {
     "title0": "Epidural Steroid Injection",
@@ -34,5 +42,12 @@
     "title4": "Sacroiliac Joint Injection",
     "content4": "Patients experiencing lower back or buttocks pain can find relief through sacroiliac joint injections. The sacroiliac joint (SIJ) is the area where the spine and hip come together to form a joint space. Inflammation in this area can lead to pain resulting from arthritis, trauma, or various diseases. During the procedure, the patient lies on their stomach with a comfortable pillow for support. Under the guidance of fluoroscopy (x-ray), a small needle is carefully directed into the joint. After confirming the needle's position with a contrast dye, a mixture of local anesthetic and steroid medication is injected in and around the joint. Typically, patients experience relief within 1-3 days, and optimal pain relief is felt within 5-14 days after the injection. This procedure can provide significant relief to those suffering form sacroiliac joint-related pain.",
     "title5": "Discectomies"
+  },
+  "form": {
+    "firstname": "First name",
+    "lastname": "Last name",
+    "phone": "Phone number",
+    "email": "Email address",
+    "message": "Your messsage"
   }
 }

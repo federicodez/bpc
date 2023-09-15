@@ -2,9 +2,9 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Loading from "@/app/dashboard/loading";
-import Form from "@/app/components/Form";
 import { useTranslation } from "react-i18next";
 
+const Form = dynamic(() => import("@/app/components/Form"), { ssr: false });
 const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
 const Map = dynamic(() => import("@/app/components/Map"), {
   loading: () => (
@@ -24,7 +24,7 @@ const ContactUs = () => {
         <Navbar />
         <div className="container contact py-10 sm:py-20 mx-auto justify-center">
           <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
-            {t("contact.title1")}
+            {t("contact.title")}
           </h1>
           <Form />
           <div className="grid mt-6 md:grid-cols-3">

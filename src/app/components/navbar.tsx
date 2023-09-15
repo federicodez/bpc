@@ -10,22 +10,21 @@ import { MdLanguage } from "react-icons/md";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
+  const [procedures, setProcedures] = useState(false);
   const [lng, setLng] = useState(false);
   const { t } = useTranslation();
 
   return (
     <header>
-      <nav className="w-full fixed z-10 bg-blue-950 top-0 left-0 right-0">
+      <nav className="w-full fixed z-10 bg-blue-950 top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-          <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <div className="logo-container">
-                <Link href="/">
-                  <Image className="spine-logo" src={spine} alt="spine logo" />
-                </Link>
-                <p className="brand">Bowen Pain Center</p>
-              </div>
-              <div className="md:hidden">
+          <div className="flex-1 items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex flex-row flex-nowrap">
+              <Image className="spine-logo" src={spine} alt="spine logo" />
+              <h3 className="text-white text-xl mx-auto self-center md:text-2xl">
+                Bowen Pain Center
+              </h3>
+              <div className="self-center md:hidden">
                 <button
                   onClick={() => setActive(!active)}
                   className="p-2 text-white rounded-md outline-none focus:border-white focus:border"
@@ -72,30 +71,109 @@ export default function Navbar() {
               }`}
             >
               <ul className="h-screen md:h-auto justify-center md:flex">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
                   <Link href="/" onClick={() => setActive(!active)}>
                     {t("navbar.title1")}
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
-                  <Link href="/procedures" onClick={() => setActive(!active)}>
+                <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
+                  <Link
+                    href="/procedures"
+                    onClick={() => setActive(!active)}
+                    onMouseOver={() => setProcedures(!procedures)}
+                    className="navbar__procedures"
+                  >
                     {t("navbar.title2")}
                   </Link>
+                  <ul className="absolute bg-blue-950 p-2">
+                    <li>
+                      <Link
+                        href="/procedures/epidural-steroid-injection"
+                        onClick={() => setActive(!active)}
+                        className={`${
+                          procedures ? "hover:bg-blue-500" : "hidden"
+                        }`}
+                      >
+                        {t("navbar.procedures.procedure1")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          procedures ? "hover:bg-blue-500" : "hidden"
+                        }`}
+                        href="/procedures/trigger-point-injection"
+                        onClick={() => setActive(!active)}
+                      >
+                        {t("navbar.procedures.procedure2")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          procedures ? "hover:bg-blue-500" : "hidden"
+                        }`}
+                        href="/procedures/medial-branch-block"
+                        onClick={() => setActive(!active)}
+                      >
+                        {t("navbar.procedures.procedure3")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          procedures ? "hover:bg-blue-500" : "hidden"
+                        }`}
+                        href="/procedures/radio-frequency-ablation"
+                        onClick={() => setActive(!active)}
+                      >
+                        {t("navbar.procedures.procedure4")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          procedures ? "hover:bg-blue-500" : "hidden"
+                        }`}
+                        href="/procedures/sacroiliac-joint-injection"
+                        onClick={() => setActive(!active)}
+                      >
+                        {t("navbar.procedures.procedure5")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          procedures ? "hover:bg-blue-500" : "hidden"
+                        }`}
+                        href="/procedures/percutaneous-discectomy"
+                        onClick={() => setActive(!active)}
+                      >
+                        {t("navbar.procedures.procedure6")}
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
                   <Link href="/contact" onClick={() => setActive(!active)}>
                     {t("navbar.title3")}
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-left">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-4 text-left">
                   <MdLanguage
                     className="lng-icon"
                     onClick={() => setLng(!lng)}
                   />
-                  <div className="nav__translate-btn bg-blue-900">
-                    <button
-                      className={`${
-                        lng ? "lng-btn hover:bg-red-500" : "hidden"
+                  <ul
+                    className={`nav__translate-btn bg-blue-900 rounded-lg ${
+                      lng ? "absolute md:right-4 lg:right-80" : "hidden"
+                    }`}
+                  >
+                    <li
+                      className={`lng-btn ${
+                        lng
+                          ? "flex justify-center m-1 p-1 hover:bg-red-500 rounded-lg"
+                          : "hidden"
                       }`}
                       id="en-btn"
                       onClick={() => {
@@ -105,10 +183,12 @@ export default function Navbar() {
                     >
                       <span className="fi fi-us fis"></span>
                       <p>English</p>
-                    </button>
-                    <button
-                      className={`${
-                        lng ? "lng-btn hover:bg-yellow-500" : "hidden"
+                    </li>
+                    <li
+                      className={`lng-btn ${
+                        lng
+                          ? "flex justify-center m-1 p-1 hover:bg-yellow-500 rounded-lg"
+                          : "hidden"
                       }`}
                       id="es-btn"
                       onClick={() => {
@@ -118,8 +198,8 @@ export default function Navbar() {
                     >
                       <span className="fi fi-es fis"></span>
                       <p>Español</p>
-                    </button>
-                  </div>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>

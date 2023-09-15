@@ -1,6 +1,10 @@
+"use client";
+
 import submitContact from "@/app/libs/submitContact";
+import { useTranslation } from "react-i18next";
 
 export default function Form() {
+  const { t } = useTranslation();
   return (
     <form
       action={submitContact}
@@ -12,7 +16,7 @@ export default function Form() {
             htmlFor="firstName"
             className="block mb-2 text-sm font-medium text-blue-900 light:text-black"
           >
-            First name
+            {t("form.firstname")}
           </label>
           <input
             type="text"
@@ -28,7 +32,7 @@ export default function Form() {
             htmlFor="lastName"
             className="block mb-2 text-sm font-medium text-blue-900 light:text-black"
           >
-            Last name
+            {t("form.lastname")}
           </label>
           <input
             type="text"
@@ -44,7 +48,7 @@ export default function Form() {
             htmlFor="phone"
             className="block mb-2 text-sm font-medium text-blue-900 light:text-black"
           >
-            Phone number
+            {t("form.phone")}
           </label>
           <input
             type="tel"
@@ -61,7 +65,7 @@ export default function Form() {
             htmlFor="email"
             className="block mb-2 text-sm font-medium text-blue-900 light:text-black"
           >
-            Email address
+            {t("form.email")}
           </label>
           <input
             type="email"
@@ -78,7 +82,7 @@ export default function Form() {
           htmlFor="message"
           className="block mb-2 text-sm font-medium text-blue-900 light:text-black"
         >
-          Your message
+          {t("form.message")}
         </label>
         <textarea
           id="message"

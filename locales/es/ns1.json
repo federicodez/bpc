@@ -2,7 +2,15 @@
   "navbar": {
     "title1": "Inicio",
     "title2": "Procedimientos",
-    "title3": "Contacto"
+    "title3": "Contacto",
+    "procedures": {
+      "procedure1": "Inyección epidural de esteroides",
+      "procedure2": "Inyección en el punto gatillo",
+      "procedure3": "Bloqueo de rama medial",
+      "procedure4": "Ablación por radiofrecuencia",
+      "procedure5": "Inyección en la articulación sacroilíaca",
+      "procedure6": "Discectomía Percutánea"
+    }
   },
   "about": {
     "p1": "Bienvenido al Centro del Dolor Bowen. Nuestra misión es ofrecer tratamientos para el dolor innovadores y de primer nivel, garantizando que se dé prioridad a su bienestar general.",
@@ -20,7 +28,7 @@
     "title1": "NUESTRAS PROCEDIMIENTOS"
   },
   "contact": {
-    "title1": "CONTÁCTENOS"
+    "title": "CONTÁCTENOS"
   },
   "carousel": {
     "title0": "Inyección epidural de esteroides",
@@ -34,5 +42,12 @@
     "title4": "Inyección en la articulación sacroilíaca",
     "content4": "Los pacientes que experimentan dolor en la parte baja de la espalda o en las nalgas pueden encontrar alivio mediante inyecciones en la articulación sacroilíaca. El La articulación sacroilíaca (SIJ) es el área donde la columna y la cadera se unen para formar un espacio articular. Inflamación en esta área. puede provocar dolor resultante de artritis, traumatismos o diversas enfermedades. Durante el procedimiento, el paciente se acuesta boca arriba. estómago con una almohada cómoda como apoyo. Bajo la guía de fluoroscopia (rayos X), se introduce cuidadosamente una pequeña aguja dirigido a la articulación. Después de confirmar la posición de la aguja con un medio de contraste, se aplica una mezcla de anestésico local. y se inyecta medicamento esteroide dentro y alrededor de la articulación. Normalmente, los pacientes experimentan alivio en 1 a 3 días y El alivio óptimo del dolor se siente entre 5 y 14 días después de la inyección. Este procedimiento puede proporcionar un alivio significativo a aquellos Sufre dolor relacionado con la articulación sacroilíaca.",
     "title5": "Discectomías"
+  },
+  "form": {
+    "firstname": "Nombre de pila",
+    "lastname": "Apellido",
+    "phone": "Número de teléfono",
+    "email": "Dirección de correo electrónico",
+    "message": "Tu mensaje"
   }
 }
