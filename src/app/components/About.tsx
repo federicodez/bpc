@@ -20,24 +20,6 @@ const About = () => {
         alt="operation picture"
       />
       <div className="container mx-auto my-10">
-        <div className="lng-btn">
-          <button
-            type="submit"
-            className="lng-btn__en"
-            onClick={() => changeLanguage("en")}
-          >
-            <span>English</span>
-            <span className="fi fi-us fis"></span>
-          </button>
-          <button
-            type="submit"
-            className="lng-btn__es"
-            onClick={() => changeLanguage("es")}
-          >
-            <span className="fi fi-es fis"></span>
-            <span>Español</span>
-          </button>
-        </div>
         <h1 className="title m-10 text-center text-2xl my-4 font-bold text-blue-800">
           {t("about.title0")}
         </h1>

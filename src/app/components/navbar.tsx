@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 import spine from "@/app/images/spine.png";
 import Image from "next/image";
-import { MdLanguage } from "react-icons/md";
 import {
   AiOutlineCloseSquare,
   AiOutlineMenu,
@@ -14,12 +13,12 @@ import {
   AiOutlineMinus,
 } from "react-icons/ai";
 
-export default function Navbar() {
+const Navbar = () => {
   const [active, setActive] = useState(false);
   const [procedures, setProcedures] = useState(false);
-  const [lng, setLng] = useState(false);
-  const [percdis, setPercdis] = useState(false);
   const { t } = useTranslation();
+
+  const handleLng = (lng: string) => changeLanguage(lng);
 
   return (
     <header>
@@ -334,46 +333,14 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-4 text-left">
-                  <MdLanguage
-                    className="lng-icon"
-                    onClick={() => setLng(!lng)}
-                  />
-                  <ul
-                    className={`nav__translate-btn bg-blue-900 rounded-lg ${
-                      lng ? "absolute md:right-4 lg:right-80" : "hidden"
-                    }`}
+                  <select
+                    id="language"
+                    name="language"
+                    onChange={(e) => handleLng(e.target.value)}
                   >
-                    <li
-                      className={`lng-btn ${
-                        lng
-                          ? "flex justify-center m-1 p-1 hover:bg-red-500 rounded-lg"
-                          : "hidden"
-                      }`}
-                      id="en-btn"
-                      onClick={() => {
-                        changeLanguage("en");
-                        setLng(!lng);
-                      }}
-                    >
-                      <span className="fi fi-us fis"></span>
-                      <p>English</p>
-                    </li>
-                    <li
-                      className={`lng-btn ${
-                        lng
-                          ? "flex justify-center m-1 p-1 hover:bg-yellow-500 rounded-lg"
-                          : "hidden"
-                      }`}
-                      id="es-btn"
-                      onClick={() => {
-                        changeLanguage("es");
-                        setLng(!lng);
-                      }}
-                    >
-                      <span className="fi fi-es fis"></span>
-                      <p>Español</p>
-                    </li>
-                  </ul>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                  </select>
                 </li>
               </ul>
             </div>
@@ -382,4 +349,6 @@ export default function Navbar() {
       </nav>
     </header>
   );
-}
+};
+
+export default Navbar;
