@@ -202,3 +202,9 @@ video {
     filter: drop-shadow(0px 0px 0.5rem #ffd60a);
   }
 }
+
+@media (max-width: 858px) {
+  .navbar-procedures-nested-links-close-btn {
+    display: none;
+  }
+}

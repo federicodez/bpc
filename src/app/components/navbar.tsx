@@ -49,12 +49,12 @@ export default function Navbar() {
             <div
               className={`flex-1 justify-self-center mt-8 md:block md:pb-0 md:mt-0 ${
                 active
-                  ? "border-t-2 pt-8 md:border-none md:h-fit md:p-0 block"
+                  ? "overscroll-contain border-t-2 pt-8 md:border-none md:h-fit md:p-0 block"
                   : "hidden"
               }`}
             >
               <ul className="h-screen md:h-auto justify-center md:flex">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
+                <li className=" pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
                   <Link href="/" onClick={() => setActive(!active)}>
                     {t("navbar.title1")}
                   </Link>
@@ -80,48 +80,46 @@ export default function Navbar() {
                     className={`
                     ${
                       procedures
-                        ? "md:absolute text-base bg-[#03045e] p-2 md:top-full"
+                        ? "mt-5 md:absolute text-base bg-[#03045e] p-2 md:mt-0 md:top-full shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
                         : "hidden"
                     }`}
                   >
                     <button
                       onClick={() => setProcedures(!procedures)}
-                      className={`${procedures ? "absolute right-5" : ""}`}
+                      className={`navbar-procedures-nested-links-close-btn ${
+                        procedures ? "md:absolute md:right-5" : ""
+                      }`}
                     >
                       <AiOutlineCloseSquare />
                     </button>
-                    <li>
+                    <li className="border-b p-2 m-2">
                       <Link
                         href="/procedures/epidural-steroid-injection/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
                         }}
-                        className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
-                        } `}
+                        className="md:hover:text-[#ffd60a]"
                       >
                         {t("navbar.procedures.procedure1")}
                       </Link>
                     </li>
-                    <li>
+                    <li className="border-b p-2 m-2">
                       <Link
-                        className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
-                        }`}
                         href="/procedures/trigger-point-injection/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
                         }}
+                        className="md:hover:text-[#ffd60a]"
                       >
                         {t("navbar.procedures.procedure2")}
                       </Link>
                     </li>
-                    <li>
+                    <li className="border-b p-2 m-2">
                       <Link
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/medial-branch-block/#carouselId"
                         onClick={() => {
@@ -132,10 +130,10 @@ export default function Navbar() {
                         {t("navbar.procedures.procedure3")}
                       </Link>
                     </li>
-                    <li>
+                    <li className="border-b p-2 m-2">
                       <Link
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/radio-frequency-ablation/#carouselId"
                         onClick={() => {
@@ -146,10 +144,10 @@ export default function Navbar() {
                         {t("navbar.procedures.procedure4")}
                       </Link>
                     </li>
-                    <li>
+                    <li className="border-b p-2 m-2">
                       <Link
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/sacroiliac-joint-injection/#carouselId"
                         onClick={() => {
@@ -160,10 +158,10 @@ export default function Navbar() {
                         {t("navbar.procedures.procedure5")}
                       </Link>
                     </li>
-                    <li>
+                    <li className="border-b p-2 m-2">
                       <Link
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/percutaneous-discectomy/#carouselId"
                         onClick={() => {
@@ -174,11 +172,7 @@ export default function Navbar() {
                         {t("navbar.procedures.procedure6")}
                       </Link>
                     </li>
-                    <li
-                      className={`${
-                        procedures ? "list-disc list-inside " : ""
-                      }`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#about"
                         onClick={() => {
@@ -186,15 +180,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.about_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#treating"
                         onClick={() => {
@@ -202,15 +194,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.treating_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#who"
                         onClick={() => {
@@ -218,15 +208,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.who_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#who"
                         onClick={() => {
@@ -234,15 +222,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.who_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#before"
                         onClick={() => {
@@ -250,15 +236,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.before_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#during"
                         onClick={() => {
@@ -266,15 +250,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.during_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#after"
                         onClick={() => {
@@ -282,15 +264,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.after_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#what"
                         onClick={() => {
@@ -298,15 +278,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.what_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#how"
                         onClick={() => {
@@ -314,15 +292,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.how_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#benefits"
                         onClick={() => {
@@ -330,15 +306,13 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.benefits_title")}
                       </Link>
                     </li>
-                    <li
-                      className={`${procedures ? "list-disc list-inside" : ""}`}
-                    >
+                    <li className="p-2 m-2 list-disc list-inside">
                       <Link
                         href="/procedures/percutaneous-discectomy/#pre"
                         onClick={() => {
@@ -346,7 +320,7 @@ export default function Navbar() {
                           setProcedures(!procedures);
                         }}
                         className={`${
-                          procedures ? "hover:text-[#ffd60a]" : ""
+                          procedures ? "md:hover:text-[#ffd60a]" : ""
                         }`}
                       >
                         {t("percdis.pre_main_title")}

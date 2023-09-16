@@ -23,7 +23,7 @@ export default function Carousel({ index }: { index: number }) {
 
   return (
     <>
-      <div className="container py-10  mx-auto justify-center">
+      <div className="container  mx-auto justify-center">
         <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
           {t("procedures.title1")}
         </h1>
