@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Loading from "@/app/dashboard/loading";
+import { Footer } from "@/app/components";
 
 const Carousel = dynamic(() => import("@/app/components/Carousel"), {
   ssr: false,
@@ -12,9 +13,8 @@ const Medial = () => {
     <>
       <Suspense fallback={<Loading />}>
         <Navbar />
-        <div className="container contact py-10 sm:py-20 mx-auto justify-center">
-          <Carousel index={2} />
-        </div>
+        <Carousel index={2} />
+        <Footer />
       </Suspense>
     </>
   );

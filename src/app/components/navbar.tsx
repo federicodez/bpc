@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="w-full fixed z-10 bg-[#03045e] top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+      <nav className="w-full sticky z-10 bg-[#03045e] top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
         <div className="justify-between px-4 mx-auto overflow-y-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div className="flex-1 items-center justify-between py-3 md:py-5 md:block">
             <div className="flex flex-row flex-nowrap">
@@ -62,7 +62,10 @@ export default function Navbar() {
                 <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
                   <Link
                     href="/procedures"
-                    onClick={() => setActive(!active)}
+                    onClick={() => {
+                      setActive(!active);
+                      setProcedures(!procedures);
+                    }}
                     onMouseOver={() => setProcedures(!procedures)}
                   >
                     {t("navbar.title2")}

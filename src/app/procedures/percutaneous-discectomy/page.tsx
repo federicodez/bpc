@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Loading from "@/app/dashboard/loading";
 import { useTranslation } from "react-i18next";
+import { Footer } from "@/app/components";
 
 const Carousel = dynamic(() => import("@/app/components/Carousel"), {
   ssr: false,
@@ -146,6 +147,7 @@ const Discectomy = () => {
             </li>
           </ul>
         </div>
+        <Footer />
       </Suspense>
     </>
   );
