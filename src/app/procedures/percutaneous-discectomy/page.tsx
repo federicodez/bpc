@@ -5,6 +5,9 @@ import { Suspense } from "react";
 import Loading from "@/app/dashboard/loading";
 import { useTranslation } from "react-i18next";
 
+const Carousel = dynamic(() => import("@/app/components/Carousel"), {
+  ssr: false,
+});
 const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
 
 const Discectomy = () => {

@@ -7,14 +7,9 @@ import { TiChevronLeftOutline, TiChevronRightOutline } from "react-icons/ti";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-type Procedures = {
-  title: string;
-  content: string;
-};
-
-export default function Carousel({ title, content }: Procedures) {
+export default function Carousel({ index }: { index: number }) {
   const { t } = useTranslation();
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(index);
   const count = procedures.length;
   const video = (
     <iframe
@@ -56,7 +51,7 @@ export default function Carousel({ title, content }: Procedures) {
               <TiChevronLeftOutline />
             </button>
           )}
-          {procedures.map(({ title, content }, i) => (
+          {procedures.map(({ content }, i) => (
             <div
               key={i}
               className="card-container absolute w-full h-full"
