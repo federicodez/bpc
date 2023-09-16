@@ -89,7 +89,7 @@ export default function Navbar() {
                     </button>
                     <li>
                       <Link
-                        href="/procedures/epidural-steroid-injection"
+                        href="/procedures/epidural-steroid-injection/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
@@ -106,7 +106,7 @@ export default function Navbar() {
                         className={`${
                           procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
-                        href="/procedures/trigger-point-injection"
+                        href="/procedures/trigger-point-injection/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
@@ -120,7 +120,7 @@ export default function Navbar() {
                         className={`${
                           procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
-                        href="/procedures/medial-branch-block"
+                        href="/procedures/medial-branch-block/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
@@ -134,7 +134,7 @@ export default function Navbar() {
                         className={`${
                           procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
-                        href="/procedures/radio-frequency-ablation"
+                        href="/procedures/radio-frequency-ablation/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
@@ -148,7 +148,7 @@ export default function Navbar() {
                         className={`${
                           procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
-                        href="/procedures/sacroiliac-joint-injection"
+                        href="/procedures/sacroiliac-joint-injection/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);
@@ -162,7 +162,7 @@ export default function Navbar() {
                         className={`${
                           procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
-                        href="/procedures/percutaneous-discectomy"
+                        href="/procedures/percutaneous-discectomy/#carouselId"
                         onClick={() => {
                           setActive(!active);
                           setProcedures(!procedures);

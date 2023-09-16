@@ -66,6 +66,7 @@ export default function Carousel({ index }: { index: number }) {
               }}
             >
               <div
+                id="carouselId"
                 className="card w-full h-full p-4 rounded-2xl text-black text-justify border-4 border-solid border-white 
           shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
               >
