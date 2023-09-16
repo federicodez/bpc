@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-white text-center">
+    <footer className="bg-[#03045e] text-white text-center">
       <p>
         @2020 Bowen Pain Center
         <br />

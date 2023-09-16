@@ -7,6 +7,12 @@ import { changeLanguage } from "i18next";
 import spine from "@/app/images/spine.png";
 import Image from "next/image";
 import { MdLanguage } from "react-icons/md";
+import {
+  AiOutlineCloseSquare,
+  AiOutlineMenu,
+  AiOutlinePlus,
+  AiOutlineMinus,
+} from "react-icons/ai";
 
 export default function Navbar() {
   const [active, setActive] = useState(false);
@@ -17,11 +23,15 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="w-full fixed z-10 bg-blue-950 top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <nav className="w-full fixed z-10 bg-[#03045e] top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+        <div className="justify-between px-4 mx-auto overflow-y-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div className="flex-1 items-center justify-between py-3 md:py-5 md:block">
             <div className="flex flex-row flex-nowrap">
-              <Image className="spine-logo" src={spine} alt="spine logo" />
+              <Image
+                className="spine-logo w-12 rounded-full m-2"
+                src={spine}
+                alt="spine logo"
+              />
               <h3 className="text-white text-xl mx-auto self-center md:text-2xl">
                 Bowen Pain Center
               </h3>
@@ -30,35 +40,7 @@ export default function Navbar() {
                   onClick={() => setActive(!active)}
                   className="p-2 text-white rounded-md outline-none focus:border-white focus:border"
                 >
-                  {active ? (
-                    <svg
-                      className="w-6 h-6 text-white"
-                      viewBox="0 0 40 40"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={5}
-                      stroke="white"
-                      fill="transparent"
-                    >
-                      <path
-                        className="close-x"
-                        d="M 10,10 L 30,30 M 30,10 L 10,30"
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      className="w-6 h-6 text-white"
-                      x-show="!showMenu"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                  )}
+                  {active ? <AiOutlineCloseSquare /> : <AiOutlineMenu />}
                 </button>
               </div>
             </div>
@@ -82,18 +64,39 @@ export default function Navbar() {
                     href="/procedures"
                     onClick={() => setActive(!active)}
                     onMouseOver={() => setProcedures(!procedures)}
-                    className="navbar__procedures"
                   >
                     {t("navbar.title2")}
                   </Link>
-                  <ul className="absolute bg-blue-950 p-2">
+                  <button
+                    onClick={() => setProcedures(!procedures)}
+                    className="absolute right-5 md:hidden"
+                  >
+                    {!procedures ? <AiOutlinePlus /> : <AiOutlineMinus />}
+                  </button>
+                  <ul
+                    className={`
+                    ${
+                      procedures
+                        ? "md:absolute text-base bg-[#03045e] p-2 md:top-full"
+                        : "hidden"
+                    }`}
+                  >
+                    <button
+                      onClick={() => setProcedures(!procedures)}
+                      className={`${procedures ? "absolute right-5" : ""}`}
+                    >
+                      <AiOutlineCloseSquare />
+                    </button>
                     <li>
                       <Link
                         href="/procedures/epidural-steroid-injection"
-                        onClick={() => setActive(!active)}
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
                         className={`${
-                          procedures ? "hover:bg-blue-500" : "hidden"
-                        }`}
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        } `}
                       >
                         {t("navbar.procedures.procedure1")}
                       </Link>
@@ -101,10 +104,13 @@ export default function Navbar() {
                     <li>
                       <Link
                         className={`${
-                          procedures ? "hover:bg-blue-500" : "hidden"
+                          procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/trigger-point-injection"
-                        onClick={() => setActive(!active)}
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
                       >
                         {t("navbar.procedures.procedure2")}
                       </Link>
@@ -112,10 +118,13 @@ export default function Navbar() {
                     <li>
                       <Link
                         className={`${
-                          procedures ? "hover:bg-blue-500" : "hidden"
+                          procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/medial-branch-block"
-                        onClick={() => setActive(!active)}
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
                       >
                         {t("navbar.procedures.procedure3")}
                       </Link>
@@ -123,10 +132,13 @@ export default function Navbar() {
                     <li>
                       <Link
                         className={`${
-                          procedures ? "hover:bg-blue-500" : "hidden"
+                          procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/radio-frequency-ablation"
-                        onClick={() => setActive(!active)}
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
                       >
                         {t("navbar.procedures.procedure4")}
                       </Link>
@@ -134,10 +146,13 @@ export default function Navbar() {
                     <li>
                       <Link
                         className={`${
-                          procedures ? "hover:bg-blue-500" : "hidden"
+                          procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/sacroiliac-joint-injection"
-                        onClick={() => setActive(!active)}
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
                       >
                         {t("navbar.procedures.procedure5")}
                       </Link>
@@ -145,72 +160,194 @@ export default function Navbar() {
                     <li>
                       <Link
                         className={`${
-                          procedures ? "hover:bg-blue-500" : "hidden"
+                          procedures ? "hover:text-[#ffd60a]" : ""
                         }`}
                         href="/procedures/percutaneous-discectomy"
-                        onClick={() => setActive(!active)}
-                        onMouseOver={() => setPercdis(!percdis)}
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
                       >
                         {t("navbar.procedures.procedure6")}
                       </Link>
-                      <ul>
-                        <li className="absolute bg-blue-950 p-2">
-                          <Link
-                            href="/procedures/percutaneous-discectomy/#who"
-                            onClick={() => {
-                              setPercdis(!percdis);
-                              setActive(!active);
-                            }}
-                            className={`${
-                              percdis ? "hover:bg-blue-500" : "hidden"
-                            }`}
-                          >
-                            {t("percdis.who_title")}
-                          </Link>
-                        </li>
-                        <li className="absolute bg-blue-950 p-2">
-                          <Link
-                            href="/procedures/percutaneous-discectomy/#how"
-                            onClick={() => {
-                              setPercdis(!percdis);
-                              setActive(!active);
-                            }}
-                            className={`${
-                              percdis ? "hover:bg-blue-500" : "hidden"
-                            }`}
-                          >
-                            {t("percdis.how_title")}
-                          </Link>
-                        </li>
-                        <li className="absolute bg-blue-950 p-2">
-                          <Link
-                            href="/procedures/percutaneous-discectomy/#benefits"
-                            onClick={() => {
-                              setPercdis(!percdis);
-                              setActive(!active);
-                            }}
-                            className={`${
-                              percdis ? "hover:bg-blue-500" : "hidden"
-                            }`}
-                          >
-                            {t("percdis.benefits_title")}
-                          </Link>
-                        </li>
-                        <li className="absolute bg-blue-950 p-2">
-                          <Link
-                            href="/procedures/percutaneous-discectomy/#pre"
-                            onClick={() => {
-                              setPercdis(!percdis);
-                              setActive(!active);
-                            }}
-                            className={`${
-                              percdis ? "hover:bg-blue-500" : "hidden"
-                            }`}
-                          >
-                            {t("percdis.pre_main_title")}
-                          </Link>
-                        </li>
-                      </ul>
+                    </li>
+                    <li
+                      className={`${
+                        procedures ? "list-disc list-inside " : ""
+                      }`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#about"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.about_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#treating"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.treating_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#who"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.who_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#who"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.who_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#before"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.before_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#during"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.during_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#after"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.after_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#what"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.what_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#how"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.how_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#benefits"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.benefits_title")}
+                      </Link>
+                    </li>
+                    <li
+                      className={`${procedures ? "list-disc list-inside" : ""}`}
+                    >
+                      <Link
+                        href="/procedures/percutaneous-discectomy/#pre"
+                        onClick={() => {
+                          setActive(!active);
+                          setProcedures(!procedures);
+                        }}
+                        className={`${
+                          procedures ? "hover:text-[#ffd60a]" : ""
+                        }`}
+                      >
+                        {t("percdis.pre_main_title")}
+                      </Link>
                     </li>
                   </ul>
                 </li>

@@ -2,8 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: linear-gradient(45deg, #fff, #c5dff8);
+  --nav-primary: #03045e;
+  --nav-secondary: #c5dff8;
+  --clr-red-900: hsla(360, 100%, 17%, 1);
+  --clr-blue-500: hsla(227, 47%, 23%, 1);
+  --clr-blue-900: hsla(227, 100%, 17%, 1);
+
+  --ff-base: "Outfit", sans-serif;
+
+  --fw-regular: 300;
+  --fw-semi-bold: 400;
+  --fw-bold: 700;
+
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: 3.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  background: linear-gradient(45deg, #fff, #c5dff8);
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui;
+  margin: 0;
+  color: #000;
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  background: var(--bg-primary);
+}
+
+Image,
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  width: min(50rem, 100% - 2rem);
+  margin-inline: auto;
 }
 
 /********Line design**********/
@@ -135,7 +186,7 @@ html {
   .lng-btn__en {
     padding: 5px;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid #000;
   }
   .lng-btn__es {
     padding: 5px;
@@ -143,18 +194,11 @@ html {
     border: 2px solid black;
   }
   .lng-btn__en:hover {
-    border: 2px solid red;
-    filter: drop-shadow(0px 0px 0.5rem red);
+    border: 2px solid #d62828;
+    filter: drop-shadow(0px 0px 0.5rem #d62828);
   }
   .lng-btn__es:hover {
-    border: 2px solid orange;
-    filter: drop-shadow(0px 0px 0.5rem orange);
+    border: 2px solid #ffd60a;
+    filter: drop-shadow(0px 0px 0.5rem #ffd60a);
   }
-}
-
-/***** Logo *****/
-
-.spine-logo {
-  width: 3rem;
-  border-radius: 50px;
 }

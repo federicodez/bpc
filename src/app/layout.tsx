@@ -2,7 +2,6 @@ import "@/i18n";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { Footer } from "@/app/components";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +24,6 @@ export default function RootLayout({
           src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
         ></Script>
         {children}
-        <Footer />
       </body>
     </html>
   );

@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import profilePic from "@/app/images/profilePic.jpg";
+import profilePic2 from "@/app/images/profilePic2.jpg";
 import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
+import { Footer } from "@/app/components";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const About = () => {
@@ -12,12 +14,12 @@ const About = () => {
   return (
     <>
       <Image
-        className="operation my-10 h-96 object-center object-cover shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
+        className="operation  h-96 object-center object-cover shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
         src={operation}
         priority={true}
         alt="operation picture"
       />
-      <div className="container mx-auto">
+      <div className="container mx-auto my-10">
         <div className="lng-btn">
           <button
             type="submit"
@@ -47,9 +49,9 @@ const About = () => {
         </h1>
         <div className="grid mx-auto my-10 sm:w-[600px] grid-cols-1 gap-4 sm:grid-cols-3">
           <Image
-            className="profile-image object-contain w-auto sm:col-span-2 sm:w-96 h-auto border-8 border-solid border-white 
+            className="profile-image object-contain object-right w-auto sm:col-span-2 sm:w-96 h-auto border-8 border-solid border-white 
           shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
-            src={profilePic}
+            src={profilePic2}
             alt="profile picture"
           />
           <div className="sm:w-72">
@@ -61,6 +63,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

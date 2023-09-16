@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Loading from "@/app/dashboard/loading";
 import { useTranslation } from "react-i18next";
+import { Footer } from "@/app/components";
 
 const Form = dynamic(() => import("@/app/components/Form"), { ssr: false });
 const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
@@ -53,6 +54,7 @@ const ContactUs = () => {
             <Map />
           </div>
         </div>
+        <Footer />
       </Suspense>
     </>
   );
