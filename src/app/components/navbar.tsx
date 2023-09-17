@@ -16,13 +16,22 @@ import {
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [procedures, setProcedures] = useState(false);
+  const [lng, setLng] = useState(true);
   const { t } = useTranslation();
 
-  const handleLng = (lng: string) => changeLanguage(lng);
+  const handleLng = () => {
+    if (lng) {
+      changeLanguage("es");
+      setLng(!lng);
+    } else {
+      changeLanguage("en");
+      setLng(!lng);
+    }
+  };
 
   return (
     <header>
-      <nav className="w-full sticky z-10 bg-[#03045e] top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+      <nav className="w-full fixed z-10 bg-[#03045e] top-0 left-0 right-0 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
         <div className="justify-between px-4 mx-auto overflow-y-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div className="flex-1 items-center justify-between py-3 md:py-5 md:block">
             <div className="flex flex-row flex-nowrap">
@@ -31,7 +40,7 @@ const Navbar = () => {
                 src={spine}
                 alt="spine logo"
               />
-              <h3 className="text-white text-xl mx-auto self-center md:text-2xl">
+              <h3 className="text-white flex-nowrap text-xl mx-auto self-center md:text-2xl">
                 Bowen Pain Center
               </h3>
               <div className="self-center md:hidden">
@@ -215,20 +224,6 @@ const Navbar = () => {
                     </li>
                     <li className="border-b p-2 m-2 list-disc list-inside">
                       <Link
-                        href="/procedures/percutaneous-discectomy/#who"
-                        onClick={() => {
-                          setActive(!active);
-                          setProcedures(!procedures);
-                        }}
-                        className={`${
-                          procedures ? "md:hover:text-[#ffd60a]" : ""
-                        }`}
-                      >
-                        {t("percdis.who_title")}
-                      </Link>
-                    </li>
-                    <li className="border-b p-2 m-2 list-disc list-inside">
-                      <Link
                         href="/procedures/percutaneous-discectomy/#before"
                         onClick={() => {
                           setActive(!active);
@@ -333,14 +328,21 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-4 text-left">
-                  <select
-                    id="language"
-                    name="language"
-                    onChange={(e) => handleLng(e.target.value)}
-                  >
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                  </select>
+                  {lng ? (
+                    <button
+                      className="mt-1 hover:text-[#ffd60a]"
+                      onClick={handleLng}
+                    >
+                      Español
+                    </button>
+                  ) : (
+                    <button
+                      className="mt-1 hover:text-[#d62828]"
+                      onClick={handleLng}
+                    >
+                      English
+                    </button>
+                  )}
                 </li>
               </ul>
             </div>

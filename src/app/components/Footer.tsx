@@ -3,10 +3,21 @@
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { changeLanguage } from "i18next";
+import { useState } from "react";
 
 const Footer = () => {
+  const [lng, setLng] = useState(true);
   const { t } = useTranslation();
-  const handleLng = (lng: string) => changeLanguage(lng);
+
+  const handleLng = () => {
+    if (lng) {
+      changeLanguage("es");
+      setLng(!lng);
+    } else {
+      changeLanguage("en");
+      setLng(!lng);
+    }
+  };
   return (
     <footer className="flex p-4 justify-evenly bg-[#03045e] text-white text-center flex-col-reverse md:flex-row">
       <p>
@@ -19,15 +30,15 @@ const Footer = () => {
         <Link href="/procedures">{t("navbar.title2")}</Link>
         <Link href="/contact">{t("navbar.title3")}</Link>
 
-        <select
-          className="flex justify-self-center m-2 w-32"
-          id="language"
-          name="language"
-          onChange={(e) => handleLng(e.target.value)}
-        >
-          <option value="en">English</option>
-          <option value="es">Español</option>
-        </select>
+        {lng ? (
+          <button className="hover:text-[#ffd60a]" onClick={handleLng}>
+            Español
+          </button>
+        ) : (
+          <button className="hover:text-[#d62828]" onClick={handleLng}>
+            English
+          </button>
+        )}
       </div>
     </footer>
   );

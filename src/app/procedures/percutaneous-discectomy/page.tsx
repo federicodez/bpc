@@ -142,9 +142,6 @@ const Discectomy = () => {
             <li className="list-disc list-inside">
               {t("percdis.pre_content_5")}
             </li>
-            <li className="list-disc list-inside">
-              {t("percdis.pre_content_6")}
-            </li>
           </ul>
         </div>
         <Footer />
