@@ -36,11 +36,11 @@ const Navbar = () => {
           <div className="flex-1 items-center justify-between py-3 md:py-5 md:block">
             <div className="flex flex-row flex-nowrap">
               <Image
-                className="spine-logo w-12 rounded-full m-2"
+                className="spine-logo w-8 md:w-12 rounded-full m-2"
                 src={spine}
                 alt="spine logo"
               />
-              <h3 className="text-white flex-nowrap text-xl mx-auto self-center md:text-2xl">
+              <h3 className="text-white flex-nowrap text-lg mx-auto self-center md:text-xl lg:text-2xl">
                 Bowen Pain Center
               </h3>
               <div className="self-center md:hidden">
@@ -63,32 +63,38 @@ const Navbar = () => {
             >
               <ul className="h-screen md:h-auto justify-center md:flex">
                 <li className=" pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
-                  <Link href="/" onClick={() => setActive(!active)}>
+                  <Link
+                    className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+                    href="/"
+                    onClick={() => setActive(!active)}
+                  >
                     {t("navbar.title1")}
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
+                <li className=" pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
                   <Link
+                    className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
                     href="/procedures"
                     onClick={() => {
                       setActive(!active);
-                      setProcedures(!procedures);
+                      setProcedures(false);
                     }}
-                    onMouseOver={() => setProcedures(!procedures)}
+                    onMouseOver={() => setProcedures(true)}
                   >
                     {t("navbar.title2")}
                   </Link>
                   <button
                     onClick={() => setProcedures(!procedures)}
-                    className="absolute right-5 md:hidden"
+                    className="relative left-[60%] md:hidden"
                   >
                     {!procedures ? <AiOutlinePlus /> : <AiOutlineMinus />}
                   </button>
                   <ul
+                    onMouseLeave={() => setProcedures(false)}
                     className={`
                     ${
                       procedures
-                        ? "mt-5 md:absolute text-base bg-[#03045e] p-2 md:mt-0 md:top-full shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
+                        ? "mt-5 md:absolute text-base bg-[#03045e] p-2 md:mt-0 md:top-2/3 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
                         : "hidden"
                     }`}
                   >
@@ -323,21 +329,25 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
-                  <Link href="/contact" onClick={() => setActive(!active)}>
+                  <Link
+                    className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+                    href="/contact"
+                    onClick={() => setActive(!active)}
+                  >
                     {t("navbar.title3")}
                   </Link>
                 </li>
                 <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-4 text-left">
                   {lng ? (
                     <button
-                      className="mt-1 hover:text-[#ffd60a]"
+                      className="mt-1 md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
                       onClick={handleLng}
                     >
                       Español
                     </button>
                   ) : (
                     <button
-                      className="mt-1 hover:text-[#d62828]"
+                      className="mt-1 md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
                       onClick={handleLng}
                     >
                       English

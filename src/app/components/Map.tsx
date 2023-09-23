@@ -9,8 +9,8 @@ const containerStyle = {
 };
 
 const clinic = {
-  lat: 40.72527,
-  lng: -73.8483,
+  lat: 40.7255334,
+  lng: -73.8481376,
 };
 
 export default function MyComponent() {

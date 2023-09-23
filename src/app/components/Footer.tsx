@@ -19,23 +19,44 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="flex p-4 justify-evenly bg-[#03045e] text-white text-center flex-col-reverse md:flex-row">
-      <p>
+    <footer className="flex p-4 justify-evenly bg-[#03045e]  text-center flex-col-reverse md:flex-row">
+      <p className="text-[#adb5bd]">
         @2020 Bowen Pain Center
         <br />
         All rights reserved &copy;
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-4 md:gap-10 items-center">
-        <Link href="/">{t("navbar.title1")}</Link>
-        <Link href="/procedures">{t("navbar.title2")}</Link>
-        <Link href="/contact">{t("navbar.title3")}</Link>
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 text-[#fff] mb-3  md:gap-10 items-center">
+        <Link
+          className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+          href="/"
+        >
+          {t("navbar.title1")}
+        </Link>
+        <Link
+          className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+          href="/procedures"
+        >
+          {t("navbar.title2")}
+        </Link>
+        <Link
+          className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+          href="/contact"
+        >
+          {t("navbar.title3")}
+        </Link>
 
         {lng ? (
-          <button className="hover:text-[#ffd60a]" onClick={handleLng}>
+          <button
+            className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+            onClick={handleLng}
+          >
             Español
           </button>
         ) : (
-          <button className="hover:text-[#d62828]" onClick={handleLng}>
+          <button
+            className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+            onClick={handleLng}
+          >
             English
           </button>
         )}
