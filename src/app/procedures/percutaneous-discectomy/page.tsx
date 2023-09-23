@@ -3,6 +3,8 @@
 import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
 import { Footer } from "@/app/components";
+import { LoadingModel } from "@/app/components";
+import { Suspense } from "react";
 
 const Carousel = dynamic(() => import("@/app/components/Carousel"), {
   ssr: false,
@@ -12,7 +14,7 @@ const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
 const Discectomy = () => {
   const { t } = useTranslation();
   return (
-    <>
+    <Suspense fallback={<LoadingModel />}>
       <Navbar />
       <div className="disectomy container flex flex-col  py-32 mx-auto justify-center">
         <h1 className="title text-2xl font-bold text-blue-800" id="about">
@@ -142,7 +144,7 @@ const Discectomy = () => {
         </ul>
       </div>
       <Footer />
-    </>
+    </Suspense>
   );
 };
 

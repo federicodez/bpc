@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
-import Loading from "@/app/dashboard/loading";
+import { LoadingModel } from "@/app/components";
 import { Footer } from "@/app/components";
 
 const Carousel = dynamic(() => import("@/app/components/Carousel"), {
@@ -10,13 +10,11 @@ const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
 
 const Radio = () => {
   return (
-    <>
-      <Suspense fallback={<Loading />}>
-        <Navbar />
-        <Carousel index={3} />
-        <Footer />
-      </Suspense>
-    </>
+    <Suspense fallback={<LoadingModel />}>
+      <Navbar />
+      <Carousel index={3} />
+      <Footer />
+    </Suspense>
   );
 };
 
