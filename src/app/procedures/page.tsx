@@ -8,7 +8,7 @@ const Carousel = dynamic(() => import("@/app/components/Carousel"), {
   ssr: false,
 });
 
-const Procedures = () => {
+const Procedures = async () => {
   return (
     <Suspense fallback={<LoadingModel />}>
       <Navbar />

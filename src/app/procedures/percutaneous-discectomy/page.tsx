@@ -9,6 +9,7 @@ import { Suspense } from "react";
 const Carousel = dynamic(() => import("@/app/components/Carousel"), {
   ssr: false,
 });
+const Video = dynamic(() => import("@/app/components/Video"), { ssr: false });
 const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
 
 const Discectomy = () => {
@@ -17,104 +18,110 @@ const Discectomy = () => {
     <Suspense fallback={<LoadingModel />}>
       <Navbar />
       <div className="disectomy container flex flex-col  py-32 mx-auto justify-center">
-        <h1 className="title text-2xl font-bold text-blue-800" id="about">
+        <h1 className="title text-2xl font-bold text-blue-800 mt-8" id="about">
           {t("percdis.about_title")}
         </h1>
         <br />
-        <p>{t("percdis.about_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.about_1")}</p>
         <br />
-        <p>{t("percdis.about_2")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.about_2")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="treating">
           {t("percdis.treating_title")}
         </h1>
         <br />
-        <p>{t("percdis.treating_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.treating_1")}</p>
         <br />
-        <p>{t("percdis.treating_2")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.treating_2")}</p>
         <br />
-        <p>{t("percdis.treating_3")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.treating_3")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="who">
           {t("percdis.who_title")}
         </h1>
         <br />
-        <p>{t("percdis.who_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.who_1")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="before">
           {t("percdis.before_title")}
         </h1>
         <br />
-        <p>{t("percdis.before_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.before_1")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="during">
           {t("percdis.during_title")}
         </h1>
         <br />
-        <p>{t("percdis.during_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.during_1")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="after">
           {t("percdis.after_title")}
         </h1>
         <br />
-        <p>{t("percdis.after_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.after_1")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="what">
           {t("percdis.what_title")}
         </h1>
         <br />
-        <p>{t("percdis.what_1")}</p>
+        <p className="m-4 lg:mx-40">{t("percdis.what_1")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="how">
           {t("percdis.how_title")}
         </h1>
         <br />
-        <h2>{t("percdis.how_1_title")}</h2>
+        <h2 className="mx-4 lg:mx-40">{t("percdis.how_1_title")}</h2>
         <br />
-        <p>{t("percdis.how_1_content")}</p>
+        <p className="mx-4 lg:mx-40">{t("percdis.how_1_content")}</p>
         <br />
-        <h2>{t("percdis.how_2_title")}</h2>
+        <h2 className="mx-4 lg:mx-40">{t("percdis.how_2_title")}</h2>
         <br />
-        <p>{t("percdis.how_2_content")}</p>
+        <p className="mx-4 lg:mx-40">{t("percdis.how_2_content")}</p>
         <br />
-        <h2>{t("percdis.how_3_title")}</h2>
+        <h2 className="mx-4 lg:mx-40">{t("percdis.how_3_title")}</h2>
         <br />
-        <p>{t("percdis.how_3_content")}</p>
+        <p className="mx-4 lg:mx-40">{t("percdis.how_3_content")}</p>
         <br />
-        <h2>{t("percdis.how_4_title")}</h2>
+        <h2 className="mx-4 lg:mx-40">{t("percdis.how_4_title")}</h2>
         <br />
-        <p>{t("percdis.how_4_content")}</p>
+        <p className="mx-4 lg:mx-40">{t("percdis.how_4_content")}</p>
         <br />
         <h1 className="title text-2xl font-bold text-blue-800" id="benefits">
           {t("percdis.benefits_title")}
         </h1>
-        <h3>{t("percdis.benefits_list_first_title")}</h3>
+        <h3 className="m-4 lg:mx-40">
+          {t("percdis.benefits_list_first_title")}
+        </h3>
         <ul>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_first_content_1")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_first_content_2")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_first_content_3")}
           </li>
         </ul>
-        <h3>{t("percdis.benefits_list_second_title")}</h3>
+        <h3 className="m-4 lg:mx-40">
+          {t("percdis.benefits_list_second_title")}
+        </h3>
         <ul>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_second_content_1")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_second_content_2")}
           </li>
         </ul>
-        <h3>{t("percdis.benefits_list_third_title")}</h3>
+        <h3 className="m-4 lg:mx-40">
+          {t("percdis.benefits_list_third_title")}
+        </h3>
         <ul>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_third_content_1")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.benefits_list_third_content_2")}
           </li>
         </ul>
@@ -123,25 +130,29 @@ const Discectomy = () => {
           {t("percdis.pre_main_title")}
         </h1>
         <br />
-        <h2>{t("percdis.pre_sub_title")}</h2>
+        <h2 className="m-4 lg:mx-40">{t("percdis.pre_sub_title")}</h2>
         <br />
         <ul>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.pre_content_1")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.pre_content_2")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.pre_content_3")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.pre_content_4")}
           </li>
-          <li className="list-disc list-inside">
+          <li className="list-disc list-inside mx-4 lg:mx-40">
             {t("percdis.pre_content_5")}
           </li>
         </ul>
+        <div className="flex justify-center items-center p-4 mt-8 gap-4 flex-col md:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+          <Video video={"/PercutaneousCervicalDisc.mp4"} />
+          <Video video={"/PercutaneousDiscDecompression.mp4"} />
+        </div>
       </div>
       <Footer />
     </Suspense>
