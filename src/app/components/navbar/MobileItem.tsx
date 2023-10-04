@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 import clsx from "clsx";
+import Image from "next/image";
+import spine from "@/app/images/spine.png";
 
 interface MobileItemProps {
   label: string;
@@ -46,7 +48,7 @@ const MobileItem: React.FC<MobileItemProps> = ({
         active && "bg-gray-500 text-white",
       )}
     >
-      <Icon className="h-6 w-6" />
+      <Icon className="h-6 w-6" src={spine} />
       <span>{label}</span>
     </Link>
   );

@@ -1728,10 +1728,10 @@
     "locate-path" "^6.0.0"
     "path-exists" "^4.0.0"
 
-"flag-icons@^6.11.0":
-  "integrity" "sha512-oK+QhV5UMWq+lmyOnfXUfVhSgHy29gQ0gQpmORdNP6ucAsKzIGm39ncvyThJyvt76Au2qsepDTE9waHRuaYPUw=="
-  "resolved" "https://registry.npmjs.org/flag-icons/-/flag-icons-6.11.0.tgz"
-  "version" "6.11.0"
+"flag-icons@^6.11.1":
+  "integrity" "sha512-c2UMJTFZoVQ47/sE1mb+9b5S1pi8SjXsx0MR063O31GV+O2EN4FMwMdEYSQItpien2bl9w1viLUoo2R3r6OK3g=="
+  "resolved" "https://registry.npmjs.org/flag-icons/-/flag-icons-6.11.1.tgz"
+  "version" "6.11.1"
 
 "flat-cache@^3.0.4":
   "integrity" "sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg=="

@@ -6,6 +6,7 @@ import { MdOutlineContactPhone } from "react-icons/md";
 import spine from "@/app/images/spine.png";
 import { useTranslation } from "react-i18next";
 import { FaUserDoctor } from "react-icons/fa6";
+import Image from "next/image";
 
 const useRoutes = () => {
   const pathname = usePathname();
@@ -21,7 +22,7 @@ const useRoutes = () => {
       {
         label: "Home",
         href: "/",
-        icon: FaUserDoctor,
+        icon: Image,
         active: pathname === "/",
       },
       {
