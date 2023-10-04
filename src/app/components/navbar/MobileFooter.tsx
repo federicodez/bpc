@@ -47,7 +47,7 @@ const MobileFooter = () => {
         lg:hidden
       "
     >
-      <ul className="flex flex-row text-white my-4">
+      <ul className="flex flex-row text-base text-white my-4">
         <li>
           <Link
             className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
