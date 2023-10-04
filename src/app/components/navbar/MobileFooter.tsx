@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import useRoutes from "@/app/hooks/useRoutes";
-import MobileItem from "./MobileItem";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
@@ -11,9 +9,16 @@ import spine from "@/app/images/spine.png";
 import Image from "next/image";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { FaUserDoctor } from "react-icons/fa6";
+import {
+  AiOutlineCloseSquare,
+  AiOutlineMenu,
+  AiOutlineMinus,
+  AiOutlinePlus,
+} from "react-icons/ai";
 
 const MobileFooter = () => {
-  const routes = useRoutes();
+  const [active, setActive] = useState(false);
+  const [procedures, setProcedures] = useState(false);
   const [lng, setLng] = useState(true);
   const { t } = useTranslation();
 
@@ -42,58 +47,282 @@ const MobileFooter = () => {
         lg:hidden
       "
     >
-      <ul className="flex flex-row text-white gap-5">
-        <li className="flex items-center flex-col">
-          <FaUserDoctor className="h-6 w-8" />
+      <ul className="flex flex-row text-white my-4">
+        <li>
           <Link
-            className="text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
-            href="/procedures"
-          >
-            Procedures
-          </Link>
-        </li>
-        <li className="flex items-center flex-col">
-          <MdOutlineContactPhone className="h-6 w-8" />
-          <Link
-            className="text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
-            href="/contact"
-          >
-            Contact Us
-          </Link>
-        </li>
-        <li className="flex items-center flex-col">
-          <Image className="h-6 w-8 rounded-full" src={spine} alt="logo" />
-          <Link
-            className="text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+            className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
             href="/"
           >
-            Home
+            <Image className="h-6 w-6 rounded-full" src={spine} alt="logo" />
+            {t("navbar.title1")}
           </Link>
         </li>
-        <li className="flex items-center">
+        <li>
           {lng ? (
-            <div className="flex flex-col justify-center items-center">
-              <span className="fi fi-es fis"></span>
+            <>
               <button
-                className="text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+                className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                 onClick={handleLng}
               >
+                <span className="fi fi-es fis h-6 w-10"></span>
                 Español
               </button>
-            </div>
+            </>
           ) : (
-            <div className="flex flex-col justify-center items-center">
-              <span className="fi fi-us fis"></span>
+            <>
               <button
-                className="text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+                className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                 onClick={handleLng}
               >
+                <span className="fi fi-us fis h-6 w-10"></span>
                 English
               </button>
-            </div>
+            </>
           )}
         </li>
+        <li>
+          <Link
+            className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+            href="/procedures"
+          >
+            <FaUserDoctor className="h-6 w-6" />
+            {t("navbar.title2")}
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+            href="/contact"
+          >
+            <MdOutlineContactPhone className="h-6 w-6" />
+            {t("navbar.title3")}
+          </Link>
+        </li>
+        <li>
+          <button
+            onClick={() => setActive(!active)}
+            className="flex flex-col justify-center items-center text-white mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+          >
+            {active ? (
+              <AiOutlineCloseSquare className="h-6 w-6" />
+            ) : (
+              <AiOutlineMenu className="h-6 w-6" />
+            )}
+            {t("navbar.title4")}
+          </button>
+        </li>
       </ul>
+      <div
+        className={`${
+          active
+            ? "absolute h-screen bottom-0 right-0 left-0 bg-[#03045e] text-white px-10"
+            : "hidden"
+        }`}
+      >
+        <ul>
+          <nav className="flex justify-center">
+            <button
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              <AiOutlineCloseSquare className="w-10 h-10" />
+            </button>
+          </nav>
+          <li className="border-b p-2 m-2">
+            <Link
+              href="/procedures/epidural-steroid-injection/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure1")}
+            </Link>
+          </li>
+
+          <li className="border-b p-2 m-2">
+            <Link
+              href="/procedures/trigger-point-injection/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure2")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2">
+            <Link
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+              href="/procedures/medial-branch-block/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure3")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2">
+            <Link
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+              href="/procedures/radio-frequency-ablation/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure4")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2">
+            <Link
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+              href="/procedures/sacroiliac-joint-injection/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure5")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2">
+            <Link
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+              href="/procedures/percutaneous-discectomy/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure6")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#about"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.about_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#treating"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.treating_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#who"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.who_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#before"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.before_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#during"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.during_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#after"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.after_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#what"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.what_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#how"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.how_title")}
+            </Link>
+          </li>
+          <li className="border-b p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#benefits"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.benefits_title")}
+            </Link>
+          </li>
+          <li className="p-2 m-2 list-disc list-inside">
+            <Link
+              href="/procedures/percutaneous-discectomy/#pre"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+            >
+              {t("percdis.pre_main_title")}
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -9,6 +9,8 @@ import Image from "next/image";
 import operation from "@/app/images/alex-op2.jpeg";
 import procedures from "@/app/libs/procedures";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import { BiLinkExternal } from "react-icons/bi";
 
 const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
   ssr: false,
@@ -20,7 +22,7 @@ const Trigger = () => {
   return (
     <Suspense fallback={<LoadingModel />}>
       <Navbar />
-      <div className="container  mx-auto mt-40 justify-center">
+      <div className="container  mx-auto mt-auto mb-40 lg:mb-10 lg:mt-40 justify-center">
         <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
           {t("procedures.title1")}
         </h1>
@@ -63,6 +65,13 @@ const Trigger = () => {
             </li>
           ))}
         </ul>
+        <Link
+          className="flex justify-center items-center underline gap-1"
+          href="/procedures/percutaneous-discectomy"
+        >
+          {t(`procedures.view`)}
+          <BiLinkExternal />
+        </Link>
       </div>
       <Footer />
     </Suspense>

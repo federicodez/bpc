@@ -3,6 +3,7 @@
     "title1": "Inicio",
     "title2": "Procedimientos",
     "title3": "Contacto",
+    "title4": "Menú",
     "procedures": {
       "procedure1": "Inyección epidural de esteroides",
       "procedure2": "Inyección en el punto gatillo",
@@ -72,7 +73,8 @@
   "procedures": {
     "p1": "En Bowen Pain Center, nuestra dedicación inquebrantable radica en ayudar a los pacientes a través de un programa intervencionista de manejo del dolor. Adoptando la vanguardia del progreso médico, ofrecemos técnicas avanzadas de diagnóstico y tratamiento para garantizar los mejores resultados posibles.",
     "p2": "Nuestra misión principal en Bowen Pain Center es aliviar el dolor agudo a crónico y fomentar una mejor salud, comodidad y calidad de vida dentro de un entorno compasivo y colaborativo. A través de investigación continua y prácticas innovadoras, estamos comprometidos a erradicar el dolor, mientras trabajamos estrechamente con cada paciente para brindar la atención más adecuada.",
-    "title1": "NUESTRAS PROCEDIMIENTOS"
+    "title1": "NUESTRAS PROCEDIMIENTOS",
+    "view": "Ver Más"
   },
   "contact": {
     "title": "CONTÁCTENOS"

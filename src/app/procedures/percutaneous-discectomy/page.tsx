@@ -16,7 +16,7 @@ const Discectomy = () => {
   return (
     <Suspense fallback={<LoadingModel />}>
       <Navbar />
-      <div className="disectomy container flex flex-col  py-32 mx-auto justify-center">
+      <div className="container  mx-auto mt-auto mb-40 lg:mb-10 lg:mt-40 justify-center">
         <h1 className="title text-2xl font-bold text-blue-800 mt-8">
           {t("percdis.main_title")}
         </h1>

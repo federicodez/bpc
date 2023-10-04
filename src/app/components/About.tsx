@@ -13,7 +13,7 @@ const About = () => {
   return (
     <>
       <Image
-        className="operation md:mt-[6%] h-96 object-center object-cover shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
+        className="operation lg:mt-[6%] h-96 object-center object-cover shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
         src={operation}
         priority={true}
         alt="operation picture"

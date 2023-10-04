@@ -9,6 +9,8 @@ import Image from "next/image";
 import operation from "../images/alex-op2.jpeg";
 import procedures from "@/app/libs/procedures";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import { BiLinkExternal } from "react-icons/bi";
 
 const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
   ssr: false,
@@ -21,7 +23,7 @@ const Procedures = () => {
   return (
     <Suspense fallback={<LoadingModel />}>
       <Navbar />
-      <div className="container  mx-auto mt-40 justify-center">
+      <div className="container  mx-auto mt-auto mb-40 lg:mb-10 lg:mt-40 justify-center">
         <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
           {t("procedures.title1")}
         </h1>
@@ -45,7 +47,9 @@ const Procedures = () => {
                 className="m-4 p-4 rounded-lg shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
                 onClick={() => setActive(id)}
               >
-                <h1 className="text-center underline">{title}</h1>
+                <h1 className="text-center underline">
+                  {t([`carousel.title${id}`])}
+                </h1>
                 <div className={active === id ? "content" : "hidden"}>
                   {content.length ? (
                     t([`carousel.content${id}`])
@@ -61,6 +65,13 @@ const Procedures = () => {
             </li>
           ))}
         </ul>
+        <Link
+          className="flex justify-center items-center underline gap-1"
+          href="/procedures/percutaneous-discectomy"
+        >
+          {t(`procedures.view`)}
+          <BiLinkExternal />
+        </Link>
       </div>
       <Footer />
     </Suspense>

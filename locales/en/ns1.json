@@ -2,7 +2,8 @@
   "navbar": {
     "title1": "Home",
     "title2": "Procedures",
-    "title3": "Contact Us",
+    "title3": "Contact",
+    "title4": "Menu",
     "procedures": {
       "procedure1": "Epidural Steroid Injection",
       "procedure2": "Trigger Point Injection",
@@ -73,7 +74,8 @@
   "procedures": {
     "p1": "At Bowen Pain Center, our unwavering dedication lies in assisting patients through a interventional pain management program. Embracing the forefront of medical progress, we offer advanced diagnosis and treatment techniques to ensure the best possible outcomes.",
     "p2": "Our core mission at Bowen Pain Center is to relieve acute to chronic pain and foster improved health, comfort, and quality of life within a compassionate and collaborative environment. Through continuous research and innovative practices, we are committed to eradicting pain, all while working closely with each patient to provide the most suitable care.",
-    "title1": "OUR PROCEDURES"
+    "title1": "OUR PROCEDURES",
+    "view": "View More"
   },
   "contact": {
     "title": "CONTACT US"

@@ -24,7 +24,7 @@ const ContactUs = () => {
   return (
     <Suspense fallback={<LoadingModel />}>
       <Navbar />
-      <div className="container contact mx-auto mt-40 justify-center">
+      <div className="container  mx-auto mt-auto mb-40 lg:mb-10 lg:mt-40 justify-center">
         <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
           {t("contact.title")}
         </h1>
