@@ -35,7 +35,7 @@ const About = () => {
             src={profilePic2}
             alt="profile picture"
           />
-          <div>
+          <div className="mb-20 lg:mb-0">
             <h3 className="font-bold text-center md:text-left">
               {t("about.title2")}
             </h3>

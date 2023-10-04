@@ -6,11 +6,10 @@ import { Footer } from "@/app/components";
 import { LoadingModel } from "@/app/components";
 import { Suspense } from "react";
 
-const Carousel = dynamic(() => import("@/app/components/Carousel"), {
+const Video = dynamic(() => import("@/app/components/Video"), { ssr: false });
+const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
   ssr: false,
 });
-const Video = dynamic(() => import("@/app/components/Video"), { ssr: false });
-const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
 
 const Discectomy = () => {
   const { t } = useTranslation();
@@ -18,6 +17,13 @@ const Discectomy = () => {
     <Suspense fallback={<LoadingModel />}>
       <Navbar />
       <div className="disectomy container flex flex-col  py-32 mx-auto justify-center">
+        <h1 className="title text-2xl font-bold text-blue-800 mt-8">
+          {t("percdis.main_title")}
+        </h1>
+        <div className="flex justify-center items-center p-4 mt-8 gap-4 flex-col md:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+          <Video video={"/PercutaneousCervicalDisc.mp4"} />
+          <Video video={"/PercutaneousDiscDecompression.mp4"} />
+        </div>
         <h1 className="title text-2xl font-bold text-blue-800 mt-8" id="about">
           {t("percdis.about_title")}
         </h1>
@@ -149,10 +155,6 @@ const Discectomy = () => {
             {t("percdis.pre_content_5")}
           </li>
         </ul>
-        <div className="flex justify-center items-center p-4 mt-8 gap-4 flex-col md:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
-          <Video video={"/PercutaneousCervicalDisc.mp4"} />
-          <Video video={"/PercutaneousDiscDecompression.mp4"} />
-        </div>
       </div>
       <Footer />
     </Suspense>

@@ -5,7 +5,9 @@ import { LoadingModel } from "@/app/components";
 import { useTranslation } from "react-i18next";
 import { Footer } from "@/app/components";
 
-const Navbar = dynamic(() => import("@/app/components/navbar"), { ssr: false });
+const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
+  ssr: false,
+});
 const Form = dynamic(() => import("@/app/components/Form"), { ssr: false });
 const Map = dynamic(() => import("@/app/components/Map"), {
   loading: () => (

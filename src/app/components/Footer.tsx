@@ -19,27 +19,26 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="flex p-4 justify-evenly bg-[#03045e]  text-center flex-col-reverse md:flex-row">
-      <p className="text-[#adb5bd]">
-        @2020 Bowen Pain Center
-        <br />
-        All rights reserved &copy;
-      </p>
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 text-[#fff] mb-3  md:gap-10 items-center">
+    <footer className="hidden lg:flex lg:p-4 lg:justify-evenly lg:bg-[#03045e]  lg:text-center lg:flex-col-reverse">
+      <div className="flex flex-row justify-center gap-32">
+        <p className="text-[#adb5bd]">@2020 Bowen Pain Center</p>
+        <p className="text-[#adb5bd]">All rights reserved &copy;</p>
+      </div>
+      <div className="grid grid-cols-4 text-[#fff] mb-3 items-center">
         <Link
-          className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+          className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
           href="/"
         >
           {t("navbar.title1")}
         </Link>
         <Link
-          className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+          className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
           href="/procedures"
         >
           {t("navbar.title2")}
         </Link>
         <Link
-          className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+          className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
           href="/contact"
         >
           {t("navbar.title3")}
@@ -47,14 +46,14 @@ const Footer = () => {
 
         {lng ? (
           <button
-            className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+            className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
             onClick={handleLng}
           >
             Español
           </button>
         ) : (
           <button
-            className="md:hover:bg-[#caf0f8] md:rounded-lg md:hover:text-[#03045e] md:px-2"
+            className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
             onClick={handleLng}
           >
             English
