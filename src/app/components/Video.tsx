@@ -4,7 +4,7 @@ type VideoProps = {
 
 const Video = ({ video }: VideoProps) => {
   return (
-    <video className="card-content w-fit h-fit" controls>
+    <video className="card-content w-96 h-68" controls>
       <source src={video} type="video/mp4" />
     </video>
   );
