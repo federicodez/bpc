@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
 import { Footer } from "@/app/components";
@@ -12,6 +13,7 @@ const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
 });
 
 const Discectomy = () => {
+  const [active, setActive] = useState(false);
   const { t } = useTranslation();
   return (
     <Suspense fallback={<LoadingModel />}>
@@ -20,9 +22,30 @@ const Discectomy = () => {
         <h1 className="title text-2xl font-bold text-blue-800 mt-8">
           {t("percdis.main_title")}
         </h1>
-        <div className="flex justify-center items-center p-4 mt-8 gap-4 flex-col md:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
-          <Video video={"/PercutaneousCervicalDisc.mp4"} />
-          <Video video={"/PercutaneousDiscDecompression.mp4"} />
+        <div className="flex justify-center items-center p-4 mt-8 gap-4 flex-col lg:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+          <div className="group" onClick={() => setActive(!active)}>
+            <input className="peer/draft" type="checkbox" />
+            <h1 className="video-title text-center w-fit peer-checked/draft:hidden">
+              Cervical Disc Nucleoplasty
+            </h1>
+            <Video video={"/Nucleoplasty.mp4"} />
+          </div>
+          <div className="group">
+            <input className="peer/draft" type="checkbox" />
+            <h1 className="video-title text-center w-fit peer-checked/draft:hidden">
+              Animated Decompression
+              <br />
+              Procedure
+            </h1>
+            <Video video={"/AnimatedDecompression.mp4"} />
+          </div>
+          <div className="group">
+            <input className="peer/draft" type="checkbox" />
+            <h1 className="video-title text-center w-fit peer-checked/draft:hidden">
+              Disc Decompression
+            </h1>
+            <Video video={"/PercDiscDecomp.mp4"} />
+          </div>
         </div>
         <h1 className="title text-2xl font-bold text-blue-800 mt-8" id="about">
           {t("percdis.about_title")}

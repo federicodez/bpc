@@ -54,24 +54,19 @@ const Procedures = () => {
                   {content.length ? (
                     t([`carousel.content${id}`])
                   ) : (
-                    <iframe
-                      className="card-content w-full h-96"
-                      src="//www.youtube.com/embed/MZLocncorVg"
-                      allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share"
-                    ></iframe>
+                    <Link
+                      className="flex justify-center items-center underline gap-1"
+                      href="/procedures/percutaneous-discectomy"
+                    >
+                      {t(`procedures.view`)}
+                      <BiLinkExternal />
+                    </Link>
                   )}
                 </div>
               </div>
             </li>
           ))}
         </ul>
-        <Link
-          className="flex justify-center items-center underline gap-1"
-          href="/procedures/percutaneous-discectomy"
-        >
-          {t(`procedures.view`)}
-          <BiLinkExternal />
-        </Link>
       </div>
       <Footer />
     </Suspense>

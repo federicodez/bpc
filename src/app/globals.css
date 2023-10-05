@@ -76,46 +76,18 @@ video {
   margin-left: 10px;
 }
 
-/********Carousel********/
+/********Video Title********/
 
-* {
-  box-sizing: border-box;
-}
-
-.carousel {
-  perspective: 500px;
+.group {
+  perspective: 1200px;
   transform-style: preserve-3d;
 }
 
-.card-container {
-  transform: rotateY(calc(var(--offset) * 50deg))
-    scaleY(calc(1 + var(--abs-offset) * -0.4))
-    translateZ(calc(var(--abs-offset) * -30rem))
-    translateX(calc(var(--direction) * -5rem));
-  filter: blur(calc(var(--abs-offset) * 1rem));
-  transition: all 0.3s ease-out;
-}
-
-.card {
-  background-color: hsl(280deg, 40%, calc(100% - var(--abs-offset) * 50%));
-  transition: all 0.3s ease-out;
-
-  h2 {
-    color: #1f2937;
-  }
-
-  p,
-  h2 {
-    flex: 1;
-    transition: all 0.3s ease-out;
-    opacity: var(--active);
-  }
-}
-
-.nav {
+.video-title {
+  display: absolute;
+  transform: translateZ(100px) translateY(100px) translateX(80px);
+  font-weight: var(--fw-bold);
   color: #fff;
-  background: unset;
-  border: unset;
 }
 
 /*****Contact Button******/
