@@ -99,5 +99,13 @@
     "phone": "Phone number",
     "email": "Email address",
     "message": "Your messsage"
+  },
+  "video": {
+    "title0": "Cervical Discectomy",
+    "src0": "/Nucleoplasty.mp4",
+    "title1": "Decompression Procedure",
+    "src1": "/AnimatedDecompression.mp4",
+    "title2": "Discectomy Decompression",
+    "src2": "/PercDiscDecomp.mp4"
   }
 }

@@ -98,5 +98,13 @@
     "phone": "Número de teléfono",
     "email": "Dirección de correo electrónico",
     "message": "Tu mensaje"
+  },
+  "video": {
+    "title0": "Discectomía Cervical",
+    "src0": "/trim-nucleoplasty_translated.mp4",
+    "title1": "Procedimiento de Descompresión",
+    "src1": "/AnimatedDecompression_translated_video.mp4",
+    "title2": "Descompresión de Discectomía",
+    "src2": "/PercDiscDecomp_translated_video.mp4"
   }
 }
