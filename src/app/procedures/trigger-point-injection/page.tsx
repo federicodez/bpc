@@ -48,7 +48,7 @@ const Trigger = () => {
               >
                 <h1 className="text-center underline">{title}</h1>
                 <div
-                  id="carouselId"
+                  id="procedureId"
                   className={active === id ? "content" : "hidden"}
                 >
                   {content.length ? (

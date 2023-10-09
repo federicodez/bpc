@@ -1,28 +1,63 @@
 "use client";
 
 import i18n from "i18next";
+import ChainedBackend from "i18next-chained-backend";
+import Backend from "i18next-http-backend";
+import LocalStorageBackend from "i18next-localstorage-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
-import enNs1 from "../locales/en/ns1.json";
-import esNs1 from "../locales/es/ns1.json";
+import translationEN from "../public/locales/en/translation.json";
+import translationES from "../public/locales/es/translation.json";
 
-export const defaultNS = "ns1";
-export const fallbackNS = "fallback";
-
-i18n.use(initReactI18next).init({
-  lng: "en",
-  returnNull: false,
-  debug: true,
-  fallbackLng: "en",
-  defaultNS,
-  fallbackNS,
-  resources: {
-    en: {
-      ns1: enNs1,
-    },
-    es: {
-      ns1: esNs1,
-    },
+export const fallbackLng = ["en", "es"];
+export const languages = [fallbackLng, "es"];
+export const defaultNS = "translation";
+export const fallbackNS = "translation";
+// const langDetectorOptions = {
+//   order: ["cookie", "localStorage", "navigator"],
+//
+//   lookupCookie: "locale",
+//   lookupLocalStorage: "locale",
+//
+//   caches: ["localStorage", "cookie"],
+//   excludeCacheFor: ["cimode"],
+//
+//   checkWhiteList: true,
+// };
+const resources = {
+  en: {
+    translation: translationEN,
   },
-});
+  es: {
+    translation: translationES,
+  },
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(Backend)
+  .use(initReactI18next)
+  .init({
+    resources,
+    // lng: "en",
+    load: "languageOnly",
+    returnNull: false,
+    debug: true,
+    // detection: langDetectorOptions,
+    fallbackLng,
+    defaultNS,
+    fallbackNS,
+    backend: {
+      backends: [LocalStorageBackend, Backend],
+      backendOptions: [
+        {
+          expirationTime: 7 * 24 * 60 * 60 * 1000,
+        },
+        {
+          loadPath: "../public/locales/{{lng}}/translation.json",
+        },
+      ],
+    },
+  });
 
 export default i18n;

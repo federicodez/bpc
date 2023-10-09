@@ -20,7 +20,7 @@ const Map = dynamic(() => import("@/app/components/Map"), {
 });
 
 const ContactUs = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <Suspense fallback={<LoadingModel />}>
       <Navbar />

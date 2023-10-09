@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import useRoutes from "@/app/hooks/useRoutes";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
@@ -12,6 +11,7 @@ import {
   AiOutlinePlus,
   AiOutlineMinus,
 } from "react-icons/ai";
+import Procedures from "@/app/libs/procedures";
 
 const DesktopNavbar = () => {
   const [active, setActive] = useState(false);
@@ -104,78 +104,20 @@ const DesktopNavbar = () => {
                 >
                   <AiOutlineCloseSquare />
                 </button>
-                <li className="border-b p-2 m-2">
-                  <Link
-                    href="/procedures/epidural-steroid-injection/#carouselId"
-                    onClick={() => {
-                      setActive(!active);
-                      setProcedures(!procedures);
-                    }}
-                    className="hover:text-[#ffd60a]"
-                  >
-                    {t("navbar.procedures.procedure1")}
-                  </Link>
-                </li>
-                <li className="border-b p-2 m-2">
-                  <Link
-                    href="/procedures/trigger-point-injection/#carouselId"
-                    onClick={() => {
-                      setActive(!active);
-                      setProcedures(!procedures);
-                    }}
-                    className="hover:text-[#ffd60a]"
-                  >
-                    {t("navbar.procedures.procedure2")}
-                  </Link>
-                </li>
-                <li className="border-b p-2 m-2">
-                  <Link
-                    className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-                    href="/procedures/medial-branch-block/#carouselId"
-                    onClick={() => {
-                      setActive(!active);
-                      setProcedures(!procedures);
-                    }}
-                  >
-                    {t("navbar.procedures.procedure3")}
-                  </Link>
-                </li>
-                <li className="border-b p-2 m-2">
-                  <Link
-                    className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-                    href="/procedures/radio-frequency-ablation/#carouselId"
-                    onClick={() => {
-                      setActive(!active);
-                      setProcedures(!procedures);
-                    }}
-                  >
-                    {t("navbar.procedures.procedure4")}
-                  </Link>
-                </li>
-                <li className="border-b p-2 m-2">
-                  <Link
-                    className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-                    href="/procedures/sacroiliac-joint-injection/#carouselId"
-                    onClick={() => {
-                      setActive(!active);
-                      setProcedures(!procedures);
-                    }}
-                  >
-                    {t("navbar.procedures.procedure5")}
-                  </Link>
-                </li>
-                <li className="border-b p-2 m-2">
-                  <Link
-                    className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-                    href="/procedures/percutaneous-discectomy/#carouselId"
-                    onClick={() => {
-                      setActive(!active);
-                      setProcedures(!procedures);
-                    }}
-                  >
-                    {t("navbar.procedures.procedure6")}
-                  </Link>
-                </li>
+                {Procedures.map((_, idx) => (
+                  <li key={idx} className="border-b p-2 m-2">
+                    <Link
+                      className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+                      href={`/procedures/${idx}/#procedureId`}
+                      onClick={() => {
+                        setActive(!active);
+                        setProcedures(!procedures);
+                      }}
+                    >
+                      {t([`navbar.procedures.procedure${idx}`])}
+                    </Link>
+                  </li>
+                ))}
                 <li className="border-b p-2 m-2 list-disc list-inside">
                   <Link
                     href="/procedures/percutaneous-discectomy/#about"

@@ -9,7 +9,7 @@ import { Footer } from "@/app/components";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Image

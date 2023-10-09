@@ -16,8 +16,8 @@ const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
   ssr: false,
 });
 
-const Radio = () => {
-  const [active, setActive] = useState<number>(3);
+const ProcedureId = ({ params: { idx } }) => {
+  const [active, setActive] = useState<number>(idx);
   const { t } = useTranslation();
   return (
     <Suspense fallback={<LoadingModel />}>
@@ -48,34 +48,29 @@ const Radio = () => {
               >
                 <h1 className="text-center underline">{title}</h1>
                 <div
-                  id="procedureId"
                   className={active === id ? "content" : "hidden"}
+                  id="procedureId"
                 >
                   {content.length ? (
                     t([`carousel.content${id}`])
                   ) : (
-                    <iframe
-                      className="card-content w-full h-96"
-                      src="//www.youtube.com/embed/MZLocncorVg"
-                      allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share"
-                    ></iframe>
+                    <Link
+                      className="flex justify-center items-center underline gap-1"
+                      href="/procedures/percutaneous-discectomy"
+                    >
+                      {t(`procedures.view`)}
+                      <BiLinkExternal />
+                    </Link>
                   )}
                 </div>
               </div>
             </li>
           ))}
         </ul>
-        <Link
-          className="flex justify-center items-center underline gap-1"
-          href="/procedures/percutaneous-discectomy"
-        >
-          {t(`procedures.view`)}
-          <BiLinkExternal />
-        </Link>
       </div>
       <Footer />
     </Suspense>
   );
 };
 
-export default Radio;
+export default ProcedureId;

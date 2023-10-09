@@ -1,9 +1,9 @@
-import ns1 from "../locales/en/ns1.json";
-import ns2 from "../locales/es/ns1.json";
+import translationEN from "../public/locales/en/translation.json";
+import translationES from "../public/locales/es/translation.json";
 
 const resources = {
-  ns1,
-  ns2,
+  translationEN,
+  translationES,
 } as const;
 
 export default resources;

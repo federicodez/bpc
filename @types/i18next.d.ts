@@ -1,4 +1,4 @@
-import { defaultNS, fallbackNS } from "../i18n";
+import { defaultNS, fallbackNS } from "@/i18n";
 import resources from "./resources";
 
 declare module "i18next" {

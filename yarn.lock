@@ -46,12 +46,12 @@
     "chalk" "^2.4.2"
     "js-tokens" "^4.0.0"
 
-"@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.19.4", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.5", "@babel/runtime@^7.22.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
-  "integrity" "sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.22.6.tgz"
-  "version" "7.22.6"
+"@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.19.4", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.5", "@babel/runtime@^7.22.15", "@babel/runtime@^7.22.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+  "integrity" "sha512-hC2v6p8ZSI/W0HUzh3V8C5g+NwSKzKPtJwSpTjwl0o297GP9+ZLQSkdvHz46CM3LqyoXxq+5G9komY+eSqSO0g=="
+  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.23.1.tgz"
+  "version" "7.23.1"
   dependencies:
-    "regenerator-runtime" "^0.13.11"
+    "regenerator-runtime" "^0.14.0"
 
 "@babel/types@^7.22.15":
   "integrity" "sha512-YSQPHLFtQNE5xN9tHuZnzu8vPr61wVTBZdfv1meex1NBosa4iT05k/Jw06ddJugi4bk7The/oSwQGFcksmEJQg=="
@@ -2023,6 +2023,14 @@
   dependencies:
     "@babel/runtime" "^7.19.4"
 
+"i18next-chained-backend@^4.5.0":
+  "integrity" "sha512-2W7JwY0iTJx/VfBmTSc3vhp2FGONiJx8eiFQUoXM70xfvYqtfnzptRyNjM9BJCUNV0rUvvBm5N8CmRuSL38v0A=="
+  "resolved" "https://registry.npmjs.org/i18next-chained-backend/-/i18next-chained-backend-4.5.0.tgz"
+  "version" "4.5.0"
+  dependencies:
+    "@babel/runtime" "^7.22.15"
+    "i18next-resources-to-backend" "1.1.4"
+
 "i18next-http-backend@^2.2.2":
   "integrity" "sha512-mJu4ZqzDtBiU3O4GV9AbK5ekEqoDMdMnCl3pkdXmb5b8yoIH//u8FsmIe6C5qXb3teZu+j6VMi20tjUgzeABiw=="
   "resolved" "https://registry.npmjs.org/i18next-http-backend/-/i18next-http-backend-2.2.2.tgz"
@@ -2030,7 +2038,14 @@
   dependencies:
     "cross-fetch" "3.1.6"
 
-"i18next-resources-to-backend@^1.1.4":
+"i18next-localstorage-backend@^4.2.0":
+  "integrity" "sha512-vglEQF0AnLriX7dLA2drHnqAYzHxnLwWQzBDw8YxcIDjOvYZz5rvpal59Dq4In+IHNmGNM32YgF0TDjBT0fHmA=="
+  "resolved" "https://registry.npmjs.org/i18next-localstorage-backend/-/i18next-localstorage-backend-4.2.0.tgz"
+  "version" "4.2.0"
+  dependencies:
+    "@babel/runtime" "^7.22.15"
+
+"i18next-resources-to-backend@^1.1.4", "i18next-resources-to-backend@1.1.4":
   "integrity" "sha512-hMyr9AOmIea17AOaVe1srNxK/l3mbk81P7Uf3fdcjlw3ehZy3UNTd0OP3EEi6yu4J02kf9jzhCcjokz6AFlEOg=="
   "resolved" "https://registry.npmjs.org/i18next-resources-to-backend/-/i18next-resources-to-backend-1.1.4.tgz"
   "version" "1.1.4"
@@ -3034,10 +3049,10 @@
   dependencies:
     "picomatch" "^2.2.1"
 
-"regenerator-runtime@^0.13.11":
-  "integrity" "sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg=="
-  "resolved" "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
-  "version" "0.13.11"
+"regenerator-runtime@^0.14.0":
+  "integrity" "sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA=="
+  "resolved" "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz"
+  "version" "0.14.0"
 
 "regexp.prototype.flags@^1.4.3", "regexp.prototype.flags@^1.5.0":
   "integrity" "sha512-0SutC3pNudRKgquxGoRGIz946MZVHqbNfPjBdxeOhBrdgDKlRoXmYLQN9xRbrR09ZXWeGAdPuif7egofn6v5LA=="

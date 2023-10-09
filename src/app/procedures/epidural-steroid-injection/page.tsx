@@ -49,7 +49,7 @@ const Epidural = () => {
                 <h1 className="text-center underline">{title}</h1>
                 <div
                   className={active === id ? "content" : "hidden"}
-                  id="carouselId"
+                  id="procedureId"
                 >
                   {content.length ? (
                     t([`carousel.content${id}`])

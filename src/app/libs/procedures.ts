@@ -1,9 +1,13 @@
-type Procedure = Array<{
+type Procedure = {
   title: string;
   content: string;
-}>;
+}[];
 
 const procedures: Procedure = [
+  {
+    title: "Discectomies",
+    content: "",
+  },
   {
     title: "Epidural Steroid Injection",
     content: `This injection procedure is conducted to alleviate neck, shoulder, and arm pain resulting from nerve root 
@@ -51,10 +55,6 @@ const procedures: Procedure = [
     and steroid medication is injected in and around the joint. Typically, patients experience relief within 1-3 days, and 
     optimal pain relief is felt within 5-14 days after the injection. This procedure can provide significant relief to those 
     suffering form sacroiliac joint-related pain.`,
-  },
-  {
-    title: "Discectomies",
-    content: "",
   },
 ];
 

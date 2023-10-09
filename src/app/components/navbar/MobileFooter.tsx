@@ -130,6 +130,19 @@ const MobileFooter = () => {
               <AiOutlineCloseSquare className="w-10 h-10" />
             </button>
           </nav>
+
+          <li className="border-b p-2 m-2">
+            <Link
+              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+              href="/procedures/percutaneous-discectomy/#carouselId"
+              onClick={() => {
+                setActive(!active);
+                setProcedures(!procedures);
+              }}
+            >
+              {t("navbar.procedures.procedure1")}
+            </Link>
+          </li>
           <li className="border-b p-2 m-2">
             <Link
               href="/procedures/epidural-steroid-injection/#carouselId"
@@ -138,7 +151,7 @@ const MobileFooter = () => {
                 setProcedures(!procedures);
               }}
             >
-              {t("navbar.procedures.procedure1")}
+              {t("navbar.procedures.procedure2")}
             </Link>
           </li>
 
@@ -150,7 +163,7 @@ const MobileFooter = () => {
                 setProcedures(!procedures);
               }}
             >
-              {t("navbar.procedures.procedure2")}
+              {t("navbar.procedures.procedure3")}
             </Link>
           </li>
           <li className="border-b p-2 m-2">
@@ -162,7 +175,7 @@ const MobileFooter = () => {
                 setProcedures(!procedures);
               }}
             >
-              {t("navbar.procedures.procedure3")}
+              {t("navbar.procedures.procedure4")}
             </Link>
           </li>
           <li className="border-b p-2 m-2">
@@ -174,25 +187,13 @@ const MobileFooter = () => {
                 setProcedures(!procedures);
               }}
             >
-              {t("navbar.procedures.procedure4")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2">
-            <Link
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-              href="/procedures/sacroiliac-joint-injection/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
               {t("navbar.procedures.procedure5")}
             </Link>
           </li>
           <li className="border-b p-2 m-2">
             <Link
               className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-              href="/procedures/percutaneous-discectomy/#carouselId"
+              href="/procedures/sacroiliac-joint-injection/#carouselId"
               onClick={() => {
                 setActive(!active);
                 setProcedures(!procedures);
