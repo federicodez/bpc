@@ -11,6 +11,7 @@ import procedures from "@/app/libs/procedures";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { BiLinkExternal } from "react-icons/bi";
+import Percdis from "./components/Percdis";
 
 const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
   ssr: false,
@@ -51,17 +52,7 @@ const Procedures = () => {
                   {t([`carousel.title${id}`])}
                 </h1>
                 <div className={active === id ? "content" : "hidden"}>
-                  {content.length ? (
-                    t([`carousel.content${id}`])
-                  ) : (
-                    <Link
-                      className="flex justify-center items-center underline gap-1"
-                      href="/procedures/percutaneous-discectomy"
-                    >
-                      {t(`procedures.view`)}
-                      <BiLinkExternal />
-                    </Link>
-                  )}
+                  {content.length ? t([`carousel.content${id}`]) : <Percdis />}
                 </div>
               </div>
             </li>

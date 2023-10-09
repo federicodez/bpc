@@ -15,6 +15,7 @@ import {
   AiOutlineMinus,
   AiOutlinePlus,
 } from "react-icons/ai";
+import Procedures from "@/app/libs/procedures";
 
 const MobileFooter = () => {
   const [active, setActive] = useState(false);
@@ -131,197 +132,20 @@ const MobileFooter = () => {
             </button>
           </nav>
 
-          <li className="border-b p-2 m-2">
-            <Link
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-              href="/procedures/percutaneous-discectomy/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
-              {t("navbar.procedures.procedure1")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2">
-            <Link
-              href="/procedures/epidural-steroid-injection/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
-              {t("navbar.procedures.procedure2")}
-            </Link>
-          </li>
-
-          <li className="border-b p-2 m-2">
-            <Link
-              href="/procedures/trigger-point-injection/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
-              {t("navbar.procedures.procedure3")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2">
-            <Link
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-              href="/procedures/medial-branch-block/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
-              {t("navbar.procedures.procedure4")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2">
-            <Link
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-              href="/procedures/radio-frequency-ablation/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
-              {t("navbar.procedures.procedure5")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2">
-            <Link
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-              href="/procedures/sacroiliac-joint-injection/#carouselId"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-            >
-              {t("navbar.procedures.procedure6")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#about"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.about_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#treating"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.treating_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#who"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.who_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#before"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.before_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#during"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.during_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#after"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.after_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#what"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.what_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#how"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.how_title")}
-            </Link>
-          </li>
-          <li className="border-b p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#benefits"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.benefits_title")}
-            </Link>
-          </li>
-          <li className="p-2 m-2 list-disc list-inside">
-            <Link
-              href="/procedures/percutaneous-discectomy/#pre"
-              onClick={() => {
-                setActive(!active);
-                setProcedures(!procedures);
-              }}
-              className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
-            >
-              {t("percdis.pre_main_title")}
-            </Link>
-          </li>
+          {Procedures.map((procedure, index) => (
+            <li key={index} className="border-b p-2 m-2">
+              <Link
+                className={`${procedures ? "hover:text-[#ffd60a]" : ""}`}
+                href={`/procedures/${index}/#procedureId`}
+                onClick={() => {
+                  setActive(!active);
+                  setProcedures(!procedures);
+                }}
+              >
+                {t([`navbar.procedures.procedure${index}`])}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
