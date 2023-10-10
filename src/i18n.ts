@@ -10,7 +10,7 @@ import translationEN from "../public/locales/en/translation.json";
 import translationES from "../public/locales/es/translation.json";
 
 export const fallbackLng = ["en", "es"];
-export const languages = [fallbackLng, "es"];
+export const languages = [fallbackLng, "en"];
 export const defaultNS = "translation";
 export const fallbackNS = "translation";
 // const langDetectorOptions = {
@@ -34,6 +34,7 @@ const resources = {
 };
 
 i18n
+  .use(ChainedBackend)
   .use(LanguageDetector)
   .use(Backend)
   .use(initReactI18next)
