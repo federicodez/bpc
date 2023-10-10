@@ -104,8 +104,10 @@
     "title0": "Cervical Discectomy",
     "src0": "/Cervical_discectomy.mp4",
     "title1": "Lumbar Discectomy",
-    "src1": "/Decompression_procedure.mp4",
-    "title2": "Lumbar Discectomy",
-    "src2": "/Discectomy_decompression.mp4"
+    "src1": "/Discectomy_decompression.mp4"
+  },
+  "youtube": {
+    "title": "Lumber Discectomy",
+    "src": "/Decompression_procedure.mp4"
   }
 }

@@ -103,8 +103,10 @@
     "title0": "Discectomía Cervical",
     "src0": "/Cervical_discectomy_translated.mp4",
     "title1": "Lumbar Discectomía",
-    "src1": "/Decompression_procedure_translated.mp4",
-    "title2": "Lumbar Discectomía",
-    "src2": "/Discectomy_decompression_translated.mp4"
+    "src1": "/Discectomy_decompression_translated.mp4"
+  },
+  "youtube": {
+    "title": "Lumbar Discectomía",
+    "src": "/Decompression_procedure_translated.mp4"
   }
 }
