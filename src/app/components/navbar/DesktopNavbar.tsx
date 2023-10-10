@@ -17,8 +17,9 @@ const DesktopNavbar = () => {
   const [active, setActive] = useState(false);
   const [procedures, setProcedures] = useState(false);
   const [lng, setLng] = useState(true);
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  console.log(lang);
   const handleLng = () => {
     if (lng) {
       changeLanguage("es");

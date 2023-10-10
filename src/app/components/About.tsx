@@ -5,11 +5,11 @@ import profilePic from "@/app/images/profilePic.jpg";
 import profilePic2 from "@/app/images/profilePic2.jpg";
 import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
-import { Footer } from "@/app/components";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import { Footer } from "@/app/components";
 
 const About = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <Image
