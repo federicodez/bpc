@@ -19,7 +19,7 @@ const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
 
 const ProcedureId = () => {
   const { index } = useParams();
-  const [active, setActive] = useState<number | null>(Number(index));
+  const [procedureID, setProcedureID] = useState<number | null>(Number(index));
   const { t } = useTranslation();
   return (
     <Suspense fallback={<LoadingModel />}>
@@ -44,18 +44,19 @@ const ProcedureId = () => {
         <ul>
           {procedures.map(({ title, content }, id) => (
             <li key={id}>
-              <div
-                className="m-4 p-4 rounded-lg shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
-                onClick={() => setActive(id)}
-              >
-                {active === id ? (
-                  <BsArrowsCollapse onClick={() => setActive(null)} />
+              <div className="m-4 p-4 rounded-lg shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+                {procedureID === id ? (
+                  <BsArrowsCollapse onClick={() => setProcedureID(null)} />
                 ) : (
-                  <BsArrowsExpand onClick={() => setActive(null)} />
+                  <BsArrowsExpand onClick={() => setProcedureID(id)} />
                 )}
                 <h1 className="text-center underline">{title}</h1>
                 <div
-                  className={active === id ? "content" : "hidden"}
+                  className={
+                    procedureID === id
+                      ? "content ease-in-out duration-300"
+                      : "hidden"
+                  }
                   id="procedureId"
                 >
                   {content.length ? t([`carousel.content${id}`]) : <Perdis />}

@@ -9,16 +9,16 @@ import Image from "next/image";
 import operation from "../images/alex-op2.jpeg";
 import procedures from "@/app/libs/procedures";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
 import { BiLinkExternal } from "react-icons/bi";
 import Percdis from "./components/Percdis";
+import { BsArrowsCollapse, BsArrowsExpand } from "react-icons/bs";
 
 const Navbar = dynamic(() => import("@/app/components/navbar/Navbar"), {
   ssr: false,
 });
 
 const Procedures = () => {
-  const [active, setActive] = useState<number>(0);
+  const [procedureID, setProcedureID] = useState<number | null>(0);
   const { t } = useTranslation();
 
   return (
@@ -42,16 +42,20 @@ const Procedures = () => {
           </div>
         </div>
         <ul>
-          {procedures.map(({ title, content }, id) => (
+          {procedures.map(({ content }, id) => (
             <li key={id}>
-              <div
-                className="m-4 p-4 rounded-lg shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
-                onClick={() => setActive(id)}
-              >
-                <h1 className="text-center underline">
-                  {t([`carousel.title${id}`])}
-                </h1>
-                <div className={active === id ? "content" : "hidden"}>
+              <div className="m-4 p-4 rounded-lg shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+                <div className="flex flex-row gap-5 justify-center items-center">
+                  <h1 className="text-center underline">
+                    {t([`carousel.title${id}`])}
+                  </h1>
+                  {procedureID === id ? (
+                    <BsArrowsCollapse onClick={() => setProcedureID(null)} />
+                  ) : (
+                    <BsArrowsExpand onClick={() => setProcedureID(id)} />
+                  )}
+                </div>
+                <div className={procedureID === id ? "content" : "hidden"}>
                   {content.length ? t([`carousel.content${id}`]) : <Percdis />}
                 </div>
               </div>
