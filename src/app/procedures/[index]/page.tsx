@@ -42,21 +42,21 @@ const ProcedureId = () => {
           </div>
         </div>
         <ul>
-          {procedures.map(({ title, content }, id) => (
+          {procedures.map(({ content }, id) => (
             <li key={id}>
               <div className="m-4 p-4 rounded-lg shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
-                {procedureID === id ? (
-                  <BsArrowsCollapse onClick={() => setProcedureID(null)} />
-                ) : (
-                  <BsArrowsExpand onClick={() => setProcedureID(id)} />
-                )}
-                <h1 className="text-center underline">{title}</h1>
+                <div className="flex flex-row gap-5 justify-center items-center">
+                  <h1 className="text-center underline">
+                    {t([`carousel.title${id}`])}
+                  </h1>
+                  {procedureID === id ? (
+                    <BsArrowsCollapse onClick={() => setProcedureID(null)} />
+                  ) : (
+                    <BsArrowsExpand onClick={() => setProcedureID(id)} />
+                  )}
+                </div>
                 <div
-                  className={
-                    procedureID === id
-                      ? "content ease-in-out duration-300"
-                      : "hidden"
-                  }
+                  className={procedureID === id ? "content" : "hidden"}
                   id="procedureId"
                 >
                   {content.length ? t([`carousel.content${id}`]) : <Perdis />}

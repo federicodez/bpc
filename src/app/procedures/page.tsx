@@ -9,7 +9,6 @@ import Image from "next/image";
 import operation from "../images/alex-op2.jpeg";
 import procedures from "@/app/libs/procedures";
 import { useTranslation } from "react-i18next";
-import { BiLinkExternal } from "react-icons/bi";
 import Percdis from "./components/Percdis";
 import { BsArrowsCollapse, BsArrowsExpand } from "react-icons/bs";
 
@@ -55,7 +54,10 @@ const Procedures = () => {
                     <BsArrowsExpand onClick={() => setProcedureID(id)} />
                   )}
                 </div>
-                <div className={procedureID === id ? "content" : "hidden"}>
+                <div
+                  className={procedureID === id ? "content" : "hidden"}
+                  id="procedureId"
+                >
                   {content.length ? t([`carousel.content${id}`]) : <Percdis />}
                 </div>
               </div>

@@ -10,6 +10,7 @@ const Video = dynamic(() => import("@/app/components/Video"), { ssr: false });
 
 const Discectomy = () => {
   const [active, setActive] = useState<number>();
+  const [youtube, setYoutube] = useState(true);
   const { t } = useTranslation();
 
   const videos = [
@@ -21,24 +22,20 @@ const Discectomy = () => {
       title: t("video.title1"),
       src: t("video.src1"),
     },
-    {
-      title: t("video.title2"),
-      src: t("video.src2"),
-    },
   ];
 
   return (
     <>
-      <div className="container  mx-auto mt-auto mb-40 lg:mb-10 lg:mt-40 justify-center">
+      <div className="container  mx-auto justify-center">
         <h1 className="title text-2xl font-bold text-blue-800 mt-8">
           {t("percdis.main_title")}
         </h1>
-        <div className="flex justify-center items-center p-4 mt-8 gap-4 flex-col lg:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+        <div className="flex justify-evenly items-center p-4 mt-8 gap-4 flex-col lg:flex-row shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
           {videos.map(({ title, src }, id) => (
             <div
               onClick={() => setActive(id)}
               key={id}
-              className="videos flex flex-col justify-center items-center"
+              className="videos flex flex-col justify-center items-center pb-5"
             >
               <span
                 className={`text-center text-white scale-110 ${
@@ -182,6 +179,22 @@ const Discectomy = () => {
             {t("percdis.pre_content_5")}
           </li>
         </ul>
+
+        <div className="flex justify-center items-center p-4 mt-8 shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0.3em_0.3em_1em_rgba(0,0,0,0.3)]">
+          <div
+            onClick={() => setYoutube(!youtube)}
+            className="videos flex flex-col justify-center items-center pb-5"
+          >
+            <span
+              className={`text-center text-white scale-110 ${
+                youtube ? "translate-y-32 videos-title" : "hidden"
+              }`}
+            >
+              {t("youtube.title")}
+            </span>
+            <Video video={t("youtube.src")} />
+          </div>
+        </div>
       </div>
     </>
   );
