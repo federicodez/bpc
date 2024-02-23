@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 import spine from "@/app/images/spine.png";
+import logo from "@/app/images/logo.png";
 import Image from "next/image";
 import {
   AiOutlineCloseSquare,
@@ -19,7 +20,6 @@ const DesktopNavbar = () => {
   const [lng, setLng] = useState(true);
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  console.log(lang);
   const handleLng = () => {
     if (lng) {
       changeLanguage("es");
@@ -49,19 +49,18 @@ const DesktopNavbar = () => {
       "
       >
         <nav className="mt-4 flex flex-row justify-around">
-          <div className="flex flex-row flex-nowrap">
-            <Image
-              className="w-12 rounded-full mx-4"
-              src={spine}
-              alt="spine logo"
-            />
-            <h3 className="text-white flex-nowrap  mx-5 self-center text-2xl">
-              Bowen Pain Center
-            </h3>
+          <div className="flex flex-row flex-nowrap mr-5">
+            <Image className="w-20" src={logo} alt="spine logo" />
+            <div className="flex flex-col justify-center ml-2">
+              <h3 className="text-white text-3xl tracking-widest">BOWEN</h3>
+              <h3 className="text-white flex-nowrap text-lg self-center tracking-wider">
+                PAIN CENTER
+              </h3>
+            </div>
           </div>
 
-          <ul className="flex">
-            <li className="text-xl text-white py-2 px-6 pt-5">
+          <ul className="flex items-center">
+            <li className="text-xl text-white px-3">
               <Link
                 className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                 href="/"
@@ -70,7 +69,7 @@ const DesktopNavbar = () => {
                 {t("navbar.title1")}
               </Link>
             </li>
-            <li className="text-xl text-white py-2 px-6 pt-5">
+            <li className="text-xl text-white px-3">
               <Link
                 className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                 href="/procedures"
@@ -121,7 +120,8 @@ const DesktopNavbar = () => {
                 ))}
               </ul>
             </li>
-            <li className="pb-6 text-xl text-white py-2 md:px-6 md:pt-5 text-left">
+
+            <li className="text-xl text-white px-3">
               <Link
                 className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                 href="/contact"
@@ -130,17 +130,17 @@ const DesktopNavbar = () => {
                 {t("navbar.title3")}
               </Link>
             </li>
-            <li className="pb-6 text-xl text-white py-2 px-6 pt-4">
+            <li className="text-xl text-white px-3">
               {lng ? (
                 <button
-                  className="mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+                  className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                   onClick={handleLng}
                 >
                   Español
                 </button>
               ) : (
                 <button
-                  className="mt-1 hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
+                  className="hover:bg-[#caf0f8] rounded-lg hover:text-[#03045e] px-2"
                   onClick={handleLng}
                 >
                   English
