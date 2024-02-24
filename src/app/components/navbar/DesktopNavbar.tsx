@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 import spine from "@/app/images/spine.png";
 import logo from "@/app/images/logo.png";
+import logo2 from "@/app/images/logo2.png";
 import Image from "next/image";
 import {
   AiOutlineCloseSquare,
@@ -50,13 +51,7 @@ const DesktopNavbar = () => {
       >
         <nav className="mt-4 flex flex-row justify-around">
           <div className="flex flex-row flex-nowrap mr-5">
-            <Image className="w-20" src={logo} alt="spine logo" />
-            <div className="flex flex-col justify-center ml-2">
-              <h3 className="text-white text-3xl tracking-widest">BOWEN</h3>
-              <h3 className="text-white flex-nowrap text-lg self-center tracking-wider">
-                PAIN CENTER
-              </h3>
-            </div>
+            <Image className="w-40" src={logo2} alt="spine logo" />
           </div>
 
           <ul className="flex items-center">
