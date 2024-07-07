@@ -26,7 +26,7 @@ async function submitContact(data: FormData) {
   }
 
   await sendEmail({
-    to: "jfedericodes@gmail.com",
+    to: "info@bowenpaincenter.com",
     subject: "Bowen Pain Center New Patient",
     text: `Name: ${firstName} ${lastName} Phone: ${phone} Email: ${email} Message: ${message}`,
   });
