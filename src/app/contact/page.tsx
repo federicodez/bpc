@@ -28,13 +28,12 @@ const ContactUs = () => {
         <h1 className="title m-10 text-2xl text-center font-bold text-blue-800">
           {t("contact.title")}
         </h1>
-        <Form />
         <div className="grid mt-6 md:grid-cols-3">
           <a
-            href="mailto:bowen.paincenter@gmail.com"
+            href="mailto:info@bowenpaincenter.com"
             className="text-center my-3 underline"
           >
-            Bowen.PainCenter@gmail.com
+            info@bowenpaincenter.com
           </a>
           <div className="block">
             <address className="text-center">
