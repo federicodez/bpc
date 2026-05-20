@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import { LoadingModel } from "@/app/components";
 import { Footer } from "@/app/components";
 import Image from "next/image";
-import operation from "../images/alex-op2.jpeg";
+import operation from "../images/bpc_surgery.jpg";
 import procedures from "@/app/libs/procedures";
 import { useTranslation } from "react-i18next";
 import Percdis from "./components/Percdis";
