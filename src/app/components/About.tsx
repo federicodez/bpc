@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import profilePic from "@/app/images/profilePic.jpg";
 import bpc_main from "@/app/images/bpc_main.jpeg";
+import profilePic2 from "@/app/images/profilePic2.jpg";
 import operation from "@/app/images/alex-op3.jpeg";
 import { useTranslation } from "react-i18next";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
