@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import profilePic from "@/app/images/profilePic.jpg";
-import bpc_main from "@/app/images/bpc_main.jpeg";
-import profilePic2 from "@/app/images/profilePic2.jpg";
-import operation from "@/app/images/alex-op3.jpeg";
+import dr_pic from "@/app/images/dr_pic.jpeg";
+import operation from "@/app/images/operation.jpeg";
 import { useTranslation } from "react-i18next";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Footer } from "@/app/components";
@@ -33,7 +31,7 @@ const About = () => {
           <Image
             className="profile-image object-contain w-auto md:w-96 h-auto border-8 border-solid border-white 
           shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),0_0_0_2px_rgb(255,255,255),0.3em_0.3em_1em_rgba(0,0,0,0.3)]"
-            src={bpc_main}
+            src={dr_pic}
             alt="profile picture"
           />
           <div className="mb-20 lg:mb-0">
